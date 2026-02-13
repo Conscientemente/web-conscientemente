@@ -1,0 +1,90 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES DE COLOR */
+:root {
+  --morado-oscuro: #4b3f72;
+  --morado-claro: #7a6fa3;
+  --gris-texto: #3f3f3f;
+  --fondo-claro: #f6f5f2;
+}
+
+/* BASE */
+body {
+  font-family: 'Lora', serif;
+  background-color: var(--fondo-claro);
+  color: var(--gris-texto);
+}
+
+/* HEADER */
+.site-header {
+  background-color: var(--fondo-claro);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name {
+  font-family: 'Magnolia Script', cursive;
+  color: var(--morado-oscuro);
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--gris-texto);
+  font-size: 0.95rem;
+}
+
+.nav-menu a:hover {
+  color: var(--morado-oscuro);
+}
+
+/* HERO */
+.hero {
+  padding: 100px 24px 120px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin-left: 8%;
+}
+
+.hero h1 {
+  font-family: 'Magnolia Script', cursive;
+  color: var(--morado-oscuro);
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+}
+
+.hero h2 {
+  color: var(--morado-claro);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.hero-logo {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--morado-oscuro);
+}
