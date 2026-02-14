@@ -1,181 +1,123 @@
-/* =================================================
-   RESET GENERAL
-   ================================================= */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <title>Conscientemente, atención psicológica</title>
 
-body {
-  font-family: 'Lora', serif;
-  background: linear-gradient(180deg, #f6f4f9 0%, #ffffff 60%);
-  color: #5a5a5a;
-  line-height: 1.6;
-}
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
 
-/* =================================================
-   HEADER PRINCIPAL
-   ================================================= */
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-.site-header {
-  background-color: #faf9f6;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 1.2rem 2.5rem;
-}
+<body>
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav">
 
-/* Marca */
-.brand-block {
-  display: flex;
-  flex-direction: column;
-}
+      <div class="brand-block">
+        <div class="brand-title">Conscientemente, atención psicológica</div>
+        <div class="brand-subtitle">
+          Acompañamiento terapéutico con evidencia y calidez humana
+        </div>
+      </div>
 
-.brand-title {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.9rem;
-  color: #6b4eff; /* morado marca */
-}
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="#">Sobre Conscientemente</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Agenda</a></li>
+      </ul>
 
-.brand-subtitle {
-  font-size: 0.9rem;
-  color: #5a5a5a;
-  margin-top: 0.2rem;
-}
+    </nav>
+  </header>
 
-/* =================================================
-   MENÚ DE NAVEGACIÓN
-   ================================================= */
+  <!-- LOGO -->
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="assets/images/logo-conscientemente.png" alt="Logo Conscientemente">
+    </div>
+  </section>
 
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 1.6rem;
-}
+  <!-- BIENVENIDA -->
+  <section class="welcome-section">
+    <div class="welcome-container">
 
-.nav-menu a {
-  font-size: 0.95rem;
-  color: #5a5a5a;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
+      <div class="welcome-text">
+        <p>
+          Bienvenidos. En Conscientemente ofrecemos un espacio de acompañamiento
+          psicológico orientado al bienestar emocional, basado en evidencia clínica
+          y en una relación terapéutica cercana, ética y respetuosa de los procesos
+          individuales.
+        </p>
+      </div>
 
-.nav-menu a:hover {
-  color: #6b4eff;
-}
+      <!-- ÁREAS -->
+      <div class="areas-block">
+        <h3>Áreas de acompañamiento terapéutico</h3>
 
-.nav-menu a.active {
-  color: #6b4eff;
-}
+        <div class="areas-bubbles">
 
-/* =================================================
-   HERO / LOGO
-   ================================================= */
+          <div class="bubble">
+            <img src="assets/images/ansiedad.png" alt="Ansiedad">
+            <span>Ansiedad</span>
+          </div>
 
-.hero {
-  padding: 4rem 2.5rem 2rem;
-}
+          <div class="bubble">
+            <img src="assets/images/fobia-social.png" alt="Fobia social">
+            <span>Fobia social</span>
+          </div>
 
-.hero-logo {
-  max-width: 220px;
-}
+          <div class="bubble">
+            <img src="assets/images/depresion.png" alt="Depresión">
+            <span>Depresión</span>
+          </div>
 
-.hero-logo img {
-  width: 100%;
-  height: auto;
-}
+          <div class="bubble">
+            <img src="assets/images/bipolar.png" alt="Trastorno bipolar">
+            <span>Trastorno bipolar</span>
+          </div>
 
-/* =================================================
-   SECCIÓN BIENVENIDA
-   ================================================= */
+          <div class="bubble">
+            <img src="assets/images/trauma.png" alt="Trauma psicológico">
+            <span>Trauma psicológico</span>
+          </div>
 
-.welcome-section {
-  padding: 3rem 2.5rem;
-}
+          <div class="bubble">
+            <img src="assets/images/autoestima.png" alt="Autoestima">
+            <span>Autoestima</span>
+          </div>
 
-.welcome-container {
-  max-width: 1000px;
-}
+          <div class="bubble">
+            <img src="assets/images/relaciones.png" alt="Relaciones y dependencia emocional">
+            <span>Relaciones y dependencia emocional</span>
+          </div>
 
-.welcome-text p {
-  font-size: 1rem;
-  text-align: justify;
-  margin-bottom: 3rem;
-}
+          <div class="bubble">
+            <img src="assets/images/duelo.png" alt="Duelo">
+            <span>Duelo</span>
+          </div>
 
-/* =================================================
-   ÁREAS DE ACOMPAÑAMIENTO (BURBUJAS)
-   ================================================= */
+        </div>
+      </div>
 
-.areas-block h3 {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #6b4eff;
-}
+      <!-- REDES -->
+      <div class="social-icons">
+        <img src="assets/images/icon-instagram.png" alt="Instagram">
+        <img src="assets/images/icon-facebook.png" alt="Facebook">
+        <img src="assets/images/icon-gmail.png" alt="Correo">
+      </div>
 
-/* Contenedor de burbujas */
-.areas-bubbles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 2rem;
-}
+    </div>
+  </section>
 
-/* Burbuja individual */
-.bubble {
-  background-color: #faf9f6;
-  border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.bubble span {
-  font-size: 0.9rem;
-  color: #5a5a5a;
-  line-height: 1.3;
-}
-
-/* Hover burbuja */
-.bubble:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(107, 78, 255, 0.25);
-}
-
-.bubble:hover span {
-  color: #6b4eff;
-}
-
-/* =================================================
-   ÍCONOS DE REDES
-   ================================================= */
-
-.social-icons {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.social-icons img {
-  width: 28px;
-  height: auto;
-  cursor: pointer;
-  opacity: 0.75;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
+</body>
+</html>
 
 .social-icons img:hover {
   opacity: 1;
