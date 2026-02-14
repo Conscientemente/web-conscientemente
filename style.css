@@ -1,22 +1,104 @@
 /* =========================
-   PRUEBA DE FUENTE – FORZADA
+   RESET
    ========================= */
-
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Dancing Script', cursive !important;
-  background: #f6f5f2;
+  box-sizing: border-box;
 }
 
-/* TEXTO DE PRUEBA */
-body::before {
-  content: "SI ESTO NO SE VE MANUSCRITO, DANCING SCRIPT NO CARGA";
-  display: block;
+/* =========================
+   BASE
+   ========================= */
+body {
+  font-family: 'Lora', serif;
+  background-color: #f6f5f2;
+  color: #3f3f3f;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.site-header {
+  background-color: #f6f5f2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+   MARCA
+   ========================= */
+.brand-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #6f63c6;
+  line-height: 1.15;
+}
+
+.brand-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  color: #a095e6;
+}
+
+/* =========================
+   MENÚ
+   ========================= */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* =========================
+   LOGO
+   ========================= */
+.hero {
+  padding: 72px 24px 56px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo img {
+  max-width: 460px;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================
+   BIENVENIDA
+   ========================= */
+.welcome-section {
+  padding: 64px 24px 80px;
   text-align: center;
-  margin-top: 40px;
-  font-size: 32px;
-  color: red;
+}
+
+.welcome-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.9;
 }
 .social-icons img {
   width: 36px;
