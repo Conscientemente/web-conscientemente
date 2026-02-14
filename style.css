@@ -64,6 +64,7 @@ body::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem; /* separa marca y menú */
 }
 
 /* =========================
@@ -87,7 +88,7 @@ body::after {
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 1rem; /* menú más compacto */
 }
 
 .nav-menu a {
