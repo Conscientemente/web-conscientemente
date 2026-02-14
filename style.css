@@ -75,12 +75,15 @@ body {
   font-size: 0.95rem;
   color: #5a5a5a;
   text-decoration: none;
-  transition: color 0.25s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
   color: #6b4eff;
+  border-bottom: 2px solid #6b4eff; /* línea morada */
 }
 
 /* =================================================
