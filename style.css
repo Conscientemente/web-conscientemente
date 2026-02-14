@@ -1,227 +1,23 @@
 /* =========================
-   RESET
+   PRUEBA DE FUENTE – FORZADA
    ========================= */
-* {
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Dancing Script', cursive !important;
+  background: #f6f5f2;
 }
 
-/* =========================
-   VARIABLES
-   ========================= */
-:root {
-  --morado-principal: #6f63c6;   /* más vivo */
-  --morado-claro: #a095e6;
-  --gris-texto: #3f3f3f;
-  --fondo-claro: #f6f5f2;
-}
-
-/* =========================
-   BASE
-   ========================= */
-body {
-  font-family: 'Lora', serif;
-  background-color: var(--fondo-claro);
-  color: var(--gris-texto);
-  overflow-x: hidden;
-}
-
-/* =========================
-   DEGRADADO LATERAL (más visible)
-   ========================= */
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  width: 200px;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-
+/* TEXTO DE PRUEBA */
 body::before {
-  left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(160,149,230,0.35),
-    rgba(160,149,230,0)
-  );
-}
-
-body::after {
-  right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(111,99,198,0.35),
-    rgba(111,99,198,0)
-  );
-}
-
-/* =========================
-   HEADER
-   ========================= */
-.site-header {
-  background-color: var(--fondo-claro);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-.nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* =========================
-   MARCA (DANCING SCRIPT REAL)
-   ========================= */
-.brand-block {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.2rem;              /* clave */
-  font-weight: 600;               /* clave */
-  color: var(--morado-principal);
-  line-height: 1.15;
-}
-
-.brand-subtitle {
-  font-family: 'Lora', serif;
-  color: var(--morado-claro);
-  font-size: 0.95rem;
-}
-
-/* =========================
-   MENÚ
-   ========================= */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
-
-.nav-menu li {
-  position: relative;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #4a4a4a;
-  font-size: 1.05rem;
-  font-weight: 500;
-  padding-bottom: 6px;
-}
-
-.nav-menu li::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--morado-principal);
-  transition: width 0.3s ease;
-}
-
-.nav-menu li:hover::after {
-  width: 100%;
-}
-
-.nav-menu li:hover a {
-  color: var(--morado-principal);
-}
-
-/* =========================
-   LOGO
-   ========================= */
-.hero {
-  padding: 72px 24px 56px;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-logo img {
-  max-width: 460px;   /* más presencia */
-  width: 100%;
-  height: auto;
-}
-
-/* =========================
-   BIENVENIDA
-   ========================= */
-.welcome-section {
-  padding: 64px 24px 80px;
-}
-
-.welcome-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  content: "SI ESTO NO SE VE MANUSCRITO, DANCING SCRIPT NO CARGA";
+  display: block;
   text-align: center;
+  margin-top: 40px;
+  font-size: 32px;
+  color: red;
 }
-
-.welcome-text {
-  font-size: 1.05rem;
-  line-height: 1.9;
-  margin-bottom: 80px;
-}
-
-/* =========================
-   ÁREAS
-   ========================= */
-.areas-block h3 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--morado-principal);
-  margin-bottom: 44px;
-}
-
-.areas-bubbles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.bubble {
-  width: 150px;
-  height: 150px;
-  background-color: #efedf8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 26px rgba(0,0,0,0.10);
-  transition: transform 0.3s ease;
-}
-
-.bubble:hover {
-  transform: translateY(-6px);
-}
-
-.bubble span {
-  font-size: 0.85rem;
-  text-align: center;
-  padding: 0 12px;
-}
-
-/* =========================
-   REDES
-   ========================= */
-.social-icons {
-  margin-top: 64px;
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-}
-
 .social-icons img {
   width: 36px;
   height: auto;
