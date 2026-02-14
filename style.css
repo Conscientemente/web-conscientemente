@@ -1,3 +1,10 @@
+Perfecto 👍
+Seguimos PASO 2 y solo PASO 2: dar forma visual con style.css.
+Nada más. Sin animaciones. Sin lógica extra.
+
+👉 Reemplaza TODO tu style.css por el siguiente archivo completo.
+
+PASO 2 · style.css (ARCHIVO COMPLETO Y LIMPIO)
 /* RESET */
 * {
   margin: 0;
@@ -9,6 +16,8 @@
 :root {
   --morado-oscuro: #4b3f72;
   --morado-claro: #7a6fa3;
+  --morado-pastel: #edeaf6;
+  --morado-pastel-2: #f3f0fa;
   --gris-texto: #3f3f3f;
   --fondo-claro: #f6f5f2;
 }
@@ -90,9 +99,9 @@ body {
   color: var(--morado-oscuro);
 }
 
-/* HERO */
+/* HERO / LOGO */
 .hero {
-  padding: 48px 24px 24px;
+  padding: 56px 24px 40px;
 }
 
 .hero-content {
@@ -102,8 +111,8 @@ body {
 }
 
 .hero-logo {
-  max-width: 260px;
-  margin: 0 auto;
+  max-width: 340px;        /* LOGO MÁS GRANDE */
+  margin: 0 auto 48px;     /* MÁS RESPIRO ABAJO */
 }
 
 .hero-logo img {
@@ -112,47 +121,94 @@ body {
   display: block;
 }
 
-/* FRANJA BIENVENIDA + ÁREAS */
-.intro-section {
-  padding: 48px 24px;
+/* SECCIÓN BIENVENIDA + ÁREAS */
+.welcome-section {
+  padding: 32px 24px 64px;
 }
 
-.intro-container {
+.welcome-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.1fr 1fr; /* NO rígido 50/50 */
+  gap: 56px;
+  align-items: flex-start;
 }
 
-/* Bienvenida */
-.intro-text p {
+/* TEXTO BIENVENIDA */
+.welcome-text p {
   text-align: justify;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 1rem;
   margin-bottom: 24px;
 }
 
+/* REDES SOCIALES */
 .social-icons {
   display: flex;
-  gap: 14px;
-  font-size: 0.85rem;
-  color: var(--morado-oscuro);
+  gap: 18px;
 }
 
-/* Áreas */
-.intro-areas {
+.social-icons img {
+  width: 28px;          /* un poco más grandes */
+  height: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+}
+
+/* ÁREAS */
+.areas-block h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--morado-oscuro);
+  margin-bottom: 20px;
+}
+
+.areas-bubbles {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 18px;
 }
 
-.area-bubble {
-  padding: 10px 18px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  font-size: 0.9rem;
+/* BURBUJAS */
+.bubble {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--morado-pastel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bubble:nth-child(even) {
+  background-color: var(--morado-pastel-2);
+}
+
+.bubble:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.bubble img {
+  width: 36px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.bubble span {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: var(--gris-texto);
 }
 
 .hero-logo img {
