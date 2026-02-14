@@ -14,6 +14,7 @@
 
 body {
   font-family: 'Lora', serif;
+  font-size: 1.05rem; /* un pisca más grande */ 
   background: linear-gradient(
     180deg,
     #f3effa 0%,
@@ -95,7 +96,7 @@ body {
 }
 
 .hero-logo {
-  max-width: 320px;            /* TAMAÑO PROTAGONISTA */
+  max-width: 360px;            /* TAMAÑO PROTAGONISTA */
 }
 
 .hero-logo img {
