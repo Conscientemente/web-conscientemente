@@ -1,214 +1,201 @@
-/* =========================
-   RESET
-========================= */
+/* =================================================
+   RESET GENERAL
+   ================================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   BASE
-========================= */
 body {
   font-family: 'Lora', serif;
-  background-color: #f6f5f2;
-  color: #3f3f3f;
-  overflow-x: hidden;
+  background: linear-gradient(180deg, #f6f4f9 0%, #ffffff 60%);
+  color: #5a5a5a;
+  line-height: 1.6;
 }
 
-/* =========================
-   DEGRADÉ LATERAL SUAVE
-========================= */
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  width: 180px;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
+/* =================================================
+   HEADER PRINCIPAL
+   ================================================= */
 
-body::before {
-  left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(140, 130, 210, 0.28),
-    rgba(140, 130, 210, 0)
-  );
-}
-
-body::after {
-  right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(90, 80, 180, 0.28),
-    rgba(90, 80, 180, 0)
-  );
-}
-
-/* =========================
-   HEADER
-========================= */
 .site-header {
-  background-color: #f6f5f2;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  background-color: #faf9f6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem 2.5rem;
 }
 
 .nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem; /* separa marca y menú */
+  gap: 2rem;
 }
 
-/* =========================
-   MARCA
-========================= */
+/* Marca */
+.brand-block {
+  display: flex;
+  flex-direction: column;
+}
+
 .brand-title {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: #6f63c6;
+  font-size: 1.9rem;
+  color: #6b4eff;
 }
 
 .brand-subtitle {
-  font-size: 0.95rem;
-  color: #9c92e6;
+  font-size: 0.9rem;
+  color: #5a5a5a;
+  margin-top: 0.2rem;
 }
 
-/* =========================
-   MENÚ
-========================= */
+/* =================================================
+   MENÚ DE NAVEGACIÓN
+   ================================================= */
+
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 1rem; /* menú más compacto */
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-menu a {
+  font-size: 0.95rem;
+  color: #5a5a5a;
   text-decoration: none;
-  color: #4a4a4a;
-  font-size: 1.05rem;
-}
-
-/* =========================
-   LOGO
-========================= */
-.hero {
-  padding: 72px 24px 56px;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-logo img {
-  max-width: 460px;
-  width: 100%;
-}
-
-/* =========================
-   BIENVENIDA
-========================= */
-.welcome-section {
-  padding: 64px 24px 40px;
-  text-align: center;
-}
-
-.welcome-text {
-  max-width: 900px;
-  margin: 0 auto 64px;
-  font-size: 1.05rem;
-  line-height: 1.9;
-}
-
-/* =========================
-   ÁREAS
-========================= */
-.areas-title {
-  font-family: 'Dancing Script', cursive;
-  color: #6f63c6;
-  font-size: 1.8rem;
-  margin-bottom: 36px;
-}
-
-.areas-bubbles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.bubble {
-  width: 150px;
-  height: 150px;
-  background: #efedf8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 14px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bubble:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.16);
-}
-
-.bubble span {
-  font-size: 0.85rem;
-}
-
-/* =========================
-   REDES
-========================= */
-.social-icons {
-  margin: 72px auto 40px;
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-}
-
-.social-icons img {
-  width: 38px;
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-/* =========================
-   HEADER - MENÚ NAVEGACIÓN
-   ========================= */
-
-header {
-  background-color: #faf9f6; /* fondo claro */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* relieve sutil */
-}
-
-header nav a {
-  color: #5a5a5a;               /* gris base */
-  ensured text-decoration: none;
-  font-weight: 400;
-  padding: 0.5rem 0.75rem;
   transition: color 0.25s ease;
 }
 
-/* Hover (al pasar el cursor) */
-header nav a:hover {
-  color: #6b5ce7;               /* morado de marca */
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #6b4eff;
 }
 
-/* Enlace activo (página actual) */
-header nav a.active {
-  color: #6b5ce7;
+/* =================================================
+   HERO / LOGO
+   ================================================= */
+
+.hero {
+  padding: 4rem 2.5rem 2rem;
 }
-.social-icons img:hover {
-  transform: scale(1.15);
+
+.hero-logo {
+  max-width: 220px;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* =================================================
+   SECCIÓN BIENVENIDA
+   ================================================= */
+
+.welcome-section {
+  padding: 3rem 2.5rem;
+}
+
+.welcome-container {
+  max-width: 1000px;
+}
+
+.welcome-text p {
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 3rem;
+}
+
+/* =================================================
+   ÁREAS DE ACOMPAÑAMIENTO (BURBUJAS)
+   ================================================= */
+
+.areas-block h3 {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: #6b4eff;
+}
+
+/* Contenedor */
+.areas-bubbles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 2.2rem;
+}
+
+/* Burbuja */
+.bubble {
+  background-color: #faf9f6;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  /* Contenido interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+/* Imagen dentro de la burbuja */
+.bubble img {
+  width: 42px;
+  height: auto;
+  opacity: 0.85;
+}
+
+/* Texto de la burbuja */
+.bubble span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #5a5a5a;
+  line-height: 1.25;
+}
+
+/* Hover */
+.bubble:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(107, 78, 255, 0.25);
+}
+
+.bubble:hover span {
+  color: #6b4eff;
+}
+
+.bubble:hover img {
   opacity: 1;
+}
+
+/* =================================================
+   ÍCONOS DE REDES
+   ================================================= */
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.social-icons img {
+  width: 28px;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
