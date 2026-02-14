@@ -1,37 +1,25 @@
-/* =================================================
-   FUENTE MAGNOLIA SCRIPT (LOCAL)
-   ================================================= */
-@font-face {
-  font-family: 'MagnoliaScript';
-  src: url('./assets/fonts/MagnoliaScript.woff2') format('woff2'),
-       url('./assets/fonts/MagnoliaScript.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =================================================
+/* =========================
    RESET
-   ================================================= */
+   ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =================================================
-   VARIABLES DE COLOR
-   ================================================= */
+/* =========================
+   VARIABLES
+   ========================= */
 :root {
-  --morado-principal: #6a5acd;   /* más vivo, no oscuro */
-  --morado-claro: #9a8df1;
+  --morado-principal: #6f63c6;   /* más vivo */
+  --morado-claro: #a095e6;
   --gris-texto: #3f3f3f;
   --fondo-claro: #f6f5f2;
 }
 
-/* =================================================
+/* =========================
    BASE
-   ================================================= */
+   ========================= */
 body {
   font-family: 'Lora', serif;
   background-color: var(--fondo-claro);
@@ -39,15 +27,15 @@ body {
   overflow-x: hidden;
 }
 
-/* =================================================
-   DEGRADADO LATERAL SUAVE
-   ================================================= */
+/* =========================
+   DEGRADADO LATERAL (más visible)
+   ========================= */
 body::before,
 body::after {
   content: "";
   position: fixed;
   top: 0;
-  width: 160px;
+  width: 200px;
   height: 100%;
   z-index: -1;
   pointer-events: none;
@@ -57,8 +45,8 @@ body::before {
   left: 0;
   background: linear-gradient(
     to right,
-    rgba(154,141,241,0.22),
-    rgba(154,141,241,0)
+    rgba(160,149,230,0.35),
+    rgba(160,149,230,0)
   );
 }
 
@@ -66,14 +54,14 @@ body::after {
   right: 0;
   background: linear-gradient(
     to left,
-    rgba(106,90,205,0.22),
-    rgba(106,90,205,0)
+    rgba(111,99,198,0.35),
+    rgba(111,99,198,0)
   );
 }
 
-/* =================================================
+/* =========================
    HEADER
-   ================================================= */
+   ========================= */
 .site-header {
   background-color: var(--fondo-claro);
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -88,30 +76,31 @@ body::after {
   align-items: center;
 }
 
-/* =================================================
-   MARCA (NOMBRE + SUBTÍTULO)
-   ================================================= */
+/* =========================
+   MARCA (DANCING SCRIPT REAL)
+   ========================= */
 .brand-block {
   display: flex;
   flex-direction: column;
 }
 
 .brand-title {
-  font-family: 'MagnoliaScript', serif;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;              /* clave */
+  font-weight: 600;               /* clave */
   color: var(--morado-principal);
-  font-size: 1.6rem;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .brand-subtitle {
   font-family: 'Lora', serif;
   color: var(--morado-claro);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-/* =================================================
+/* =========================
    MENÚ
-   ================================================= */
+   ========================= */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -124,7 +113,7 @@ body::after {
 
 .nav-menu a {
   text-decoration: none;
-  color: var(--gris-texto);
+  color: #4a4a4a;
   font-size: 1.05rem;
   font-weight: 500;
   padding-bottom: 6px;
@@ -149,24 +138,24 @@ body::after {
   color: var(--morado-principal);
 }
 
-/* =================================================
-   LOGO CENTRAL
-   ================================================= */
+/* =========================
+   LOGO
+   ========================= */
 .hero {
-  padding: 72px 24px 48px;
+  padding: 72px 24px 56px;
   display: flex;
   justify-content: center;
 }
 
 .hero-logo img {
-  max-width: 420px;   /* LOGO PROTAGONISTA */
+  max-width: 460px;   /* más presencia */
   width: 100%;
   height: auto;
 }
 
-/* =================================================
+/* =========================
    BIENVENIDA
-   ================================================= */
+   ========================= */
 .welcome-section {
   padding: 64px 24px 80px;
 }
@@ -180,77 +169,61 @@ body::after {
 .welcome-text {
   font-size: 1.05rem;
   line-height: 1.9;
-  margin-bottom: 72px; /* RESPIRO CLARO */
+  margin-bottom: 80px;
 }
 
-/* =================================================
-   ÁREAS DE ACOMPAÑAMIENTO
-   ================================================= */
+/* =========================
+   ÁREAS
+   ========================= */
 .areas-block h3 {
-  font-family: 'MagnoliaScript', serif;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: var(--morado-principal);
-  font-size: 1.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .areas-bubbles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;
+  gap: 30px;
 }
 
 .bubble {
   width: 150px;
   height: 150px;
-  background: radial-gradient(
-    circle at top,
-    #f3f1fb,
-    #e7e4f6
-  );
+  background-color: #efedf8;
   border-radius: 50%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.10);
+  transition: transform 0.3s ease;
 }
 
 .bubble:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
-}
-
-.bubble img {
-  width: 42px;
-  height: auto;
-  margin-bottom: 8px;
 }
 
 .bubble span {
   font-size: 0.85rem;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
-/* =================================================
-   REDES SOCIALES (AL FINAL)
-   ================================================= */
+/* =========================
+   REDES
+   ========================= */
 .social-icons {
-  margin-top: 72px;
+  margin-top: 64px;
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 28px;
 }
 
 .social-icons img {
   width: 36px;
   height: auto;
-  transition: transform 0.25s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.08);
 }
 
