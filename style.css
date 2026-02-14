@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* VARIABLES DE COLOR */
+/* VARIABLES */
 :root {
   --morado-oscuro: #4b3f72;
   --morado-claro: #7a6fa3;
@@ -30,13 +30,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 18px 24px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* BLOQUE MARCA */
+/* MARCA */
 .brand-block {
   display: flex;
   flex-direction: column;
@@ -50,7 +49,6 @@ body {
 }
 
 .brand-subtitle {
-  font-family: 'Lora', serif;
   color: var(--morado-claro);
   font-size: 0.9rem;
 }
@@ -62,19 +60,21 @@ body {
   gap: 28px;
 }
 
-/* 🔑 CLAVE: display inline-block */
-.nav-menu a {
-  display: inline-block;
+.nav-menu li {
   position: relative;
+}
+
+.nav-menu a {
   text-decoration: none;
   color: var(--gris-texto);
   font-size: 1.05rem;
   font-weight: 500;
   padding-bottom: 6px;
+  display: inline-block;
 }
 
-/* Línea sutil */
-.nav-menu a::after {
+/* Línea debajo */
+.nav-menu li::after {
   content: "";
   position: absolute;
   left: 0;
@@ -85,13 +85,12 @@ body {
   transition: width 0.3s ease;
 }
 
-/* Hover */
-.nav-menu a:hover {
-  color: var(--morado-oscuro);
+.nav-menu li:hover::after {
+  width: 100%;
 }
 
-.nav-menu a:hover::after {
-  width: 100%;
+.nav-menu li:hover a {
+  color: var(--morado-oscuro);
 }
 
 /* HERO */
@@ -103,13 +102,6 @@ body {
   max-width: 800px;
   margin-left: 8%;
 }
-
-.hero-logo {
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  color: var(--morado-oscuro);
-}
-
 
 .hero-logo {
   font-size: 0.8rem;
