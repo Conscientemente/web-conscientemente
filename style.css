@@ -1,38 +1,37 @@
-/* =========================
-   FUENTE MAGNOLIA (WEBFONT)
-   ========================= */
+/* =================================================
+   FUENTE MAGNOLIA SCRIPT (LOCAL)
+   ================================================= */
 @font-face {
-  font-family: 'Magnolia';
-  src:
-    url('./assets/fonts/magnolia-script.woff2') format('woff2'),
-    url('./assets/fonts/magnolia-script.woff') format('woff');
+  font-family: 'MagnoliaScript';
+  src: url('./assets/fonts/MagnoliaScript.woff2') format('woff2'),
+       url('./assets/fonts/MagnoliaScript.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-/* =========================
+/* =================================================
    RESET
-   ========================= */
+   ================================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   VARIABLES
-   ========================= */
+/* =================================================
+   VARIABLES DE COLOR
+   ================================================= */
 :root {
-  --morado-principal: #6b5bd6;
-  --morado-claro: #9a8df0;
+  --morado-principal: #6a5acd;   /* más vivo, no oscuro */
+  --morado-claro: #9a8df1;
   --gris-texto: #3f3f3f;
   --fondo-claro: #f6f5f2;
 }
 
-/* =========================
+/* =================================================
    BASE
-   ========================= */
+   ================================================= */
 body {
   font-family: 'Lora', serif;
   background-color: var(--fondo-claro);
@@ -40,9 +39,41 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================
+/* =================================================
+   DEGRADADO LATERAL SUAVE
+   ================================================= */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(154,141,241,0.22),
+    rgba(154,141,241,0)
+  );
+}
+
+body::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(106,90,205,0.22),
+    rgba(106,90,205,0)
+  );
+}
+
+/* =================================================
    HEADER
-   ========================= */
+   ================================================= */
 .site-header {
   background-color: var(--fondo-claro);
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -57,18 +88,18 @@ body {
   align-items: center;
 }
 
-/* =========================
-   MARCA
-   ========================= */
+/* =================================================
+   MARCA (NOMBRE + SUBTÍTULO)
+   ================================================= */
 .brand-block {
   display: flex;
   flex-direction: column;
 }
 
 .brand-title {
-  font-family: 'Magnolia', cursive;
+  font-family: 'MagnoliaScript', serif;
   color: var(--morado-principal);
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   line-height: 1.2;
 }
 
@@ -78,9 +109,9 @@ body {
   font-size: 0.9rem;
 }
 
-/* =========================
+/* =================================================
    MENÚ
-   ========================= */
+   ================================================= */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -118,26 +149,26 @@ body {
   color: var(--morado-principal);
 }
 
-/* =========================
-   LOGO
-   ========================= */
+/* =================================================
+   LOGO CENTRAL
+   ================================================= */
 .hero {
-  padding: 64px 24px 48px;
+  padding: 72px 24px 48px;
   display: flex;
   justify-content: center;
 }
 
 .hero-logo img {
-  max-width: 420px;
+  max-width: 420px;   /* LOGO PROTAGONISTA */
   width: 100%;
   height: auto;
 }
 
-/* =========================
+/* =================================================
    BIENVENIDA
-   ========================= */
+   ================================================= */
 .welcome-section {
-  padding: 56px 24px 72px;
+  padding: 64px 24px 80px;
 }
 
 .welcome-container {
@@ -148,17 +179,17 @@ body {
 
 .welcome-text {
   font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 64px;
+  line-height: 1.9;
+  margin-bottom: 72px; /* RESPIRO CLARO */
 }
 
-/* =========================
-   ÁREAS
-   ========================= */
+/* =================================================
+   ÁREAS DE ACOMPAÑAMIENTO
+   ================================================= */
 .areas-block h3 {
-  font-family: 'Magnolia', cursive;
+  font-family: 'MagnoliaScript', serif;
   color: var(--morado-principal);
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   margin-bottom: 40px;
 }
 
@@ -166,23 +197,35 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 28px;
+  gap: 32px;
 }
 
 .bubble {
   width: 150px;
   height: 150px;
-  background-color: #f1effc;
+  background: radial-gradient(
+    circle at top,
+    #f3f1fb,
+    #e7e4f6
+  );
   border-radius: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bubble:hover {
   transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+.bubble img {
+  width: 42px;
+  height: auto;
+  margin-bottom: 8px;
 }
 
 .bubble span {
@@ -191,16 +234,23 @@ body {
   padding: 0 10px;
 }
 
-/* =========================
-   REDES
-   ========================= */
+/* =================================================
+   REDES SOCIALES (AL FINAL)
+   ================================================= */
 .social-icons {
-  margin-top: 56px;
+  margin-top: 72px;
   display: flex;
   justify-content: center;
-  gap: 28px;
+  gap: 32px;
 }
 
 .social-icons img {
   width: 36px;
+  height: auto;
+  transition: transform 0.25s ease;
 }
+
+.social-icons img:hover {
+  transform: scale(1.08);
+}
+
