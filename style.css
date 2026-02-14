@@ -3,7 +3,8 @@
    ========================= */
 @font-face {
   font-family: 'Magnolia';
-  src: url('./assets/fonts/Magnolia%20Script.otf') format('opentype');
+  src: url('assets/fonts/MagnoliaScript.woff2') format('woff2'),
+       url('assets/fonts/MagnoliaScript.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
