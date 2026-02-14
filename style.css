@@ -9,12 +9,12 @@
 }
 
 /* =================================================
-   FONDO GENERAL (DEGRADÉ VISIBLE)
+   FONDO GENERAL (DEGRADÉ)
    ================================================= */
 
 body {
   font-family: 'Lora', serif;
-  font-size: 1.05rem; /* un pisca más grande */ 
+  font-size: 1.05rem;
   background: linear-gradient(
     180deg,
     #f3effa 0%,
@@ -36,7 +36,7 @@ body {
 
 .nav {
   max-width: 1200px;
-  margin: 0 auto;              /* CENTRADO */
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +57,7 @@ body {
 
 .brand-subtitle {
   font-size: 0.95rem;
-  color: #6b4eff;              /* MISMO COLOR */
+  color: #6b4eff;
   margin-top: 0.25rem;
 }
 
@@ -83,23 +83,23 @@ body {
 .nav-menu a:hover,
 .nav-menu a.active {
   color: #6b4eff;
-  border-bottom: 2px solid #6b4eff; /* línea morada */
+  border-bottom: 2px solid #6b4eff;
 }
 
 /* =================================================
-   HERO / LOGO (CENTRADO)
+   HERO / LOGO
    ================================================= */
 
 .hero {
   max-width: 1200px;
-  margin: 0 auto;              /* CENTRADO */
+  margin: 0 auto;
   padding: 5rem 2rem 3rem;
   display: flex;
   justify-content: center;
 }
 
 .hero-logo {
-  max-width: 360px;            /* TAMAÑO PROTAGONISTA */
+  max-width: 400px; /* LOGO MÁS GRANDE */
 }
 
 .hero-logo img {
@@ -114,7 +114,7 @@ body {
 
 .welcome-section {
   max-width: 1200px;
-  margin: 0 auto;              /* CENTRADO */
+  margin: 0 auto;
   padding: 3rem 2rem;
 }
 
@@ -122,7 +122,7 @@ body {
   max-width: 900px;
   margin: 0 auto 3.5rem;
   font-size: 1rem;
-  text-align: justify;         /* JUSTIFICADO */
+  text-align: justify;
 }
 
 /* =================================================
@@ -133,7 +133,7 @@ body {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
   color: #6b4eff;
-  text-align: center;          /* TÍTULO CENTRADO */
+  text-align: center;
 }
 
 .areas-bubbles {
@@ -141,7 +141,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 2.2rem;
   max-width: 1000px;
-  margin: 0 auto;              /* CENTRADO */
+  margin: 0 auto;
 }
 
 .bubble {
@@ -150,7 +150,9 @@ body {
   width: 170px;
   height: 170px;
   margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 6px 16px rgba(107, 78, 255, 0.18); /* SOMBRITA */
+
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 
@@ -165,23 +167,21 @@ body {
 
 .bubble img {
   width: 42px;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
+/* NOMBRE DE LA BURBUJA */
 .bubble span {
   font-size: 0.95rem;
   font-weight: 500;
-  color: #5a5a5a;
+  color: #6b4eff; /* MORADO SIEMPRE */
   line-height: 1.25;
 }
 
+/* Hover */
 .bubble:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(107, 78, 255, 0.25);
-}
-
-.bubble:hover span {
-  color: #6b4eff;
+  box-shadow: 0 10px 24px rgba(107, 78, 255, 0.3);
 }
 
 /* =================================================
@@ -190,7 +190,7 @@ body {
 
 .social-icons {
   display: flex;
-  justify-content: center;     /* CENTRADOS */
+  justify-content: center;
   gap: 1.5rem;
   margin: 3rem auto 0;
 }
