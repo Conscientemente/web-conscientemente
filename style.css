@@ -35,11 +35,22 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.brand-block {
+  display: flex;
+  flex-direction: column;
+}
 
-.brand-name {
+.brand-title {
   font-family: 'Magnolia Script', cursive;
   color: var(--morado-oscuro);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-family: 'Lora', serif;
+  color: var(--morado-claro);
+  font-size: 0.9rem;
 }
 
 .nav-menu {
