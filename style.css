@@ -73,7 +73,7 @@ body {
   display: inline-block;
 }
 
-/* Línea debajo */
+/* Línea debajo en hover */
 .nav-menu li::after {
   content: "";
   position: absolute;
@@ -103,8 +103,13 @@ body {
   margin-left: 8%;
 }
 
+/* LOGO */
 .hero-logo {
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  color: var(--morado-oscuro);
+  margin-top: 20px;
+}
+
+.hero-logo img {
+  max-width: 260px;   /* tamaño equilibrado */
+  width: 100%;
+  height: auto;
 }
