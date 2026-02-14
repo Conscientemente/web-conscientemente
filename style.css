@@ -95,7 +95,7 @@ body {
 
 /* HERO */
 .hero {
-  padding: 120px 24px 140px;
+  padding: 48px 24px 32px; /* contenido real, sin bloque gigante */
 }
 
 .hero-content {
@@ -105,11 +105,12 @@ body {
 
 /* LOGO */
 .hero-logo {
-  margin-top: 20px;
+  margin-top: 16px;
+  max-width: 220px;  /* CONTROL REAL DEL TAMAÑO */
 }
 
 .hero-logo img {
-  max-width: 260px;   /* tamaño equilibrado */
   width: 100%;
   height: auto;
+  display: block;
 }
