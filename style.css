@@ -9,17 +9,20 @@
 }
 
 /* =================================================
-   FONDO GENERAL (DEGRADÉ VISIBLE)
+   FONDO GENERAL (DEGRADÉ LATERAL)
    ================================================= */
 
 body {
   font-family: 'Lora', serif;
   font-size: 1.05rem;
   background: linear-gradient(
-    180deg,
+    90deg,
     #ede7fa 0%,
-    #f7f4fd 35%,
-    #ffffff 70%
+    #f7f4fd 12%,
+    #ffffff 35%,
+    #ffffff 65%,
+    #f7f4fd 88%,
+    #ede7fa 100%
   );
   color: #5a5a5a;
   line-height: 1.6;
@@ -148,8 +151,7 @@ body {
   gap: 2.5rem;
   max-width: 1000px;
   margin: 0 auto;
-
-  justify-items: center; /* 🔑 ESTO CENTRA LAS DE ABAJO */
+  justify-items: center;
 }
 
 .bubble {
@@ -157,11 +159,9 @@ body {
   height: 170px;
   background-color: #faf9f6;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   box-shadow: 0 8px 18px rgba(107, 78, 255, 0.22);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -200,5 +200,4 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
-
 
