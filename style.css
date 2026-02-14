@@ -23,7 +23,7 @@ body {
 /* HEADER */
 .site-header {
   background-color: var(--fondo-claro);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .nav {
@@ -45,7 +45,6 @@ body {
   font-family: 'Magnolia Script', cursive;
   color: var(--morado-oscuro);
   font-size: 1.6rem;
-  line-height: 1.2;
 }
 
 .brand-subtitle {
@@ -70,10 +69,8 @@ body {
   font-size: 1.05rem;
   font-weight: 500;
   padding-bottom: 6px;
-  display: inline-block;
 }
 
-/* Línea debajo en hover */
 .nav-menu li::after {
   content: "";
   position: absolute;
@@ -95,18 +92,67 @@ body {
 
 /* HERO */
 .hero {
-  padding: 48px 24px 32px; /* contenido real, sin bloque gigante */
+  padding: 48px 24px 24px;
 }
 
 .hero-content {
-  max-width: 800px;
-  margin-left: 8%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* LOGO */
 .hero-logo {
-  margin-top: 16px;
-  max-width: 220px;  /* CONTROL REAL DEL TAMAÑO */
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FRANJA BIENVENIDA + ÁREAS */
+.intro-section {
+  padding: 48px 24px;
+}
+
+.intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+/* Bienvenida */
+.intro-text p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+  font-size: 0.85rem;
+  color: var(--morado-oscuro);
+}
+
+/* Áreas */
+.intro-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.area-bubble {
+  padding: 10px 18px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .hero-logo img {
