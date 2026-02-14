@@ -175,3 +175,8 @@ body {
 .social-icons img {
   width: 32px;
 }
+.test {
+  text-align: center;
+  color: purple;
+  font-size: 24px;
+}
