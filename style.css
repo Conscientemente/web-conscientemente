@@ -35,6 +35,8 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+/* BLOQUE MARCA */
 .brand-block {
   display: flex;
   flex-direction: column;
@@ -53,26 +55,27 @@ body {
   font-size: 0.9rem;
 }
 
-.nav-menu a {
-  text-decoration: none;
-  color: var(--gris-texto);
-  font-size: 1.05rem;     /* un poco más grande */
-  font-weight: 500;      /* más presencia, sin verse pesado */
+/* MENÚ */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
 }
 
 .nav-menu a {
   text-decoration: none;
   color: var(--gris-texto);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  font-weight: 500;
 }
 
 .nav-menu a:hover {
   color: var(--morado-oscuro);
 }
 
-/* HERO */
+/* HERO (solo logo por ahora) */
 .hero {
-  padding: 100px 24px 120px;
+  padding: 120px 24px 140px;
 }
 
 .hero-content {
@@ -80,22 +83,7 @@ body {
   margin-left: 8%;
 }
 
-.hero h1 {
-  font-family: 'Magnolia Script', cursive;
-  color: var(--morado-oscuro);
-  font-size: 3.2rem;
-  margin-bottom: 12px;
-}
-
-.hero h2 {
-  color: var(--morado-claro);
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
-
 .hero-logo {
-  margin-top: 10px;
   font-size: 0.8rem;
   letter-spacing: 2px;
   color: var(--morado-oscuro);
