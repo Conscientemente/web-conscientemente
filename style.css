@@ -63,14 +63,33 @@ body {
 }
 
 .nav-menu a {
+  position: relative;
   text-decoration: none;
   color: var(--gris-texto);
   font-size: 1.05rem;
   font-weight: 500;
+  padding-bottom: 4px;
 }
 
+/* Línea sutil debajo del texto */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--morado-oscuro);
+  transition: width 0.3s ease;
+}
+
+/* Hover */
 .nav-menu a:hover {
   color: var(--morado-oscuro);
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
 }
 
 /* HERO (solo logo por ahora) */
