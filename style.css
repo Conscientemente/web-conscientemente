@@ -180,7 +180,32 @@ body::after {
   opacity: 0.85;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+/* =========================
+   HEADER - MENÚ NAVEGACIÓN
+   ========================= */
 
+header {
+  background-color: #faf9f6; /* fondo claro */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* relieve sutil */
+}
+
+header nav a {
+  color: #5a5a5a;               /* gris base */
+  ensured text-decoration: none;
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.25s ease;
+}
+
+/* Hover (al pasar el cursor) */
+header nav a:hover {
+  color: #6b5ce7;               /* morado de marca */
+}
+
+/* Enlace activo (página actual) */
+header nav a.active {
+  color: #6b5ce7;
+}
 .social-icons img:hover {
   transform: scale(1.15);
   opacity: 1;
