@@ -1,35 +1,80 @@
+/* =========================
+   FUENTE MAGNOLIA SCRIPT
+   ========================= */
 @font-face {
   font-family: 'Magnolia';
-  src: url('assets/fonts/magnoliascrip.otf') format('opentype');
+  src: url('./assets/fonts/Magnolia%20Script.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-/* RESET */
+
+/* =========================
+   RESET
+   ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* VARIABLES */
+/* =========================
+   VARIABLES
+   ========================= */
 :root {
-  --morado-oscuro: #4b3f72;
-  --morado-claro: #7a6fa3;
+  --morado-principal: #5E4FA2;
+  --morado-claro: #8B7EDC;
   --gris-texto: #3f3f3f;
   --fondo-claro: #f6f5f2;
 }
 
-/* BASE */
+/* =========================
+   BASE
+   ========================= */
 body {
   font-family: 'Lora', serif;
   background-color: var(--fondo-claro);
   color: var(--gris-texto);
+  overflow-x: hidden;
 }
 
-/* HEADER */
+/* =========================
+   DEGRADADO LATERAL SUAVE
+   ========================= */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(139,126,220,0.22),
+    rgba(139,126,220,0)
+  );
+}
+
+body::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(94,79,162,0.22),
+    rgba(94,79,162,0)
+  );
+}
+
+/* =========================
+   HEADER
+   ========================= */
 .site-header {
   background-color: var(--fondo-claro);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .nav {
@@ -41,25 +86,30 @@ body {
   align-items: center;
 }
 
-/* MARCA */
+/* =========================
+   MARCA
+   ========================= */
 .brand-block {
   display: flex;
   flex-direction: column;
 }
 
 .brand-title {
-  font-family: 'Lora', serif;
-  color: var(--morado-oscuro);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-family: 'Magnolia', cursive;
+  color: var(--morado-principal);
+  font-size: 1.55rem;
+  line-height: 1.2;
 }
 
 .brand-subtitle {
+  font-family: 'Lora', serif;
   color: var(--morado-claro);
   font-size: 0.9rem;
 }
 
-/* MENÚ */
+/* =========================
+   MENÚ
+   ========================= */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -73,12 +123,11 @@ body {
 .nav-menu a {
   text-decoration: none;
   color: var(--gris-texto);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 500;
   padding-bottom: 6px;
 }
 
-/* Línea hover */
 .nav-menu li::after {
   content: "";
   position: absolute;
@@ -86,7 +135,7 @@ body {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: var(--morado-oscuro);
+  background-color: var(--morado-principal);
   transition: width 0.3s ease;
 }
 
@@ -95,25 +144,29 @@ body {
 }
 
 .nav-menu li:hover a {
-  color: var(--morado-oscuro);
+  color: var(--morado-principal);
 }
 
-/* HERO */
+/* =========================
+   LOGO
+   ========================= */
 .hero {
-  padding: 64px 24px 32px;
+  padding: 64px 24px 40px;
   display: flex;
   justify-content: center;
 }
 
 .hero-logo img {
-  max-width: 340px;
+  max-width: 380px;
   width: 100%;
   height: auto;
 }
 
-/* BIENVENIDA */
+/* =========================
+   BIENVENIDA
+   ========================= */
 .welcome-section {
-  padding: 64px 24px;
+  padding: 56px 24px 72px;
 }
 
 .welcome-container {
@@ -124,35 +177,36 @@ body {
 
 .welcome-text {
   font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 48px;
+  line-height: 1.8;
+  margin-bottom: 56px;
 }
 
-/* ÁREAS */
+/* =========================
+   ÁREAS
+   ========================= */
 .areas-block h3 {
-  font-family: 'Lora', serif;
-  color: var(--morado-oscuro);
-  font-size: 1.4rem;
-  margin-bottom: 32px;
+  font-family: 'Magnolia', cursive;
+  color: var(--morado-principal);
+  font-size: 1.45rem;
+  margin-bottom: 36px;
 }
 
 .areas-bubbles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 28px;
 }
 
 .bubble {
   width: 150px;
   height: 150px;
-  background-color: #efedf6;
+  background-color: #efedf8;
   border-radius: 50%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
 }
 
@@ -160,26 +214,25 @@ body {
   transform: translateY(-6px);
 }
 
-.bubble img {
-  width: 36px;
-  margin-bottom: 8px;
-}
-
 .bubble span {
   font-size: 0.85rem;
   text-align: center;
+  padding: 0 10px;
 }
 
-/* REDES */
+/* =========================
+   REDES
+   ========================= */
 .social-icons {
-  margin-top: 48px;
+  margin-top: 56px;
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 28px;
 }
 
 .social-icons img {
-  width: 32px;
+  width: 34px;
+  height: auto;
 }
 .test {
   text-align: center;
