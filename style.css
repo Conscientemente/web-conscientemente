@@ -1,126 +1,177 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conscientemente, atención psicológica</title>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Tipografía -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+/* VARIABLES */
+:root {
+  --morado-oscuro: #4b3f72;
+  --morado-claro: #7a6fa3;
+  --gris-texto: #3f3f3f;
+  --fondo-claro: #f6f5f2;
+}
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="style.css?v=4">
-</head>
+/* BASE */
+body {
+  font-family: 'Lora', serif;
+  background-color: var(--fondo-claro);
+  color: var(--gris-texto);
+}
 
-<body>
+/* HEADER */
+.site-header {
+  background-color: var(--fondo-claro);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <nav class="nav">
-      <div class="brand-block">
-        <div class="brand-title">Conscientemente, atención psicológica</div>
-        <div class="brand-subtitle">
-          Acompañamiento terapéutico con evidencia y calidez humana
-        </div>
-      </div>
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-      <ul class="nav-menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre Conscientemente</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Agenda</a></li>
-      </ul>
-    </nav>
-  </header>
+/* MARCA */
+.brand-block {
+  display: flex;
+  flex-direction: column;
+}
 
-  <!-- LOGO -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-logo">
-        <img src="assets/images/logo-conscientemente.png" alt="Logo Conscientemente">
-      </div>
-    </div>
-  </section>
+.brand-title {
+  font-family: 'Lora', serif;
+  color: var(--morado-oscuro);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 
-  <!-- BIENVENIDA + ÁREAS -->
-  <section class="welcome-section">
-    <div class="welcome-container">
+.brand-subtitle {
+  color: var(--morado-claro);
+  font-size: 0.9rem;
+}
 
-      <!-- TEXTO DE BIENVENIDA -->
-      <div class="welcome-text">
-        <p>
-          ¡Bienvenidos! En Conscientemente ofrecemos un espacio de acompañamiento
-          psicológico orientado al bienestar emocional, basado en evidencia clínica
-          y en una relación terapéutica cercana, ética y respetuosa de los procesos
-          individuales.
-        </p>
-      </div>
+/* MENÚ */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
 
-      <!-- ÁREAS -->
-      <div class="areas-block">
-        <h3>Áreas de acompañamiento terapéutico</h3>
+.nav-menu li {
+  position: relative;
+}
 
-        <div class="areas-bubbles">
+.nav-menu a {
+  text-decoration: none;
+  color: var(--gris-texto);
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 6px;
+}
 
-          <div class="bubble">
-            <img src="assets/images/area-ansiedad.png" alt="Ansiedad">
-            <span>Ansiedad</span>
-          </div>
+/* Línea hover */
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--morado-oscuro);
+  transition: width 0.3s ease;
+}
 
-          <div class="bubble">
-            <img src="assets/images/area-fobia-social.png" alt="Fobia social">
-            <span>Fobia social</span>
-          </div>
+.nav-menu li:hover::after {
+  width: 100%;
+}
 
-          <div class="bubble">
-            <img src="assets/images/area-depresion.png" alt="Depresión">
-            <span>Depresión</span>
-          </div>
+.nav-menu li:hover a {
+  color: var(--morado-oscuro);
+}
 
-          <div class="bubble">
-            <img src="assets/images/area-bipolar.png" alt="Trastorno bipolar">
-            <span>Trastorno bipolar</span>
-          </div>
+/* HERO */
+.hero {
+  padding: 64px 24px 32px;
+  display: flex;
+  justify-content: center;
+}
 
-          <div class="bubble">
-            <img src="assets/images/area-trauma.png" alt="Trauma psicológico">
-            <span>Trauma psicológico</span>
-          </div>
+.hero-logo img {
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+}
 
-          <div class="bubble">
-            <img src="assets/images/area-autoestima.png" alt="Autoestima">
-            <span>Autoestima</span>
-          </div>
+/* BIENVENIDA */
+.welcome-section {
+  padding: 64px 24px;
+}
 
-          <div class="bubble">
-            <img src="assets/images/area-relaciones.png" alt="Relaciones y dependencia emocional">
-            <span>Relaciones y dependencia emocional</span>
-          </div>
+.welcome-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-          <div class="bubble">
-            <img src="assets/images/area-duelo.png" alt="Duelo">
-            <span>Duelo</span>
-          </div>
+.welcome-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
 
-        </div>
-      </div>
+/* ÁREAS */
+.areas-block h3 {
+  font-family: 'Lora', serif;
+  color: var(--morado-oscuro);
+  font-size: 1.4rem;
+  margin-bottom: 32px;
+}
 
-      <!-- REDES (AL FINAL) -->
-      <div class="social-icons">
-        <a href="#" aria-label="Instagram">
-          <img src="assets/images/icon-instagram.png" alt="Instagram">
-        </a>
-        <a href="#" aria-label="Facebook">
-          <img src="assets/images/icon-facebook.png" alt="Facebook">
-        </a>
-        <a href="mailto:contacto@conscientemente.com" aria-label="Correo">
-          <img src="assets/images/icon-gmail.png" alt="Correo electrónico">
-        </a>
-      </div>
+.areas-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
 
-    </div>
-  </section>
+.bubble {
+  width: 150px;
+  height: 150px;
+  background-color: #efedf6;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
 
-</body>
-</html>
+.bubble:hover {
+  transform: translateY(-6px);
+}
+
+.bubble img {
+  width: 36px;
+  margin-bottom: 8px;
+}
+
+.bubble span {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* REDES */
+.social-icons {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-icons img {
+  width: 32px;
+}
