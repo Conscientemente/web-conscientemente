@@ -62,16 +62,18 @@ body {
   gap: 28px;
 }
 
+/* 🔑 CLAVE: display inline-block */
 .nav-menu a {
+  display: inline-block;
   position: relative;
   text-decoration: none;
   color: var(--gris-texto);
   font-size: 1.05rem;
   font-weight: 500;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
 }
 
-/* Línea sutil debajo del texto */
+/* Línea sutil */
 .nav-menu a::after {
   content: "";
   position: absolute;
@@ -92,7 +94,7 @@ body {
   width: 100%;
 }
 
-/* HERO (solo logo por ahora) */
+/* HERO */
 .hero {
   padding: 120px 24px 140px;
 }
@@ -101,6 +103,13 @@ body {
   max-width: 800px;
   margin-left: 8%;
 }
+
+.hero-logo {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--morado-oscuro);
+}
+
 
 .hero-logo {
   font-size: 0.8rem;
