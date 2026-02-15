@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conscientemente, atención psicológica</title>
 
   <!-- Tipografías -->
@@ -14,16 +14,14 @@
 
 <body>
 
-  <!-- FONDO LATERAL (OBLIGATORIO PARA EL DEGRADÉ) -->
+  <!-- Fondo lateral -->
   <div class="page-background"></div>
 
-  <!-- CONTENIDO -->
   <div class="page-content">
 
     <!-- HEADER -->
     <header class="site-header">
       <nav class="nav">
-
         <div class="brand-block">
           <div class="brand-title">Conscientemente, atención psicológica</div>
           <div class="brand-subtitle">
@@ -36,17 +34,41 @@
           <li><a href="#">Sobre Conscientemente</a></li>
           <li><a href="#">Servicios</a></li>
           <li><a href="#">Contacto</a></li>
-          <li><a href="#">Agenda</a></li>
+          <li><a href="#agenda">Agenda</a></li>
         </ul>
-
       </nav>
     </header>
 
-    <!-- HERO / LOGO -->
-    <section class="hero">
-      <div class="hero-logo">
-        <img src="assets/images/logo-conscientemente.png" alt="Logo Conscientemente">
+    <!-- BANNER -->
+    <section class="banner">
+
+      <!-- Estado 1: Logo -->
+      <div class="banner-slide active" id="banner-logo">
+        <img src="assets/images/logo-conscientemente.png"
+             alt="Conscientemente"
+             class="banner-logo">
       </div>
+
+      <!-- Estado 2: Socialización -->
+      <div class="banner-slide" id="banner-socializacion">
+        <div class="banner-circle">
+          <img src="assets/images/banner-socializacion.png"
+               alt="Socialización Conscientemente">
+        </div>
+
+        <div class="banner-text">
+          <h2>Espacio de socialización virtual gratuita</h2>
+          <p>
+            Un primer encuentro para escucharte, comprender tu situación
+            y resolver dudas sobre el proceso.
+          </p>
+        </div>
+
+        <a href="#agenda" class="banner-button">
+          Agenda tu espacio de socialización →
+        </a>
+      </div>
+
     </section>
 
     <!-- BIENVENIDA -->
@@ -59,37 +81,41 @@
           individuales.
         </p>
       </div>
-
-      <!-- ÁREAS -->
-      <div class="areas-block">
-        <h3>Áreas de acompañamiento terapéutico</h3>
-
-        <div class="areas-bubbles">
-          <div class="bubble"><span>Ansiedad</span></div>
-          <div class="bubble"><span>Fobia social</span></div>
-          <div class="bubble"><span>Depresión</span></div>
-          <div class="bubble"><span>Trastorno bipolar</span></div>
-          <div class="bubble"><span>Trastornos de personalidad</span></div>
-          <div class="bubble"><span>Conducta suicida y autolesiones</span></div>
-          <div class="bubble"><span>Trauma psicológico</span></div>
-          <div class="bubble"><span>Autoestima</span></div>
-          <div class="bubble"><span>Relaciones y dependencia emocional</span></div>
-          <div class="bubble"><span>Duelo</span></div>
-          <div class="bubble"><span>Adolescencia y crianza</span></div>
-          <div class="bubble"><span>Otros motivos de consulta</span></div>
-        </div>
-      </div>
-
-      <!-- REDES -->
-      <div class="social-icons">
-        <img src="assets/images/icon-instagram.png" alt="Instagram">
-        <img src="assets/images/icon-facebook.png" alt="Facebook">
-        <img src="assets/images/icon-gmail.png" alt="Correo">
-      </div>
-
     </section>
+
+    <!-- ÁREAS -->
+    <section class="areas-block">
+      <h3>Áreas de acompañamiento terapéutico</h3>
+
+      <div class="areas-bubbles">
+        <div class="bubble"><span>Ansiedad</span></div>
+        <div class="bubble"><span>Fobia social</span></div>
+        <div class="bubble"><span>Depresión</span></div>
+        <div class="bubble"><span>Trastorno bipolar</span></div>
+        <div class="bubble"><span>Trastornos de personalidad</span></div>
+        <div class="bubble"><span>Conducta suicida y autolesiones</span></div>
+        <div class="bubble"><span>Trauma psicológico</span></div>
+        <div class="bubble"><span>Autoestima</span></div>
+        <div class="bubble"><span>Relaciones y dependencia emocional</span></div>
+        <div class="bubble"><span>Duelo</span></div>
+        <div class="bubble"><span>Adolescencia y crianza</span></div>
+        <div class="bubble"><span>Otros motivos de consulta</span></div>
+      </div>
+    </section>
+
+    <!-- REDES -->
+    <div class="social-icons">
+      <img src="assets/images/icon-instagram.png" alt="Instagram">
+      <img src="assets/images/icon-facebook.png" alt="Facebook">
+      <img src="assets/images/icon-gmail.png" alt="Correo">
+    </div>
+
+    <!-- AGENDA (placeholder) -->
+    <section id="agenda"></section>
 
   </div>
 
+  <!-- JS -->
+  <script src="banner.js"></script>
 </body>
 </html>
