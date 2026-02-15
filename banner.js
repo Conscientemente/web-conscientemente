@@ -1,9 +1,9 @@
 const slides = document.querySelectorAll('.banner-slide');
 let current = 0;
 
-// tiempos (en milisegundos)
-const logoTime = 1500;      // logo MUY corto
-const socialTime = 8000;   // socialización más largo
+// tiempos (ms)
+const logoTime = 2200;      // logo: 2.2 segundos
+const socialTime = 8000;   // socialización: lectura tranquila
 
 function showSlide(index) {
   slides.forEach(slide => slide.classList.remove('active'));
@@ -21,5 +21,5 @@ function cycleBanner() {
   }, delay);
 }
 
-// iniciar
+// iniciar ciclo
 cycleBanner();
