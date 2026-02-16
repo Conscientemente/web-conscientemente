@@ -35,10 +35,51 @@
   padding: 1.2rem 3rem;
 }
 
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #6b4eff;
+}
+
+.brand-subtitle {
+  font-size: 0.95rem;
+  color: #6b4eff;
+}
+
+/* ================= MENÚ ================= */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #5a5a5a;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color .25s ease, border-color .25s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #6b4eff;
+  border-bottom-color: #6b4eff;
+}
+
 /* ================= BANNER ================= */
+/* 🔹 AJUSTE CONTROLADO PARA DEJAR ASOMAR BIENVENIDA */
 .banner-wrapper {
   position: relative;
-  height: 78vh;               /* CLAVE: no pantalla completa */
+  height: 78vh;
   max-height: 640px;
   min-height: 460px;
 
@@ -47,10 +88,9 @@
   align-items: center;
 
   overflow: hidden;
-  margin-bottom: -3.5rem;     /* deja asomar bienvenida */
+  margin-bottom: -3.5rem;
 }
 
-/* slides */
 .banner-slide {
   position: absolute;
   inset: 0;
@@ -72,6 +112,7 @@
 
 /* círculo */
 .banner-circle {
+  position: relative;
   width: 360px;
   height: 360px;
   border-radius: 50%;
@@ -86,7 +127,7 @@
   object-fit: cover;
 }
 
-/* texto dentro */
+/* texto dentro del círculo */
 .banner-circle-text {
   position: absolute;
   inset: 0;
@@ -104,11 +145,13 @@
   font-size: 2.2rem;
   color: #3b4fa1;
   margin-bottom: 1.2rem;
+  line-height: 1.25;
 }
 
 .banner-circle-text p {
   font-size: 1.05rem;
   color: #2f3f80;
+  line-height: 1.55;
 }
 
 /* botón */
@@ -127,17 +170,105 @@
 
   border: 2px solid transparent;
   animation: float 3s ease-in-out infinite;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.banner-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(79,195,232,.35);
+}
+
+/* animaciones */
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 /* ================= BIENVENIDA ================= */
 .welcome-section {
   max-width: 1200px;
-  margin: 6rem auto 0;   /* aire real, no pegado */
+  margin: 6rem auto 0;
   padding: 0 2rem;
+}
+
+.welcome-text p {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* ================= ÁREAS ================= */
+.areas-block {
+  margin: 4rem auto;
+}
+
+.areas-block h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: #6b4eff;
+  margin-bottom: 3rem;
+}
+
+.areas-bubbles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.bubble {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #faf9f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(107,78,255,.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.bubble:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(107,78,255,.35);
+}
+
+.bubble span {
+  color: #6b4eff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ================= REDES ================= */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem auto;
+}
+
+.social-icons img {
+  width: 34px;
+  opacity: .8;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+  transform: scale(1.12);
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:768px) {
+
   .banner-wrapper {
     height: auto;
     min-height: 520px;
@@ -152,15 +283,20 @@
   .banner-logo {
     max-width: 300px;
   }
+
+  .banner-circle-text h2 {
+    font-size: 1.9rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-/* animaciones */
-@keyframes pulse {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.025); }
-}
 
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
