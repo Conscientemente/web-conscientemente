@@ -1,7 +1,3 @@
-/* ===============================
-   BANNER ROTATIVO
-   =============================== */
-
 const slides = document.querySelectorAll('.banner-slide');
 let current = 0;
 
@@ -15,7 +11,6 @@ function showSlide(index) {
 
 function cycleBanner() {
   showSlide(current);
-
   const delay = current === 0 ? logoTime : socialTime;
 
   setTimeout(() => {
@@ -25,15 +20,3 @@ function cycleBanner() {
 }
 
 cycleBanner();
-
-/* ===============================
-   MODAL ANSIEDAD
-   =============================== */
-
-function openAnsiedad() {
-  document.getElementById('modal-ansiedad').classList.add('active');
-}
-
-function closeAnsiedad() {
-  document.getElementById('modal-ansiedad').classList.remove('active');
-}
