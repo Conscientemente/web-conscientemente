@@ -23,3 +23,14 @@ function cycleBanner() {
 
 // iniciar ciclo
 cycleBanner();
+/* ===============================
+   MODAL ANSIEDAD
+   =============================== */
+
+function openAnsiedad() {
+  document.getElementById('modal-ansiedad').classList.add('active');
+}
+
+function closeAnsiedad() {
+  document.getElementById('modal-ansiedad').classList.remove('active');
+}
