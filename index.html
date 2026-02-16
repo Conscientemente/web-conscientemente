@@ -14,9 +14,10 @@
 
 <body>
 
-  <!-- FONDO LATERAL -->
+  <!-- FONDO -->
   <div class="page-background"></div>
 
+  <!-- CONTENIDO -->
   <div class="page-content">
 
     <!-- HEADER -->
@@ -35,7 +36,7 @@
           <li><a href="#">Sobre Conscientemente</a></li>
           <li><a href="#">Servicios</a></li>
           <li><a href="#">Contacto</a></li>
-          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#">Agenda</a></li>
         </ul>
 
       </nav>
@@ -44,21 +45,20 @@
     <!-- BANNER -->
     <section class="banner-wrapper">
 
-      <!-- Estado 1 -->
+      <!-- SLIDE LOGO -->
       <div class="banner-slide active">
         <img src="assets/images/logo-conscientemente.png"
-             alt="Conscientemente"
+             alt="Logo Conscientemente"
              class="banner-logo">
       </div>
 
-      <!-- Estado 2 -->
+      <!-- SLIDE SOCIALIZACIÓN -->
       <div class="banner-slide">
 
         <div class="banner-circle">
-          <img src="assets/images/banner-socializacion.png" alt="Socialización">
-
+          <img src="assets/images/ansiedad.png" alt="">
           <div class="banner-circle-text">
-            <h2>Espacio de socialización virtual gratuita</h2>
+            <h2>Espacio de socialización virtual</h2>
             <p>
               Un primer encuentro para escucharte, comprender tu situación
               y resolver dudas sobre el proceso.
@@ -67,7 +67,7 @@
         </div>
 
         <a href="#agenda" class="banner-button">
-          Agenda tu espacio de socialización →
+          Agenda tu espacio de socialización
         </a>
 
       </div>
@@ -84,91 +84,94 @@
           individuales.
         </p>
       </div>
-    </section>
 
-    <!-- ÁREAS -->
-    <section class="areas-block">
-      <h3>Áreas de acompañamiento terapéutico</h3>
+      <!-- ÁREAS -->
+      <div class="areas-block">
+        <h3>Áreas de acompañamiento terapéutico</h3>
 
-      <div class="areas-bubbles">
-        <div class="bubble"><span>Ansiedad</span></div>
-        <div class="bubble"><span>Fobia social</span></div>
-        <div class="bubble"><span>Depresión</span></div>
-        <div class="bubble"><span>Trastorno bipolar</span></div>
-        <div class="bubble"><span>Trastornos de personalidad</span></div>
-        <div class="bubble"><span>Conducta suicida y autolesiones</span></div>
-        <div class="bubble"><span>Trauma psicológico</span></div>
-        <div class="bubble"><span>Autoestima</span></div>
-        <div class="bubble"><span>Relaciones y dependencia emocional</span></div>
-        <div class="bubble"><span>Duelo</span></div>
-        <div class="bubble"><span>Adolescencia y crianza</span></div>
-        <div class="bubble"><span>Otros motivos de consulta</span></div>
+        <div class="areas-bubbles">
+
+          <div class="bubble" onclick="openAnsiedad()">
+            <span>Ansiedad</span>
+          </div>
+
+          <div class="bubble"><span>Fobia social</span></div>
+          <div class="bubble"><span>Depresión</span></div>
+          <div class="bubble"><span>Trastorno bipolar</span></div>
+          <div class="bubble"><span>Trastornos de personalidad</span></div>
+          <div class="bubble"><span>Conducta suicida y autolesiones</span></div>
+          <div class="bubble"><span>Trauma psicológico</span></div>
+          <div class="bubble"><span>Autoestima</span></div>
+          <div class="bubble"><span>Relaciones y dependencia emocional</span></div>
+          <div class="bubble"><span>Duelo</span></div>
+          <div class="bubble"><span>Adolescencia y crianza</span></div>
+          <div class="bubble"><span>Otros motivos de consulta</span></div>
+
+        </div>
+      </div>
+
+      <!-- REDES -->
+      <div class="social-icons">
+        <img src="assets/images/icon-instagram.png" alt="Instagram">
+        <img src="assets/images/icon-facebook.png" alt="Facebook">
+        <img src="assets/images/icon-gmail.png" alt="Correo">
       </div>
     </section>
 
-    <!-- REDES -->
-    <div class="social-icons">
-      <img src="assets/images/icon-instagram.png" alt="Instagram">
-      <img src="assets/images/icon-facebook.png" alt="Facebook">
-      <img src="assets/images/icon-gmail.png" alt="Correo">
-    </div>
+  </div>
 
-    <section id="agenda"></section>
+  <!-- MODAL ANSIEDAD -->
+  <div id="modal-ansiedad" class="modal-overlay">
+
+    <div class="modal-container">
+
+      <div class="modal-bg"
+           style="background-image:url('assets/images/ansiedad.png');"></div>
+
+      <div class="modal-content">
+
+        <h2 class="modal-title">Ansiedad</h2>
+
+        <div class="modal-text">
+          <p>
+            La ansiedad es una respuesta emocional natural ante situaciones que se
+            perciben como amenazantes o inciertas. Sin embargo, cuando esta respuesta
+            se intensifica, se vuelve persistente o interfiere con la vida cotidiana,
+            puede generar un malestar significativo a nivel emocional, cognitivo,
+            conductual y físico.
+          </p>
+
+          <p>
+            En Conscientemente, el acompañamiento psicológico en procesos de ansiedad
+            se orienta a comprender cómo se han construido los patrones de pensamiento,
+            emoción y comportamiento que mantienen el malestar, favoreciendo el
+            desarrollo de recursos personales que permitan una relación más flexible
+            y saludable con la experiencia ansiosa.
+          </p>
+        </div>
+
+        <div class="modal-actions">
+
+          <a href="https://wa.me/573118743911"
+             target="_blank"
+             class="modal-whatsapp">
+            Escríbenos por WhatsApp
+          </a>
+
+          <button class="modal-back" onclick="closeAnsiedad()">
+            ↩︎ Regresar
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
+  <!-- JS -->
   <script src="banner.js"></script>
+
 </body>
 </html>
-<!-- MODAL ANSIEDAD -->
-<div id="modal-ansiedad" class="modal-overlay">
-
-  <div class="modal-container">
-
-    <!-- Fondo ilustrado -->
-    <div class="modal-bg"
-         style="background-image: url('assets/images/ansiedad.png');"></div>
-
-    <!-- Contenido -->
-    <div class="modal-content">
-
-      <h2 class="modal-title">Ansiedad</h2>
-
-      <div class="modal-text">
-        <p>
-          La ansiedad es una respuesta emocional natural ante situaciones que se
-          perciben como amenazantes o inciertas. Sin embargo, cuando esta respuesta
-          se intensifica, se vuelve persistente o interfiere con la vida cotidiana,
-          puede generar un malestar significativo a nivel emocional, cognitivo,
-          conductual y físico.
-        </p>
-
-        <p>
-          En Conscientemente, el acompañamiento psicológico en procesos de ansiedad
-          se orienta a comprender cómo se han construido los patrones de pensamiento,
-          emoción y comportamiento que mantienen el malestar. El trabajo terapéutico
-          busca favorecer el desarrollo de recursos personales que permitan una
-          relación más flexible y saludable con la experiencia ansiosa, respetando
-          la historia, el ritmo y las necesidades de cada persona.
-        </p>
-      </div>
-
-      <!-- Botones -->
-      <div class="modal-actions">
-
-        <a href="https://wa.me/573118743911"
-           target="_blank"
-           class="modal-whatsapp">
-          Escríbenos por WhatsApp
-        </a>
-
-        <button class="modal-back" onclick="closeAnsiedad()">
-          ↩︎ Regresar
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
-</div>
