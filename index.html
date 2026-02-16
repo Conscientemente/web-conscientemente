@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conscientemente, atención psicológica</title>
 
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<div class="page-background"></div>
+  <!-- FONDO LATERAL -->
+  <div class="page-background"></div>
 
-<div class="page-content">
+  <div class="page-content">
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <nav class="nav">
-      <div class="brand-block">
-        <div class="brand-title">Conscientemente, atención psicológica</div>
-        <div class="brand-subtitle">
-          Acompañamiento terapéutico con evidencia y calidez humana
+    <!-- HEADER -->
+    <header class="site-header">
+      <nav class="nav">
+        <div class="brand-block">
+          <div class="brand-title">Conscientemente, atención psicológica</div>
+          <div class="brand-subtitle">
+            Acompañamiento terapéutico con evidencia y calidez humana
+          </div>
         </div>
-      </div>
 
-      <ul class="nav-menu">
-        <li><a href="#" class="active">Inicio</a></li>
-        <li><a href="#">Sobre Conscientemente</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Agenda</a></li>
-      </ul>
-    </nav>
-  </header>
+        <ul class="nav-menu">
+          <li><a href="#" class="active">Inicio</a></li>
+          <li><a href="#">Sobre Conscientemente</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Agenda</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- BANNER -->
-  <section class="banner-wrapper">
-
-    <!-- Slide 1 -->
-    <div class="banner-slide active">
-      <img src="assets/images/logo-conscientemente.png"
-           alt="Logo Conscientemente"
-           class="banner-logo">
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="banner-slide">
-      <div class="banner-content">
+    <!-- BANNER -->
+    <section class="banner">
+      <div class="banner-inner">
 
         <div class="banner-circle">
-          <img src="assets/images/socializacion.png" alt="Socialización">
-          <div class="banner-circle-text">
-            <h2>Espacio de socialización virtual</h2>
+          <div class="banner-content">
+            <h2>Espacio de<br>socialización virtual</h2>
             <p>
               Un primer encuentro para escucharte, comprender tu situación
               y resolver dudas sobre el proceso.
@@ -60,28 +53,24 @@
           </div>
         </div>
 
-        <a href="agenda.html" class="banner-button">
-          Agenda tu espacio de socialización →
-        </a>
+        <div class="banner-action">
+          <a href="#" class="btn-agenda">
+            Agenda tu espacio de socialización →
+          </a>
+        </div>
 
       </div>
-    </div>
+    </section>
 
-  </section>
-
-  <!-- BIENVENIDA -->
-  <section class="welcome-section">
-    <div class="welcome-text">
-      <p>
-        Bienvenidos. En Conscientemente ofrecemos un espacio de acompañamiento
-        psicológico orientado al bienestar emocional, basado en evidencia clínica
-        y en una relación terapéutica cercana, ética y respetuosa de los procesos
-        individuales.
+    <!-- BIENVENIDA (ASOMA SOLO LA PRIMERA PARTE) -->
+    <section class="welcome-section">
+      <p class="welcome-preview">
+        Bienvenidos. En Conscientemente ofrecemos un espacio de acompañamiento psicológico orientado al bienestar emocional…
       </p>
-    </div>
+    </section>
 
     <!-- ÁREAS -->
-    <div class="areas-block">
+    <section class="areas-block">
       <h3>Áreas de acompañamiento terapéutico</h3>
 
       <div class="areas-bubbles">
@@ -98,7 +87,7 @@
         <div class="bubble"><span>Adolescencia y crianza</span></div>
         <div class="bubble"><span>Otros motivos de consulta</span></div>
       </div>
-    </div>
+    </section>
 
     <!-- REDES -->
     <div class="social-icons">
@@ -107,10 +96,8 @@
       <img src="assets/images/icon-gmail.png" alt="Correo">
     </div>
 
-  </section>
+  </div>
 
-</div>
-
-<script src="banner.js"></script>
 </body>
 </html>
+
