@@ -1,11 +1,10 @@
-/* ================= RESET ================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================= FONDO ================= */
 .page-background {
   position: fixed;
   inset: 0;
@@ -23,21 +22,20 @@
 
 .page-content {
   font-family: 'Lora', serif;
-  font-size: 1.05rem;
   color: #5a5a5a;
   line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .site-header {
-  background-color: #faf9f6;
+  background: #faf9f6;
   box-shadow: 0 2px 10px rgba(0,0,0,.08);
   padding: 1.2rem 3rem;
 }
 
 .nav {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,142 +52,22 @@
   color: #6b4eff;
 }
 
-/* ================= MENÚ ================= */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 1.1rem;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #5a5a5a;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-  color: #6b4eff;
-  border-bottom-color: #6b4eff;
-}
-
-/* ================= BANNER ================= */
+/* BANNER */
 .banner-wrapper {
-  position: relative;
   height: 78vh;
-  max-height: 640px;
   min-height: 460px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  margin-bottom: -3.5rem;
 }
 
-.banner-slide {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity .8s ease;
-}
-
-.banner-slide.active {
-  opacity: 1;
-}
-
-.banner-logo {
-  max-width: 420px;
-}
-
-.banner-circle {
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 18px 38px rgba(107,78,255,.30);
-  position: relative;
-}
-
-.banner-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.banner-circle-text {
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.banner-circle-text h2 {
-  font-family: 'Dancing Script', cursive;
-  color: #3b4fa1;
-  font-size: 2.1rem;
-}
-
-.banner-circle-text p {
-  font-family: 'Lora', serif;
-  color: #2f3f80;
-}
-
-.banner-button {
-  margin-top: 1.6rem;
-  padding: .75rem 1.9rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #3b4fa1;
-  background:
-    linear-gradient(#e7f4f8,#f0f8fb) padding-box,
-    linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
-  border: 2px solid transparent;
-}
-
-/* ================= BIENVENIDA ================= */
-.welcome-section {
-  max-width: 1200px;
-  margin: 6rem auto 0;
-  padding: 0 2rem;
-}
-
-.welcome-text p {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: justify;
-}
-
-/* ================= ÁREAS ================= */
-.areas-block {
-  margin: 4rem auto;
-}
-
-.areas-block h3 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
-  text-align: center;
-  color: #6b4eff;
-  margin-bottom: 3rem;
-}
-
+/* ÁREAS */
 .areas-bubbles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
   gap: 2.5rem;
   max-width: 1000px;
-  margin: 0 auto;
-  justify-items: center;
+  margin: auto;
 }
 
 .bubble {
@@ -198,33 +76,32 @@
   border-radius: 50%;
   background:
     linear-gradient(#faf9f6,#faf9f6) padding-box,
-    linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
+    linear-gradient(90deg,rgba(123,108,246,.6),rgba(79,195,232,.6)) border-box;
   border: 2px solid transparent;
+  box-shadow: 0 12px 26px rgba(107,78,255,.22);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 10px 22px rgba(107,78,255,.25);
   transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .bubble:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(107,78,255,.35);
+  box-shadow: 0 22px 44px rgba(107,78,255,.32);
 }
 
 .bubble img {
-  width: 100px;
+  width: 105px;
   margin-bottom: .6rem;
 }
 
 .bubble span {
   color: #6b4eff;
-  font-size: .95rem;
 }
 
-/* ================= MODAL ================= */
+/* MODAL */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -232,7 +109,6 @@
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
 }
 
 .modal-overlay.active {
@@ -241,11 +117,11 @@
 
 .modal-box {
   background: #fff;
-  max-width: 600px;
-  width: 90%;
-  padding: 3rem;
-  border-radius: 32px;
-  box-shadow: 0 35px 70px rgba(107,78,255,.4);
+  max-width: 560px;
+  width: calc(100% - 4rem);
+  padding: 3rem 3.2rem;
+  border-radius: 36px;
+  box-shadow: 0 40px 80px rgba(107,78,255,.45);
   position: relative;
   overflow: hidden;
 }
@@ -254,37 +130,41 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("assets/images/ansiedad.png") center / 65% no-repeat;
+  background: url("assets/images/ansiedad.png") center/60% no-repeat;
   opacity: .08;
   filter: blur(2px);
-  pointer-events: none;
 }
 
 .modal-box h2 {
   font-family: 'Dancing Script', cursive;
-  color: #3b4fa1;
-  font-size: 2.6rem;
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: 2.6rem;
+  color: #3b4fa1;
+  margin-bottom: 1.8rem;
 }
 
 .modal-content p {
-  font-family: 'Lora', serif;
   text-align: justify;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
 }
 
-/* Botón WhatsApp */
+.modal-cta-text {
+  text-align: center;
+  margin-top: 1.8rem;
+  font-weight: 500;
+}
+
+/* CTA */
 .modal-whatsapp {
   display: inline-flex;
   align-items: center;
   gap: .6rem;
-  margin: 2rem auto 1.5rem;
+  margin: 1.6rem auto 1.8rem;
   padding: .65rem 1.6rem;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 600;
   color: #3b4fa1;
+  font-weight: 600;
   background:
     linear-gradient(#e7f4f8,#f0f8fb) padding-box,
     linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
@@ -292,21 +172,21 @@
 }
 
 .modal-whatsapp img {
-  width: 20px;
+  width: 24px;
 }
 
-/* Botón Regresar */
+/* REGRESAR */
 .modal-back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .4rem;
-  margin: 0 auto;
-  padding: .6rem 1.4rem;
-  border-radius: 999px;
-  background: transparent;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
   border: 2px solid #7b6cf6;
+  background: transparent;
   color: #7b6cf6;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   cursor: pointer;
 }
-
