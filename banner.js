@@ -1,9 +1,12 @@
+/* ===============================
+   BANNER ROTATIVO
+   =============================== */
+
 const slides = document.querySelectorAll('.banner-slide');
 let current = 0;
 
-// tiempos (ms)
-const logoTime = 2200;      // logo: 2.2 segundos
-const socialTime = 8000;   // socialización: lectura tranquila
+const logoTime = 2200;
+const socialTime = 8000;
 
 function showSlide(index) {
   slides.forEach(slide => slide.classList.remove('active'));
@@ -21,8 +24,8 @@ function cycleBanner() {
   }, delay);
 }
 
-// iniciar ciclo
 cycleBanner();
+
 /* ===============================
    MODAL ANSIEDAD
    =============================== */
