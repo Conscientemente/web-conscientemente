@@ -42,20 +42,13 @@
 
     <!-- BANNER -->
     <section class="banner-wrapper">
-
-      <!-- Estado 1 -->
       <div class="banner-slide active">
-        <img src="assets/images/logo-conscientemente.png"
-             alt="Conscientemente"
-             class="banner-logo">
+        <img src="assets/images/logo-conscientemente.png" alt="Conscientemente" class="banner-logo">
       </div>
 
-      <!-- Estado 2 -->
       <div class="banner-slide">
-
         <div class="banner-circle">
           <img src="assets/images/banner-socializacion.png" alt="Socialización">
-
           <div class="banner-circle-text">
             <h2>Espacio de socialización virtual gratuita</h2>
             <p>
@@ -68,9 +61,7 @@
         <a href="#agenda" class="banner-button">
           Agenda tu espacio de socialización →
         </a>
-
       </div>
-
     </section>
 
     <!-- BIENVENIDA -->
@@ -79,8 +70,7 @@
         <p>
           Bienvenidos. En Conscientemente ofrecemos un espacio de acompañamiento
           psicológico orientado al bienestar emocional, basado en evidencia clínica
-          y en una relación terapéutica cercana, ética y respetuosa de los procesos
-          individuales.
+          y en una relación terapéutica cercana, ética y respetuosa.
         </p>
       </div>
     </section>
@@ -90,7 +80,12 @@
       <h3>Áreas de acompañamiento terapéutico</h3>
 
       <div class="areas-bubbles">
-        <div class="bubble"><span>Ansiedad</span></div>
+        <!-- PILOTO: ANSIEDAD -->
+        <div class="bubble bubble-active" id="open-ansiedad">
+          <img src="assets/images/ansiedad.png" alt="Ansiedad">
+          <span>Ansiedad</span>
+        </div>
+
         <div class="bubble"><span>Fobia social</span></div>
         <div class="bubble"><span>Depresión</span></div>
         <div class="bubble"><span>Trastorno bipolar</span></div>
@@ -113,9 +108,48 @@
     </div>
 
     <section id="agenda"></section>
+  </div>
 
+  <!-- MODAL ANSIEDAD -->
+  <div class="modal-overlay" id="modal-ansiedad">
+    <div class="modal-box">
+      <div class="modal-bg"></div>
+
+      <h2>Ansiedad</h2>
+
+      <div class="modal-content">
+        <p>
+          La ansiedad es una respuesta emocional natural ante situaciones percibidas como amenazantes.
+          Se manifiesta a nivel cognitivo, emocional, fisiológico y conductual.
+        </p>
+
+        <p>
+          Cuando la ansiedad se vuelve persistente, intensa o interfiere con la vida cotidiana,
+          puede generar un alto nivel de malestar y afectar el funcionamiento personal, social y laboral.
+        </p>
+
+        <p>
+          Desde un enfoque cognitivo-conductual, el acompañamiento terapéutico se orienta a comprender
+          cómo los pensamientos, las emociones y las respuestas corporales interactúan y mantienen el malestar,
+          incorporando estrategias basadas en evidencia y adaptadas a cada persona.
+        </p>
+
+        <p>
+          El trabajo terapéutico incluye, entre otros aspectos, la identificación de pensamientos automáticos,
+          la regulación emocional, el manejo de síntomas físicos, el fortalecimiento de estrategias de afrontamiento
+          y la prevención de recaídas.
+        </p>
+      </div>
+
+      <a href="https://wa.me/573138743911" class="modal-whatsapp" target="_blank">
+        Agenda tu cita por WhatsApp
+      </a>
+
+      <button class="modal-back" id="close-ansiedad">Regresar</button>
+    </div>
   </div>
 
   <script src="banner.js"></script>
+  <script src="modal.js"></script>
 </body>
 </html>
