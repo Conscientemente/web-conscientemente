@@ -1,11 +1,11 @@
-const openBtn = document.getElementById('open-ansiedad');
-const modal = document.getElementById('modal-ansiedad');
-const closeBtn = document.getElementById('close-ansiedad');
+const openAnsiedad = document.getElementById("open-ansiedad");
+const modalAnsiedad = document.getElementById("modal-ansiedad");
+const closeAnsiedad = document.getElementById("close-ansiedad");
 
-openBtn.addEventListener('click', () => {
-  modal.classList.add('active');
+openAnsiedad.addEventListener("click", () => {
+  modalAnsiedad.classList.add("active");
 });
 
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
+closeAnsiedad.addEventListener("click", () => {
+  modalAnsiedad.classList.remove("active");
 });
