@@ -1,6 +1,6 @@
 /* ======================================================
    MODAL PILOTO DEFINITIVO – CONSCIENTEMENTE
-   Corrección de alineación de texto (justify real)
+   Ajuste fino de aire y legibilidad
    ====================================================== */
 
 .modal {
@@ -21,7 +21,7 @@
   pointer-events: auto;
 }
 
-/* Caja del modal */
+/* Caja */
 .modal-box {
   background: #ffffff;
   width: 90%;
@@ -50,17 +50,33 @@
 
 /* Cuerpo */
 .modal-body {
-  padding: 26px 30px;
+  padding: 28px 32px;
   overflow-y: auto;
   font-family: 'Lora', serif;
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.8;
   color: #333333;
 }
 
-/* 👇 ESTO ES LO QUE FALTABA */
+/* Párrafos */
 .modal-body p {
   text-align: justify;
+  margin-bottom: 18px;
+}
+
+/* Lista */
+.modal-body ul {
+  margin: 10px 0 20px 22px;
+}
+
+.modal-body li {
+  margin-bottom: 8px;
+}
+
+/* Cierre (CTA textual) */
+.modal-body p:last-of-type {
+  margin-top: 28px;
+  font-weight: 500;
 }
 
 /* Footer */
