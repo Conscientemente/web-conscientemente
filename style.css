@@ -216,23 +216,23 @@
   padding: 1rem;
 }
 
-/* REDES */
+/* REDES — AJUSTE DE TAMAÑO */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 4rem auto;
 }
 
 .social-icons img {
-  width: 34px;
-  opacity: .8;
-  transition: transform .2s ease, opacity .2s ease;
+  width: 44px;              /* ⬅️ AUMENTADO */
+  opacity: .85;
+  transition: transform .25s ease, opacity .25s ease;
 }
 
 .social-icons img:hover {
   opacity: 1;
-  transform: scale(1.12);
+  transform: scale(1.15);
 }
 
 /* RESPONSIVE */
@@ -249,5 +249,8 @@
   .banner-circle-text h2 {
     font-size: 1.9rem;
   }
-}
 
+  .social-icons img {
+    width: 40px;            /* ⬅️ un poco más pequeño en móvil */
+  }
+}
