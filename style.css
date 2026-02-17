@@ -23,9 +23,9 @@
 
 .page-content {
   font-family: 'Lora', serif;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: #5a5a5a;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* HEADER */
@@ -126,7 +126,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.6rem;
+  padding: 2.8rem;
   text-align: center;
   background: rgba(255,255,255,.6);
 }
@@ -145,10 +145,10 @@
 }
 
 .banner-button {
-  margin-top: 1.8rem;
-  padding: .75rem 1.9rem;
+  margin-top: 2rem;
+  padding: .85rem 2.2rem;
   border-radius: 999px;
-  font-size: .95rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   color: #3b4fa1;
@@ -160,8 +160,8 @@
 
 /* BIENVENIDA */
 .welcome-section {
-  max-width: 900px;
-  margin: 3rem auto 0;
+  max-width: 920px;
+  margin: 3.5rem auto 0;
   padding: 0 2rem;
 }
 
@@ -171,12 +171,12 @@
 
 /* ÁREAS */
 .areas-block {
-  margin: 4rem auto;
+  margin: 4.5rem auto;
 }
 
 .areas-block h3 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
+  font-size: 2.1rem;
   text-align: center;
   color: #6b4eff;
   margin-bottom: 3rem;
@@ -214,23 +214,25 @@
   padding: 1rem;
 }
 
-/* REDES — MUCHO MÁS GRANDES */
+/* REDES — AHORA SÍ, MUY GRANDES */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 3.2rem;
-  margin: 5rem auto;
+  gap: 3.8rem;
+  margin: 5.5rem auto;
 }
 
 .social-icons img {
-  width: 72px;                 /* ⬅️ AHORA SÍ, GRANDE */
+  width: 96px;               /* ⬅️ GRANDE DE VERDAD */
+  height: auto;
   opacity: 0.95;
+  cursor: pointer;
   transition: transform .25s ease, opacity .25s ease;
 }
 
 .social-icons img:hover {
   opacity: 1;
-  transform: scale(1.22);
+  transform: scale(1.25);
 }
 
 /* RESPONSIVE */
@@ -249,6 +251,6 @@
   }
 
   .social-icons img {
-    width: 60px;               /* ⬅️ grandes también en móvil */
+    width: 76px;            /* ⬅️ grandes también en móvil */
   }
 }
