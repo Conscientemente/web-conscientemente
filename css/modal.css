@@ -1,6 +1,6 @@
 /* ======================================================
    MODAL PILOTO DEFINITIVO – CONSCIENTEMENTE
-   Ajuste fino de aire y legibilidad
+   Botón WhatsApp integrado a identidad visual
    ====================================================== */
 
 .modal {
@@ -23,15 +23,42 @@
 
 /* Caja */
 .modal-box {
-  background: #ffffff;
+  position: relative;
   width: 90%;
   max-width: 760px;
   max-height: 85vh;
   border-radius: 18px;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagen de fondo */
+.modal-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/ansiedad.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  z-index: 1;
+}
+
+/* Capa blanca */
+.modal-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 2;
+}
+
+/* Contenido */
+.modal-header,
+.modal-body,
+.modal-footer {
+  position: relative;
+  z-index: 3;
 }
 
 /* Header */
@@ -58,13 +85,11 @@
   color: #333333;
 }
 
-/* Párrafos */
 .modal-body p {
   text-align: justify;
   margin-bottom: 18px;
 }
 
-/* Lista */
 .modal-body ul {
   margin: 10px 0 20px 22px;
 }
@@ -73,10 +98,41 @@
   margin-bottom: 8px;
 }
 
-/* Cierre (CTA textual) */
+/* CTA textual */
 .modal-body p:last-of-type {
-  margin-top: 28px;
+  margin-top: 30px;
+  margin-bottom: 22px;
   font-weight: 500;
+}
+
+/* === BOTÓN WHATSAPP REFINADO === */
+.modal-whatsapp {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 18px; /* mismo radio que la burbuja */
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #6b4eff,
+    #5840d6
+  );
+
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.35),
+    0 6px 14px rgba(107, 78, 255, 0.25);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-whatsapp:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.45),
+    0 8px 18px rgba(107, 78, 255, 0.35);
 }
 
 /* Footer */
