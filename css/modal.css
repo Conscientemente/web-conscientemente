@@ -21,14 +21,15 @@
   max-width: 480px;
   border-radius: 36px;
   box-shadow: 0 35px 90px rgba(107, 78, 255, 0.45);
-  position: relative;
   font-family: 'Lora', serif;
   color: #3b4fa1;
 
   display: flex;
   flex-direction: column;
+
   max-height: 78vh;
   overflow: hidden;
+  position: relative;
 }
 
 /* ================= BOTÓN ATRÁS ================= */
@@ -46,11 +47,10 @@
   color: #3b4fa1;
   font-size: 0.75rem;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 5;
 }
 
 /* ================= TÍTULO ================= */
@@ -58,9 +58,9 @@
   font-family: 'Dancing Script', cursive;
   font-size: 2.3rem;
   text-align: center;
-  margin-top: 3.2rem;
-  margin-bottom: 1.4rem;
+  margin: 3.2rem 0 1.2rem;
   color: #3b4fa1;
+  flex-shrink: 0;
   z-index: 2;
 }
 
@@ -75,13 +75,16 @@
   z-index: 1;
 }
 
-/* ================= CONTENIDO ================= */
+/* ================= CONTENIDO (ÚNICO SCROLL) ================= */
 .modal-content {
-  padding: 0 2.8rem 2rem;
+  padding: 0 2.8rem;
   overflow-y: auto;
   z-index: 2;
+
+  flex: 1;              /* ⬅️ CLAVE */
 }
 
+/* TEXTO */
 .modal-content p {
   text-align: justify;
   margin-bottom: 1.2rem;
@@ -89,16 +92,17 @@
   font-size: 0.98rem;
 }
 
-/* ================= FOOTER ================= */
+/* ================= FOOTER FIJO DENTRO ================= */
 .modal-footer {
   padding: 1.6rem 2.8rem 2.4rem;
   display: flex;
   justify-content: center;
-  z-index: 2;
   flex-shrink: 0;
+  z-index: 2;
+  background: #ffffff;
 }
 
-/* ================= BOTÓN WHATSAPP ================= */
+/* ================= BOTÓN WHATSAPP (SIN ÍCONO) ================= */
 .modal-whatsapp {
   display: inline-flex;
   align-items: center;
