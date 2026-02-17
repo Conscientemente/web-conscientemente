@@ -25,8 +25,9 @@
   font-family: 'Lora', serif;
   color: #3b4fa1;
 
+  display: flex;
+  flex-direction: column;
   max-height: 72vh;
-  overflow: hidden;
 }
 
 /* TÍTULO */
@@ -36,13 +37,14 @@
   text-align: center;
   padding: 2.2rem 2.6rem 1.2rem;
   color: #3b4fa1;
+  flex-shrink: 0;
 }
 
-/* CONTENIDO (SCROLL REAL) */
+/* CONTENIDO CON SCROLL (SOLO TEXTO) */
 .modal-content {
   padding: 0 2.6rem;
   overflow-y: auto;
-  max-height: calc(72vh - 240px); /* espacio real para footer */
+  flex: 1; /* ⬅️ ocupa el espacio disponible */
 }
 
 /* TEXTO */
@@ -56,14 +58,15 @@
 .modal-cta {
   text-align: center;
   font-weight: 500;
-  margin: 1.8rem 0 2rem;
+  margin: 1.8rem 0 1.4rem;
 }
 
-/* FOOTER */
+/* FOOTER (FUERA DEL SCROLL) */
 .modal-footer {
-  padding: 1.8rem 2.6rem 2.4rem;
+  padding: 1.6rem 2.6rem 2.2rem;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
   background: #ffffff;
 }
 
@@ -71,12 +74,11 @@
 .modal-whatsapp {
   display: inline-flex;
   align-items: center;
-  gap: 1.2rem;
-  padding: 1rem 2.6rem;
+  gap: 1rem;
+  padding: 0.95rem 2.4rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
   color: #3b4fa1;
 
   background:
@@ -86,9 +88,9 @@
   border: 2px solid transparent;
 }
 
-/* ICONO WHATSAPP — MÁS GRANDE */
+/* ICONO WHATSAPP (MISMO PESO QUE HOME) */
 .modal-whatsapp img {
-  width: 48px;   /* ⬅️ ahora sí, tamaño real */
+  width: 52px;   /* ⬅️ más grande y legible */
   height: auto;
 }
 
