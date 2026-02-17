@@ -1,4 +1,4 @@
-/* OVERLAY */
+/* ================= OVERLAY ================= */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -14,7 +14,7 @@
   display: flex;
 }
 
-/* CONTENEDOR MODAL */
+/* ================= CONTENEDOR MODAL ================= */
 .modal-box {
   background: #ffffff;
   width: 100%;
@@ -28,9 +28,32 @@
   display: flex;
   flex-direction: column;
   max-height: 72vh;
+
+  /* imagen de fondo sutil */
+  background-image: url("../assets/images/ansiedad.png");
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: 85%;              /* ⬅️ más grande */
+  background-blend-mode: multiply;
 }
 
-/* TÍTULO */
+/* capa blanca para que el texto respire */
+.modal-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 36px;
+  z-index: 0;
+}
+
+/* asegurar contenido sobre la capa */
+.modal-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= TÍTULO ================= */
 .modal-box h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 2.3rem;
@@ -40,41 +63,33 @@
   flex-shrink: 0;
 }
 
-/* CONTENIDO CON SCROLL (SOLO TEXTO) */
+/* ================= CONTENIDO ================= */
 .modal-content {
   padding: 0 2.6rem;
   overflow-y: auto;
-  flex: 1; /* ⬅️ ocupa el espacio disponible */
+  flex: 1;
 }
 
-/* TEXTO */
 .modal-content p {
   text-align: justify;
   margin-bottom: 1.1rem;
   line-height: 1.6;
 }
 
-/* CTA TEXTO */
-.modal-cta {
-  text-align: center;
-  font-weight: 500;
-  margin: 1.8rem 0 1.4rem;
-}
-
-/* FOOTER (FUERA DEL SCROLL) */
+/* ================= FOOTER ================= */
 .modal-footer {
   padding: 1.6rem 2.6rem 2.2rem;
   display: flex;
   justify-content: center;
   flex-shrink: 0;
-  background: #ffffff;
+  background: transparent;
 }
 
-/* BOTÓN WHATSAPP */
+/* ================= BOTÓN WHATSAPP ================= */
 .modal-whatsapp {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   padding: 0.95rem 2.4rem;
   border-radius: 999px;
   text-decoration: none;
@@ -88,21 +103,28 @@
   border: 2px solid transparent;
 }
 
-/* ICONO WHATSAPP (MISMO PESO QUE HOME) */
+/* icono whatsapp — ahora sí visible */
 .modal-whatsapp img {
-  width: 52px;   /* ⬅️ más grande y legible */
+  width: 56px;              /* ⬅️ más grande */
   height: auto;
 }
 
-/* BOTÓN REGRESAR */
+/* ================= BOTÓN REGRESAR ================= */
 .modal-back {
   position: absolute;
   top: 1.4rem;
   left: 1.6rem;
-  background: none;
-  border: none;
-  font-family: 'Lora', serif;
-  font-size: 0.95rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
+  border: 2px solid transparent;
+  font-size: 1rem;
   color: #6b4eff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
