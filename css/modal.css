@@ -2,77 +2,102 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(40, 38, 60, 0.55);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 6000;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .modal-overlay.active {
   display: flex;
 }
 
-/* ================= MODAL ================= */
+/* ================= MODAL BOX ================= */
 .modal-box {
   background: #ffffff;
   width: 100%;
-  max-width: 460px;
+  max-width: 480px;
   border-radius: 36px;
-  box-shadow: 0 40px 90px rgba(107, 78, 255, 0.45);
+  box-shadow: 0 35px 90px rgba(107, 78, 255, 0.45);
   position: relative;
   font-family: 'Lora', serif;
   color: #3b4fa1;
-
   display: flex;
   flex-direction: column;
-  max-height: 72vh;
+  max-height: 78vh;
   overflow: hidden;
 }
 
-/* ================= IMAGEN DECORATIVA ================= */
-.modal-box::before {
-  content: "";
+/* ================= BOTÓN ATRÁS ================= */
+.modal-back {
   position: absolute;
-  inset: 0;
-  background: url("../assets/images/ansiedad.png") center 30% / 320px no-repeat;
-  opacity: 0.07;
-  pointer-events: none;
+  top: 18px;
+  left: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
+  color: #3b4fa1;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ================= TÍTULO ================= */
 .modal-box h2 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   text-align: center;
-  padding: 3.2rem 2.6rem 1.2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 1.4rem;
   color: #3b4fa1;
-  position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+/* ================= IMAGEN FONDO ================= */
+.modal-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/ansiedad.png") center / 70% no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 /* ================= CONTENIDO ================= */
 .modal-content {
-  padding: 0 2.6rem;
+  padding: 0 2.8rem;
   overflow-y: auto;
-  position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .modal-content p {
   text-align: justify;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.2rem;
   line-height: 1.65;
+  font-size: 0.98rem;
+}
+
+/* ================= CTA TEXTO ================= */
+.modal-cta {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-weight: 500;
 }
 
 /* ================= FOOTER ================= */
 .modal-footer {
-  padding: 1.6rem 2.6rem 2.2rem;
+  padding: 1.6rem 2.8rem 2.4rem;
   display: flex;
   justify-content: center;
-  position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* ================= BOTÓN WHATSAPP ================= */
@@ -80,50 +105,19 @@
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  .modal-whatsapp {
-  padding: 0.85rem 1.6rem;
+  padding: 0.95rem 2.6rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
   color: #3b4fa1;
-
   background:
     linear-gradient(#f0f8fb, #f0f8fb) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
-
   border: 2px solid transparent;
 }
 
-/* ÍCONO WHATSAPP */
+/* ICONO WHATSAPP */
 .modal-whatsapp img {
-  width: 66px;
+  width: 36px;
   height: auto;
-}
-
-/* ================= BOTÓN REGRESAR ================= */
-.modal-back {
-  position: absolute;
-  top: 1.4rem;
-  left: 1.6rem;
-
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
-
-  border: 2px solid transparent;
-
-  font-family: 'Lora', serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #6b4eff;
-
-  cursor: pointer;
 }
