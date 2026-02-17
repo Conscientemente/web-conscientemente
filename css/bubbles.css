@@ -29,11 +29,14 @@
   position: relative;
 }
 
-/* 🔹 IMAGEN GRANDE (PROTAGONISTA) */
+/* 🔥 AQUÍ ESTÁ LA CLAVE 🔥 */
 .bubble img {
-  width: 125px;      /* ⬅️ AQUÍ está el cambio fuerte */
+  width: 135px;          /* IMAGEN GRANDE */
   height: auto;
-  margin-bottom: 12px;
+  max-width: none;      /* ⬅️ rompe el límite global */
+  max-height: none;
+  margin-bottom: 10px;
+  display: block;
 }
 
 /* Texto */
@@ -44,7 +47,7 @@
   text-align: center;
 }
 
-/* 🔹 HOVER SUAVE, CLARO, 3D */
+/* Hover 3D */
 .bubble:hover {
   background: radial-gradient(
     circle at top left,
