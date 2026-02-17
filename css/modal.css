@@ -21,15 +21,13 @@
   max-width: 480px;
   border-radius: 36px;
   box-shadow: 0 35px 90px rgba(107, 78, 255, 0.45);
+  position: relative;
   font-family: 'Lora', serif;
   color: #3b4fa1;
-
   display: flex;
   flex-direction: column;
-
   max-height: 78vh;
   overflow: hidden;
-  position: relative;
 }
 
 /* ================= BOTÓN ATRÁS ================= */
@@ -45,12 +43,11 @@
     linear-gradient(#ffffff, #ffffff) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
   color: #3b4fa1;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 5;
 }
 
 /* ================= TÍTULO ================= */
@@ -58,9 +55,9 @@
   font-family: 'Dancing Script', cursive;
   font-size: 2.3rem;
   text-align: center;
-  margin: 3.2rem 0 1.2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 1.4rem;
   color: #3b4fa1;
-  flex-shrink: 0;
   z-index: 2;
 }
 
@@ -69,22 +66,18 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../assets/images/ansiedad.png") center / 65% no-repeat;
+  background: url("../assets/images/ansiedad.png") center / 70% no-repeat;
   opacity: 0.08;
   pointer-events: none;
-  z-index: 1;
 }
 
-/* ================= CONTENIDO (ÚNICO SCROLL) ================= */
+/* ================= CONTENIDO ================= */
 .modal-content {
   padding: 0 2.8rem;
   overflow-y: auto;
   z-index: 2;
-
-  flex: 1;              /* ⬅️ CLAVE */
 }
 
-/* TEXTO */
 .modal-content p {
   text-align: justify;
   margin-bottom: 1.2rem;
@@ -92,31 +85,39 @@
   font-size: 0.98rem;
 }
 
-/* ================= FOOTER FIJO DENTRO ================= */
+/* ================= CTA TEXTO ================= */
+.modal-cta {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-weight: 500;
+}
+
+/* ================= FOOTER ================= */
 .modal-footer {
   padding: 1.6rem 2.8rem 2.4rem;
   display: flex;
   justify-content: center;
-  flex-shrink: 0;
   z-index: 2;
-  background: #ffffff;
 }
 
-/* ================= BOTÓN WHATSAPP (SIN ÍCONO) ================= */
+/* ================= BOTÓN WHATSAPP ================= */
 .modal-whatsapp {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.9rem 2.4rem;
+  gap: 1rem;
+  padding: 0.95rem 2.6rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
   color: #3b4fa1;
-
   background:
     linear-gradient(#f0f8fb, #f0f8fb) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
-
   border: 2px solid transparent;
+}
+
+/* ICONO WHATSAPP */
+.modal-whatsapp img {
+  width: 36px;
+  height: auto;
 }
