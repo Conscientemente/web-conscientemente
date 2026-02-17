@@ -14,7 +14,7 @@
   display: flex;
 }
 
-/* ================= MODAL BOX ================= */
+/* ================= MODAL ================= */
 .modal-box {
   background: #ffffff;
   width: 100%;
@@ -48,6 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 
 /* ================= TÍTULO ================= */
@@ -55,8 +56,7 @@
   font-family: 'Dancing Script', cursive;
   font-size: 2.3rem;
   text-align: center;
-  margin-top: 3.2rem;
-  margin-bottom: 1.4rem;
+  margin: 3.4rem 0 1.4rem;
   color: #3b4fa1;
   z-index: 2;
 }
@@ -73,7 +73,7 @@
 
 /* ================= CONTENIDO ================= */
 .modal-content {
-  padding: 0 2.8rem 2.8rem;
+  padding: 0 2.8rem 2.2rem;
   overflow-y: auto;
   z-index: 2;
 }
@@ -87,30 +87,35 @@
 
 /* ================= FOOTER ================= */
 .modal-footer {
-  padding: 1.6rem 2.8rem 2.4rem;
+  padding: 1.4rem 2.8rem 2.4rem;
   display: flex;
   justify-content: center;
   z-index: 2;
 }
 
-/* ================= BOTÓN WHATSAPP (CONTROL TOTAL) ================= */
+/* ================= BOTÓN WHATSAPP (ANULACIÓN TOTAL) ================= */
 .modal-whatsapp {
-  display: inline-flex !important;
+  /* ⬅️ ESTA ES LA CLAVE */
+  position: static !important;
+  inset: auto !important;
   width: auto !important;
+  height: auto !important;
   max-width: none !important;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
 
   padding: 0.85rem 2.2rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  color: #3b4fa1;
+  white-space: nowrap;
 
+  color: #3b4fa1;
   background:
     linear-gradient(#f0f8fb, #f0f8fb) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
-
   border: 2px solid transparent;
-  text-align: center;
-  white-space: nowrap;
 }
