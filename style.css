@@ -214,16 +214,16 @@
   padding: 1rem;
 }
 
-/* REDES — AHORA SÍ, MUY GRANDES */
+/* REDES — MÁS GRANDES AÚN */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 3.8rem;
-  margin: 5.5rem auto;
+  gap: 4.5rem;
+  margin: 6rem auto;
 }
 
 .social-icons img {
-  width: 96px;               /* ⬅️ GRANDE DE VERDAD */
+  width: 120px;            /* ⬅️ AÚN MÁS GRANDES */
   height: auto;
   opacity: 0.95;
   cursor: pointer;
@@ -251,6 +251,6 @@
   }
 
   .social-icons img {
-    width: 76px;            /* ⬅️ grandes también en móvil */
+    width: 90px;           /* ⬅️ GRANDES TAMBIÉN EN MÓVIL */
   }
 }
