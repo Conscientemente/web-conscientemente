@@ -1,9 +1,8 @@
 /* ======================================================
-   MODAL AISLADO – LIMPIO Y ESTABLE
-   Proyecto: Conscientemente
+   MODAL PILOTO DEFINITIVO – CONSCIENTEMENTE
+   Base sólida para todas las burbujas
    ====================================================== */
 
-/* Overlay */
 .modal {
   position: fixed;
   inset: 0;
@@ -17,17 +16,16 @@
   z-index: 9999;
 }
 
-/* Activo */
 .modal.active {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Caja */
+/* Caja del modal */
 .modal-box {
   background: #ffffff;
   width: 90%;
-  max-width: 720px;
+  max-width: 760px;
   max-height: 85vh;
   border-radius: 18px;
   display: flex;
@@ -38,45 +36,48 @@
 
 /* Header */
 .modal-header {
-  padding: 22px 26px;
+  padding: 22px 28px;
   border-bottom: 1px solid #e6e6e6;
+  text-align: center;
 }
 
 .modal-header h2 {
   margin: 0;
   font-family: 'Dancing Script', cursive;
-  font-size: 32px;
+  font-size: 34px;
   color: #6b4eff;
 }
 
-/* Cuerpo con scroll */
+/* Cuerpo del contenido */
 .modal-body {
-  padding: 24px 26px;
+  padding: 26px 30px;
   overflow-y: auto;
   font-family: 'Lora', serif;
   font-size: 16px;
-  line-height: 1.7;
-  color: #333;
+  line-height: 1.75;
+  color: #333333;
+  text-align: justify;              /* 👈 AJUSTE CLAVE */
 }
 
 /* Footer */
 .modal-footer {
-  padding: 16px 26px;
+  padding: 18px 28px;
   border-top: 1px solid #e6e6e6;
   display: flex;
   justify-content: flex-end;
 }
 
-/* Botón */
+/* Botón Atrás */
 .modal-close {
   background: #6b4eff;
-  color: #fff;
+  color: #ffffff;
   border: none;
-  border-radius: 8px;
-  padding: 10px 22px;
+  border-radius: 10px;
+  padding: 10px 24px;
   font-family: 'Lora', serif;
   font-size: 14px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .modal-close:hover {
