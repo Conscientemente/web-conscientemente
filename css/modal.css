@@ -14,11 +14,9 @@
   display: flex;
 }
 
-/* ================= CAJA MODAL ================= */
+/* ================= MODAL ================= */
 .modal-box {
-  background:
-    url("../assets/images/ansiedad.png") center 20% / 140px no-repeat,
-    #ffffff;
+  background: #ffffff;
   width: 100%;
   max-width: 460px;
   border-radius: 36px;
@@ -30,6 +28,17 @@
   display: flex;
   flex-direction: column;
   max-height: 72vh;
+  overflow: hidden;
+}
+
+/* ================= IMAGEN DECORATIVA ================= */
+.modal-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/ansiedad.png") center 22% / 180px no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 /* ================= TÍTULO ================= */
@@ -37,15 +46,18 @@
   font-family: 'Dancing Script', cursive;
   font-size: 2.4rem;
   text-align: center;
-  padding: 3.2rem 2.6rem 1.4rem;
+  padding: 3.2rem 2.6rem 1.2rem;
   color: #3b4fa1;
-  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* ================= CONTENIDO ================= */
 .modal-content {
   padding: 0 2.6rem;
   overflow-y: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .modal-content p {
@@ -56,10 +68,11 @@
 
 /* ================= FOOTER ================= */
 .modal-footer {
-  padding: 1.6rem 2.6rem 2.4rem;
+  padding: 1.6rem 2.6rem 2.2rem;
   display: flex;
   justify-content: center;
-  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* ================= BOTÓN WHATSAPP ================= */
@@ -67,20 +80,22 @@
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2.6rem;
+  padding: 0.85rem 2.2rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
   color: #3b4fa1;
+
   background:
     linear-gradient(#f0f8fb, #f0f8fb) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
+
   border: 2px solid transparent;
 }
 
 /* ÍCONO WHATSAPP */
 .modal-whatsapp img {
-  width: 42px;
+  width: 34px;
   height: auto;
 }
 
@@ -100,4 +115,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
