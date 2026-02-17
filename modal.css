@@ -1,0 +1,94 @@
+/* OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 6000;
+}
+
+/* ACTIVO */
+.modal-overlay.active {
+  display: flex;
+}
+
+/* CAJA MODAL */
+.modal-box {
+  background: #ffffff;
+  max-width: 560px;
+  width: 90%;
+  padding: 3.2rem;
+  border-radius: 36px;
+  box-shadow: 0 40px 90px rgba(107, 78, 255, 0.45);
+  position: relative;
+  font-family: 'Lora', serif;
+  color: #3b4fa1;
+}
+
+/* TÍTULO */
+.modal-box h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #3b4fa1;
+}
+
+/* TEXTO */
+.modal-content p {
+  text-align: justify;
+  margin-bottom: 1.1rem;
+  line-height: 1.65;
+}
+
+/* CTA */
+.modal-cta {
+  text-align: center;
+  font-weight: 500;
+  margin: 2.2rem 0 1.6rem;
+}
+
+/* BOTÓN WHATSAPP */
+.modal-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #3b4fa1;
+
+  background:
+    linear-gradient(#f0f8fb, #f0f8fb) padding-box,
+    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
+
+  border: 2px solid transparent;
+}
+
+/* ICONO WHATSAPP */
+.modal-whatsapp img {
+  width: 36px;
+  height: auto;
+}
+
+/* CONTENEDOR BOTÓN */
+.modal-whatsapp-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* REGRESAR */
+.modal-back {
+  position: absolute;
+  left: 1.8rem;
+  top: 1.6rem;
+  background: none;
+  border: none;
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  color: #6b4eff;
+  cursor: pointer;
+}
