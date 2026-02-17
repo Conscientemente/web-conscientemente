@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
 body {
   font-family: 'Lora', serif;
   color: #3b4fa1;
+  overflow-x: hidden;
 }
 
 /* FONDO */
@@ -49,25 +51,7 @@ body {
   color: #6b4eff;
 }
 
-.nav-menu {
-  display: flex;
-  gap: 1.2rem;
-  list-style: none;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #555;
-  border-bottom: 2px solid transparent;
-}
-
-.nav-menu a.active,
-.nav-menu a:hover {
-  color: #6b4eff;
-  border-bottom-color: #6b4eff;
-}
-
-/* BANNER */
+/* BANNER (NO TOCADO) */
 .banner-wrapper {
   min-height: 520px;
   display: flex;
@@ -91,42 +75,6 @@ body {
   opacity: 1;
 }
 
-.banner-circle {
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(107,78,255,.35);
-  margin-bottom: 1.5rem;
-}
-
-.banner-circle-text {
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,.65);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem;
-  text-align: center;
-}
-
-.banner-circle-text h2 {
-  font-family: 'Dancing Script';
-  font-size: 2.2rem;
-}
-
-.banner-button {
-  padding: .8rem 2rem;
-  border-radius: 999px;
-  background:
-    linear-gradient(#f0f8fb,#f0f8fb) padding-box,
-    linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
-  border: 2px solid transparent;
-  text-decoration: none;
-  color: #3b4fa1;
-}
-
 /* BIENVENIDA */
 .welcome-section {
   max-width: 900px;
@@ -144,14 +92,7 @@ body {
   margin-bottom: 3rem;
 }
 
-.areas-bubbles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-  gap: 2.5rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
+/* BURBUJAS 3D */
 .bubble-3d {
   width: 180px;
   height: 180px;
@@ -180,21 +121,7 @@ body {
   transform: translateY(-8px);
 }
 
-.bubble img, .bubble span {
-  position: relative;
-  z-index: 2;
-}
-
-.bubble img {
-  width: 95px;
-  margin-bottom: .6rem;
-}
-
-.bubble span {
-  color: #6b4eff;
-}
-
-/* MODAL */
+/* MODAL (AHORA SÍ CONTENIDO) */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -216,60 +143,22 @@ body {
   border-radius: 40px;
   box-shadow: 0 40px 90px rgba(107,78,255,.45);
   position: relative;
+  overflow: hidden; /* 🔑 CLAVE */
 }
 
+/* FONDO DEL MODAL — BIEN HECHO */
 .modal-box::before {
   content: "";
   position: absolute;
-  inset: -20%;
-  background: url("assets/images/ansiedad.png") center/110% no-repeat;
-  opacity: .12;
-  filter: blur(2px);
+  inset: 0;
+  background: url("assets/images/ansiedad.png") center/70% no-repeat;
+  opacity: .08;
+  filter: blur(1px);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.modal-box h2 {
-  font-family: 'Dancing Script';
-  text-align: center;
-  font-size: 2.6rem;
-}
-
-.modal-text p {
-  margin-bottom: 1rem;
-  text-align: justify;
-}
-
-.modal-cta {
-  text-align: center;
-  margin: 2rem 0 1.5rem;
-}
-
-.modal-whatsapp {
-  display: flex;
-  align-items: center;
-  gap: .8rem;
-  justify-content: center;
-  margin: auto;
-  padding: .8rem 2rem;
-  border-radius: 999px;
-  background:
-    linear-gradient(#f0f8fb,#f0f8fb) padding-box,
-    linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
-  border: 2px solid transparent;
-  text-decoration: none;
-  color: #3b4fa1;
-}
-
-.modal-whatsapp img {
-  width: 34px;
-}
-
-.modal-back {
-  position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
-  background: none;
-  border: none;
-  color: #6b4eff;
-  font-size: 1rem;
-  cursor: pointer;
+.modal-box > * {
+  position: relative;
+  z-index: 1;
 }
