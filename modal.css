@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   z-index: 6000;
+  padding: 2.5rem; /* aire con bordes */
 }
 
 /* ACTIVO */
@@ -17,22 +18,24 @@
 /* CAJA MODAL */
 .modal-box {
   background: #ffffff;
-  max-width: 560px;
-  width: 90%;
-  padding: 3.2rem;
+  width: 100%;
+  max-width: 480px;          /* 🔽 más pequeño */
+  max-height: 80vh;          /* 🔽 no ocupa toda la pantalla */
+  padding: 2.8rem 2.6rem;
   border-radius: 36px;
-  box-shadow: 0 40px 90px rgba(107, 78, 255, 0.45);
+  box-shadow: 0 35px 80px rgba(107, 78, 255, 0.45);
   position: relative;
   font-family: 'Lora', serif;
   color: #3b4fa1;
+  overflow-y: auto;          /* scroll solo si es necesario */
 }
 
 /* TÍTULO */
 .modal-box h2 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   text-align: center;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.6rem;
   color: #3b4fa1;
 }
 
@@ -40,22 +43,27 @@
 .modal-content p {
   text-align: justify;
   margin-bottom: 1.1rem;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 /* CTA */
 .modal-cta {
   text-align: center;
   font-weight: 500;
-  margin: 2.2rem 0 1.6rem;
+  margin: 2rem 0 1.4rem;
 }
 
 /* BOTÓN WHATSAPP */
+.modal-whatsapp-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .modal-whatsapp {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2.6rem;
+  padding: 0.95rem 2.4rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
@@ -70,14 +78,8 @@
 
 /* ICONO WHATSAPP */
 .modal-whatsapp img {
-  width: 36px;
+  width: 40px;               /* ⬆️ icono bien visible */
   height: auto;
-}
-
-/* CONTENEDOR BOTÓN */
-.modal-whatsapp-wrapper {
-  display: flex;
-  justify-content: center;
 }
 
 /* REGRESAR */
