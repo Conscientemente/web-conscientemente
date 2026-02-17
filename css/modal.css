@@ -1,6 +1,6 @@
 /* ======================================================
    MODAL PILOTO DEFINITIVO – CONSCIENTEMENTE
-   Fondo visible + lectura protegida + scroll estable
+   Botón WhatsApp visible + fondo + scroll OK
    ====================================================== */
 
 .modal {
@@ -34,7 +34,7 @@
   flex-direction: column;
 }
 
-/* Imagen de fondo */
+/* Fondo imagen */
 .modal-box::before {
   content: "";
   position: absolute;
@@ -42,20 +42,19 @@
   background-image: url("../assets/images/ansiedad.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.18;              /* 👈 AHORA SÍ SE VE */
+  opacity: 0.18;
   z-index: 1;
 }
 
-/* Capa blanca translúcida */
 .modal-box::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.82); /* 👈 BAJAMOS OPACIDAD */
+  background: rgba(255, 255, 255, 0.82);
   z-index: 2;
 }
 
-/* Contenido */
+/* Contenido encima */
 .modal-header,
 .modal-body,
 .modal-footer {
@@ -110,27 +109,24 @@
   font-weight: 500;
 }
 
-/* Botón WhatsApp */
-.modal-whatsapp {
+/* ===== BOTÓN WHATSAPP (PRIORIDAD ALTA) ===== */
+.modal-body .modal-whatsapp {
   display: inline-block;
+  margin-top: 8px;
   padding: 14px 26px;
   border-radius: 18px;
-  text-decoration: none;
+  text-decoration: none !important;
   font-family: 'Lora', serif;
   font-size: 14px;
-  color: #ffffff;
+  color: #ffffff !important;
+
   background: linear-gradient(135deg, #6b4eff, #5840d6);
   box-shadow:
     inset 0 2px 6px rgba(255, 255, 255, 0.35),
     0 6px 14px rgba(107, 78, 255, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.modal-whatsapp:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    inset 0 2px 6px rgba(255, 255, 255, 0.45),
-    0 8px 18px rgba(107, 78, 255, 0.35);
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Footer */
