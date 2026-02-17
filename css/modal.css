@@ -14,14 +14,14 @@
   display: flex;
 }
 
-/* ================= MODAL ================= */
+/* ================= MODAL BOX ================= */
 .modal-box {
-  position: relative;
   background: #ffffff;
   width: 100%;
   max-width: 480px;
   border-radius: 36px;
   box-shadow: 0 35px 90px rgba(107, 78, 255, 0.45);
+  position: relative;
   font-family: 'Lora', serif;
   color: #3b4fa1;
   display: flex;
@@ -30,33 +30,24 @@
   overflow: hidden;
 }
 
-/* ================= FONDO ILUSTRACIÓN ================= */
-.modal-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../assets/images/ansiedad.png") center 55% / 65% no-repeat;
-  opacity: 0.07;
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* ================= BOTÓN ATRÁS ================= */
 .modal-back {
   position: absolute;
   top: 18px;
   left: 18px;
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
+  border: 2px solid transparent;
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
-  border: 2px solid transparent;
   color: #3b4fa1;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   cursor: pointer;
-  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ================= TÍTULO ================= */
@@ -64,9 +55,20 @@
   font-family: 'Dancing Script', cursive;
   font-size: 2.3rem;
   text-align: center;
-  margin: 3.6rem 0 1.6rem;
+  margin-top: 3.2rem;
+  margin-bottom: 1.4rem;
   color: #3b4fa1;
   z-index: 2;
+}
+
+/* ================= IMAGEN FONDO ================= */
+.modal-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/ansiedad.png") center / 70% no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 /* ================= CONTENIDO ================= */
@@ -83,35 +85,32 @@
   font-size: 0.98rem;
 }
 
+/* ================= CTA TEXTO ================= */
+.modal-cta {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-weight: 500;
+}
+
 /* ================= FOOTER ================= */
 .modal-footer {
-  padding: 1.8rem 2.8rem 2.6rem;
+  padding: 1.6rem 2.8rem 2.4rem;
   display: flex;
   justify-content: center;
   z-index: 2;
 }
 
-/* ================= BOTÓN WHATSAPP ================= */
+/* ================= BOTÓN WHATSAPP (SOLO TEXTO) ================= */
 .modal-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 2.6rem;
+  display: inline-block;
+  padding: 0.95rem 2.6rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
   color: #3b4fa1;
   background:
     linear-gradient(#f0f8fb, #f0f8fb) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
   border: 2px solid transparent;
-}
-
-/* ================= ÍCONO WHATSAPP SVG ================= */
-.modal-whatsapp::before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background: no-repeat center / contain
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%233b4fa1' d='M380.9 97.1C339 55.1 283.2 32 224.8 32 100.3 32-.5 132.3 0 256c.2 45.5 12.2 89.6 34.8 128L0 480l99.6-32.7c36.4 19.9 77.4 30.4 119.3 30.4h.1c124.5 0 225.3-100.3 225.3-223.8 0-59.2-23.1-114.8-63.7-156.8z'/%3E%3C/svg%3E");
 }
