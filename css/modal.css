@@ -35,15 +35,15 @@
   position: absolute;
   top: 18px;
   left: 18px;
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 2px solid transparent;
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
   color: #3b4fa1;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@
 
 /* ================= CONTENIDO ================= */
 .modal-content {
-  padding: 0 2.8rem 6.5rem; /* ⬅️ CLAVE: espacio para el botón */
+  padding: 0 2.8rem 2.8rem;
   overflow-y: auto;
   z-index: 2;
 }
@@ -85,13 +85,6 @@
   font-size: 0.98rem;
 }
 
-/* ================= CTA TEXTO ================= */
-.modal-cta {
-  text-align: center;
-  margin-top: 1.6rem;
-  font-weight: 500;
-}
-
 /* ================= FOOTER ================= */
 .modal-footer {
   padding: 1.6rem 2.8rem 2.4rem;
@@ -100,18 +93,24 @@
   z-index: 2;
 }
 
-/* ================= BOTÓN WHATSAPP ================= */
+/* ================= BOTÓN WHATSAPP (CONTROL TOTAL) ================= */
 .modal-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.95rem 2.6rem;
+  display: inline-flex !important;
+  width: auto !important;
+  max-width: none !important;
+
+  padding: 0.85rem 2.2rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
   color: #3b4fa1;
+
   background:
     linear-gradient(#f0f8fb, #f0f8fb) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
+
   border: 2px solid transparent;
+  text-align: center;
+  white-space: nowrap;
 }
