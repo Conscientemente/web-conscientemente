@@ -8,7 +8,7 @@
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- CSS BASE (OBLIGATORIO) -->
+  <!-- CSS BASE -->
   <link rel="stylesheet" href="style.css">
 
   <!-- CSS ESPECÍFICOS -->
@@ -106,14 +106,16 @@
 
 </div>
 
-<!-- ================= MODAL ================= -->
+<!-- ================= MODAL (ALINEADO CON CSS Y JS) ================= -->
 
-<div class="modal-overlay" id="modal-ansiedad">
-  <div class="modal-box">
+<div class="modal" id="modal-ansiedad">
+  <div class="modal-content">
 
-    <h2>Ansiedad</h2>
+    <div class="modal-header">
+      <h2>Ansiedad</h2>
+    </div>
 
-    <div class="modal-content">
+    <div class="modal-body">
       <p>
         La ansiedad es una respuesta emocional natural ante situaciones percibidas
         como amenazantes. Puede manifestarse a nivel cognitivo, emocional,
@@ -143,13 +145,8 @@
     </div>
 
     <div class="modal-footer">
-      <a href="https://wa.me/573138743911" target="_blank" class="modal-whatsapp">
-        <img src="assets/images/logo-whatsapp.png" alt="WhatsApp">
-        Agenda tu cita por WhatsApp
-      </a>
+      <button class="modal-close" id="close-ansiedad">Atrás</button>
     </div>
-
-    <button class="modal-back" id="close-ansiedad">← Atrás</button>
 
   </div>
 </div>
