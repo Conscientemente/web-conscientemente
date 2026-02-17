@@ -10,154 +10,109 @@
 
   <!-- CSS base -->
   <link rel="stylesheet" href="style.css">
-  <!-- CSS modal -->
-  <link rel="stylesheet" href="modal.css">
+
+  <!-- CSS burbujas (PASO 2) -->
+  <link rel="stylesheet" href="css/bubbles.css">
 </head>
 
 <body>
 
-<div class="page-background"></div>
+  <!-- FONDO -->
+  <div class="page-background"></div>
 
-<div class="page-content">
+  <div class="page-content">
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <nav class="nav">
+    <!-- HEADER -->
+    <header class="site-header">
+      <nav class="nav">
 
-      <div class="brand-block">
-        <div class="brand-title">Conscientemente, atención psicológica</div>
-        <div class="brand-subtitle">
-          Acompañamiento terapéutico con evidencia y calidez humana
+        <div class="brand-block">
+          <div class="brand-title">Conscientemente, atención psicológica</div>
+          <div class="brand-subtitle">
+            Acompañamiento terapéutico con evidencia y calidez humana
+          </div>
         </div>
+
+        <ul class="nav-menu">
+          <li><a href="#" class="active">Inicio</a></li>
+          <li><a href="#">Sobre Conscientemente</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+        </ul>
+
+      </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner-wrapper">
+
+      <div class="banner-slide active">
+        <img src="assets/images/logo-conscientemente.png"
+             alt="Conscientemente"
+             class="banner-logo">
       </div>
 
-      <ul class="nav-menu">
-        <li><a href="#" class="active">Inicio</a></li>
-        <li><a href="#">Sobre Conscientemente</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#agenda">Agenda</a></li>
-      </ul>
+      <div class="banner-slide">
+        <div class="banner-circle">
+          <img src="assets/images/banner-socializacion.png" alt="Socialización">
 
-    </nav>
-  </header>
-
-  <!-- BANNER -->
-  <section class="banner-wrapper">
-    <div class="banner-slide active">
-      <img src="assets/images/logo-conscientemente.png"
-           alt="Conscientemente"
-           class="banner-logo">
-    </div>
-
-    <div class="banner-slide">
-      <div class="banner-circle">
-        <img src="assets/images/banner-socializacion.png" alt="Socialización">
-        <div class="banner-circle-text">
-          <h2>Espacio de socialización virtual gratuita</h2>
-          <p>
-            Un primer encuentro para escucharte, comprender tu situación
-            y resolver dudas sobre<br>el proceso.
-          </p>
+          <div class="banner-circle-text">
+            <h2>Espacio de socialización virtual gratuita</h2>
+            <p>
+              Un primer encuentro para escucharte, comprender tu situación
+              y resolver dudas sobre<br>el proceso.
+            </p>
+          </div>
         </div>
+
+        <a href="#agenda" class="banner-button">
+          Agenda tu espacio de socialización →
+        </a>
       </div>
 
-      <a href="#agenda" class="banner-button">
-        Agenda tu espacio de socialización →
-      </a>
+    </section>
+
+    <!-- BIENVENIDA -->
+    <section class="welcome-section">
+      <p>
+        Bienvenidos. En Conscientemente ofrecemos un espacio de acompañamiento
+        psicológico orientado al bienestar emocional, basado en evidencia clínica
+        y en una relación terapéutica cercana, ética y respetuosa de los procesos
+        individuales.
+      </p>
+    </section>
+
+    <!-- ÁREAS / BURBUJAS -->
+    <section class="areas-block">
+      <h3>Áreas de acompañamiento terapéutico</h3>
+
+      <div class="areas-bubbles">
+
+        <!-- BURBUJA PILOTO -->
+        <div class="bubble" id="open-ansiedad">
+          <div class="bubble-content">
+            <img src="assets/images/ansiedad.png" alt="Ansiedad">
+            <span>Ansiedad</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REDES -->
+    <div class="social-icons">
+      <img src="assets/images/logo-instagram.png" alt="Instagram">
+      <img src="assets/images/logo-facebook.png" alt="Facebook">
+      <img src="assets/images/logo-gmail.png" alt="Correo">
     </div>
-  </section>
 
-  <!-- BIENVENIDA -->
-  <section class="welcome-section">
-    <p>
-      Bienvenidos. En Conscientemente ofrecemos un espacio de acompañamiento
-      psicológico orientado al bienestar emocional, basado en evidencia clínica
-      y en una relación terapéutica cercana, ética y respetuosa de los procesos
-      individuales.
-    </p>
-  </section>
+    <section id="agenda"></section>
 
-  <!-- ÁREAS -->
-  <section class="areas-block">
-    <h3>Áreas de acompañamiento terapéutico</h3>
-
-    <div class="areas-bubbles">
-      <div class="bubble" id="open-ansiedad"><span>Ansiedad</span></div>
-      <div class="bubble"><span>Fobia social</span></div>
-      <div class="bubble"><span>Depresión</span></div>
-      <div class="bubble"><span>Trastorno bipolar</span></div>
-      <div class="bubble"><span>Trastornos de personalidad</span></div>
-      <div class="bubble"><span>Conducta suicida y autolesiones</span></div>
-      <div class="bubble"><span>Trauma psicológico</span></div>
-      <div class="bubble"><span>Autoestima</span></div>
-      <div class="bubble"><span>Relaciones y dependencia emocional</span></div>
-      <div class="bubble"><span>Duelo</span></div>
-      <div class="bubble"><span>Adolescencia y crianza</span></div>
-      <div class="bubble"><span>Otros motivos de consulta</span></div>
-    </div>
-  </section>
-
-  <!-- REDES -->
-  <div class="social-icons">
-    <img src="assets/images/logo-instagram.png" alt="Instagram">
-    <img src="assets/images/logo-facebook.png" alt="Facebook">
-    <img src="assets/images/logo-gmail.png" alt="Correo">
   </div>
 
-  <section id="agenda"></section>
-
-</div>
-
-<!-- MODAL ANSIEDAD -->
-<div class="modal-overlay" id="modal-ansiedad">
-  <div class="modal-box">
-
-    <button class="modal-back" id="close-ansiedad">⤺ Regresar</button>
-
-    <h2>Ansiedad</h2>
-
-    <div class="modal-content">
-      <p>
-        La ansiedad es una respuesta emocional natural ante situaciones percibidas
-        como amenazantes. Puede manifestarse a nivel cognitivo, emocional,
-        fisiológico y conductual.
-      </p>
-
-      <p>
-        Cuando se vuelve persistente o intensa, puede generar un alto nivel de
-        malestar y afectar el funcionamiento personal, social y laboral.
-      </p>
-
-      <p>
-        Desde un enfoque cognitivo-conductual, el acompañamiento terapéutico se
-        orienta a comprender cómo pensamientos, emociones y respuestas corporales
-        interactúan, incorporando estrategias basadas en evidencia.
-      </p>
-
-      <p>
-        El proceso incluye identificación de pensamientos automáticos, regulación
-        emocional, manejo de síntomas físicos y fortalecimiento de recursos de
-        afrontamiento.
-      </p>
-
-      <p class="modal-cta">
-        ¿Te identificas con esta información? Podemos acompañarte en tu proceso.
-      </p>
-    </div>
-
-    <div class="modal-whatsapp-wrapper">
-      <a href="https://wa.me/573138743911" target="_blank" class="modal-whatsapp">
-        <img src="assets/images/logo-whatsapp.png" alt="WhatsApp">
-        Agenda tu cita por WhatsApp
-      </a>
-    </div>
-
-  </div>
-</div>
-
-<script src="banner.js"></script>
-<script src="modal-ansiedad.js"></script>
+  <!-- JS -->
+  <script src="banner.js"></script>
 
 </body>
 </html>
