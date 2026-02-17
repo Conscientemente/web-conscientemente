@@ -73,7 +73,7 @@
 
 /* ================= CONTENIDO ================= */
 .modal-content {
-  padding: 0 2.8rem;
+  padding: 0 2.8rem 6.5rem; /* ⬅️ CLAVE: espacio para el botón */
   overflow-y: auto;
   z-index: 2;
 }
@@ -114,10 +114,4 @@
     linear-gradient(#f0f8fb, #f0f8fb) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
   border: 2px solid transparent;
-}
-
-/* ICONO WHATSAPP */
-.modal-whatsapp img {
-  width: 36px;
-  height: auto;
 }
