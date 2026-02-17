@@ -1,93 +1,103 @@
-/* OVERLAY */
+/* ================= OVERLAY ================= */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 9000;
+  z-index: 6000;
+  padding: 2rem;
 }
 
 .modal-overlay.active {
   display: flex;
 }
 
-/* CAJA MODAL */
+/* ================= CAJA MODAL ================= */
 .modal-box {
-  width: 460px;
-  max-height: 75vh;
-  background: #ffffff;
+  background:
+    url("../assets/images/ansiedad.png") center 20% / 140px no-repeat,
+    #ffffff;
+  width: 100%;
+  max-width: 460px;
   border-radius: 36px;
-  box-shadow: 0 35px 85px rgba(107,78,255,0.45);
-  padding: 2.6rem;
-  overflow-y: auto;
-
+  box-shadow: 0 40px 90px rgba(107, 78, 255, 0.45);
+  position: relative;
   font-family: 'Lora', serif;
   color: #3b4fa1;
-  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  max-height: 72vh;
 }
 
-/* IMAGEN DE FONDO SUTIL */
-.modal-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../assets/images/ansiedad.png") center / 240px no-repeat;
-  opacity: 0.05;
-  pointer-events: none;
-}
-
-/* TÍTULO */
+/* ================= TÍTULO ================= */
 .modal-box h2 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  padding: 3.2rem 2.6rem 1.4rem;
+  color: #3b4fa1;
+  flex-shrink: 0;
 }
 
-/* TEXTO */
-.modal-box p {
+/* ================= CONTENIDO ================= */
+.modal-content {
+  padding: 0 2.6rem;
+  overflow-y: auto;
+}
+
+.modal-content p {
   text-align: justify;
   margin-bottom: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-/* WHATSAPP DENTRO DEL FLUJO */
-.modal-whatsapp {
+/* ================= FOOTER ================= */
+.modal-footer {
+  padding: 1.6rem 2.6rem 2.4rem;
   display: flex;
   justify-content: center;
-  margin: 2rem 0 1.5rem;
+  flex-shrink: 0;
 }
 
-.modal-whatsapp a {
+/* ================= BOTÓN WHATSAPP ================= */
+.modal-whatsapp {
   display: inline-flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   padding: 1rem 2.6rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
   color: #3b4fa1;
-
   background:
-    linear-gradient(#f0f8fb,#f0f8fb) padding-box,
-    linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
-
+    linear-gradient(#f0f8fb, #f0f8fb) padding-box,
+    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
   border: 2px solid transparent;
 }
 
+/* ÍCONO WHATSAPP */
 .modal-whatsapp img {
-  width: 48px;
+  width: 42px;
   height: auto;
 }
 
-/* REGRESAR */
+/* ================= BOTÓN REGRESAR ================= */
 .modal-back {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  color: #6b4eff;
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #7b6cf6;
+  background: #ffffff;
+  color: #7b6cf6;
+  font-size: 1.2rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
