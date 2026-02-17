@@ -152,11 +152,9 @@
   font-weight: 600;
   text-decoration: none;
   color: #3b4fa1;
-
   background:
     linear-gradient(#e7f4f8,#f0f8fb) padding-box,
     linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
-
   border: 2px solid transparent;
 }
 
@@ -216,23 +214,23 @@
   padding: 1rem;
 }
 
-/* REDES — TAMAÑO CORRECTO (VISIBLES) */
+/* REDES — MUCHO MÁS GRANDES */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  margin: 4.5rem auto;
+  gap: 3.2rem;
+  margin: 5rem auto;
 }
 
 .social-icons img {
-  width: 56px;               /* ⬅️ TAMAÑO REAL, YA NO PEQUEÑO */
-  opacity: 0.9;
+  width: 72px;                 /* ⬅️ AHORA SÍ, GRANDE */
+  opacity: 0.95;
   transition: transform .25s ease, opacity .25s ease;
 }
 
 .social-icons img:hover {
   opacity: 1;
-  transform: scale(1.18);
+  transform: scale(1.22);
 }
 
 /* RESPONSIVE */
@@ -251,6 +249,6 @@
   }
 
   .social-icons img {
-    width: 48px;            /* ⬅️ visibles también en móvil */
+    width: 60px;               /* ⬅️ grandes también en móvil */
   }
 }
