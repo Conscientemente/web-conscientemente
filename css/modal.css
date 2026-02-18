@@ -1,5 +1,5 @@
 /* ======================================================
-   MODAL – ESTABLE + EFECTOS SUAVES RESTAURADOS
+   MODAL – ESTABLE + CTA WHATSAPP (SIN ROMPER NADA)
    ====================================================== */
 
 .modal {
@@ -70,6 +70,44 @@
   margin-bottom: 8px;
 }
 
+/* CTA WhatsApp (al final, alineado a la izquierda) */
+.modal-cta {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Animación suave continua (igual lenguaje que banner) */
+@keyframes floatSoftModal {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.modal-whatsapp {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3b4fa1;
+
+  background:
+    linear-gradient(#e7f4f8,#f0f8fb) padding-box,
+    linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
+  border: 2px solid transparent;
+
+  animation: floatSoftModal 6s ease-in-out infinite;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.modal-whatsapp:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(107,78,255,.35);
+}
+
 /* Footer */
 .modal-footer {
   padding: 18px 28px;
@@ -78,7 +116,7 @@
   justify-content: flex-end;
 }
 
-/* BOTÓN ATRÁS — OK */
+/* Botón Atrás (ya validado) */
 .modal-close {
   background: #6b4eff;
   color: #ffffff;
@@ -88,7 +126,6 @@
   font-family: 'Lora', serif;
   font-size: 14px;
   cursor: pointer;
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -99,20 +136,4 @@
   transform: translateY(-2px);
   background-color: #5840d6;
   box-shadow: 0 8px 18px rgba(107,78,255,0.35);
-}
-
-/* ======================================================
-   BOTÓN SOCIALIZACIÓN — EFECTO SUAVE RESTAURADO
-   (NO cambia estructura, SOLO hover)
-   ====================================================== */
-
-.banner-button {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.banner-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
 }
