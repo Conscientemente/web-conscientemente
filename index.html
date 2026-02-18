@@ -175,15 +175,15 @@
 
     <div class="modal-body">
       <p>
-        La depresión es un trastorno del estado de ánimo que se caracteriza por
-        una sensación persistente de tristeza, vacío o desmotivación, acompañada
-        de cambios en el pensamiento, la conducta y el funcionamiento emocional.
+        La depresión es un trastorno del estado de ánimo caracterizado por una
+        sensación persistente de tristeza, vacío o desmotivación, acompañada de
+        cambios en el pensamiento, la conducta y el funcionamiento emocional.
       </p>
 
       <p>
         Puede manifestarse a través de pérdida de interés o placer, fatiga,
         dificultades de concentración, alteraciones del sueño y del apetito,
-        así como pensamientos de minusvalía o desesperanza.
+        así como pensamientos de desesperanza o minusvalía.
       </p>
 
       <p>
@@ -223,30 +223,8 @@
 <!-- JS -->
 <script src="banner.js"></script>
 <script src="modal-ansiedad.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const openDepresion = document.getElementById("open-depresion");
-    const modalDepresion = document.getElementById("modal-depresion");
-    const closeDepresion = document.getElementById("close-depresion");
-
-    if (openDepresion && modalDepresion && closeDepresion) {
-      openDepresion.addEventListener("click", () => {
-        modalDepresion.classList.add("active");
-      });
-
-      closeDepresion.addEventListener("click", () => {
-        modalDepresion.classList.remove("active");
-      });
-
-      modalDepresion.addEventListener("click", (e) => {
-        if (e.target === modalDepresion) {
-          modalDepresion.classList.remove("active");
-        }
-      });
-    }
-  });
-</script>
+<script src="modal-depresion.js"></script>
 
 </body>
 </html>
+ 
