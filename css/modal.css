@@ -1,5 +1,5 @@
 /* ======================================================
-   MODAL – ESTABLE + EFECTOS SUAVES (NO TOCAR ESTRUCTURA)
+   MODAL – ESTABLE + EFECTOS SUAVES RESTAURADOS
    ====================================================== */
 
 .modal {
@@ -78,7 +78,7 @@
   justify-content: flex-end;
 }
 
-/* BOTÓN ATRÁS — EFECTO SUAVE RESTAURADO */
+/* BOTÓN ATRÁS — OK */
 .modal-close {
   background: #6b4eff;
   color: #ffffff;
@@ -99,4 +99,20 @@
   transform: translateY(-2px);
   background-color: #5840d6;
   box-shadow: 0 8px 18px rgba(107,78,255,0.35);
+}
+
+/* ======================================================
+   BOTÓN SOCIALIZACIÓN — EFECTO SUAVE RESTAURADO
+   (NO cambia estructura, SOLO hover)
+   ====================================================== */
+
+.banner-button {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.banner-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
 }
