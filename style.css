@@ -104,6 +104,13 @@
   max-width: 420px;
 }
 
+/* === ANIMACIÓN SUAVE CONTINUA (NUEVO) === */
+@keyframes floatSoft {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
 .banner-circle {
   position: relative;
   width: 360px;
@@ -111,6 +118,9 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 18px 38px rgba(107,78,255,.30);
+
+  /* NUEVO */
+  animation: floatSoft 6s ease-in-out infinite;
 }
 
 .banner-circle img {
@@ -159,14 +169,12 @@
   border: 2px solid transparent;
 
   /* NUEVO */
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease;
+  animation: floatSoft 6s ease-in-out infinite;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
-/* NUEVO — EFECTO SUAVE */
 .banner-button:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 14px 28px rgba(107,78,255,.35);
 }
 
