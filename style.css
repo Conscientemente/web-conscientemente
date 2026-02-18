@@ -144,6 +144,7 @@
   line-height: 1.55;
 }
 
+/* BOTÓN SOCIALIZACIÓN */
 .banner-button {
   margin-top: 2rem;
   padding: .85rem 2.2rem;
@@ -156,6 +157,17 @@
     linear-gradient(#e7f4f8,#f0f8fb) padding-box,
     linear-gradient(90deg,#7b6cf6,#4fc3e8) border-box;
   border: 2px solid transparent;
+
+  /* NUEVO */
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+/* NUEVO — EFECTO SUAVE */
+.banner-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(107,78,255,.35);
 }
 
 /* BIENVENIDA */
@@ -214,7 +226,7 @@
   padding: 1rem;
 }
 
-/* REDES — MÁS GRANDES AÚN */
+/* REDES */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -223,7 +235,7 @@
 }
 
 .social-icons img {
-  width: 120px;            /* ⬅️ AÚN MÁS GRANDES */
+  width: 120px;
   height: auto;
   opacity: 0.95;
   cursor: pointer;
@@ -251,6 +263,6 @@
   }
 
   .social-icons img {
-    width: 90px;           /* ⬅️ GRANDES TAMBIÉN EN MÓVIL */
+    width: 90px;
   }
 }
