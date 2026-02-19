@@ -21,15 +21,19 @@
   flex-direction: column;
   align-items: center;
 
-  /* 🔹 CLAVE: control del centro visual */
+  /* Centro visual controlado */
   justify-content: flex-start;
   padding-top: 1.9rem;
 
   box-shadow: 0 10px 20px rgba(107, 78, 255, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+
+  /* 🔹 CLAVE: nada se sale del círculo */
+  overflow: hidden;
 }
 
+/* Hover intacto */
 .bubble:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 34px rgba(107, 78, 255, 0.35);
@@ -37,13 +41,21 @@
 
 /* Imagen base */
 .bubble-img {
+  max-width: 80px;
+  max-height: 80px;
   height: auto;
-  margin-bottom: 0.9rem;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
 }
 
 /* Ansiedad */
 #open-ansiedad .bubble-img {
   max-width: 75px;
+}
+
+/* Ansiedad social */
+#open-fobiasocial .bubble-img {
+  max-width: 82px;
 }
 
 /* Depresión */
