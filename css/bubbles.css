@@ -52,9 +52,9 @@
   max-width: 95px;
 }
 
-/* 🔹 Autoestima (ajuste fino) */
+/* 🔹 Autoestima (tamaño equilibrado) */
 #open-autoestima .bubble-img {
-  max-width: 78px; /* antes era mayor */
+  max-width: 86px; /* punto medio real */
 }
 
 /* Depresión */
