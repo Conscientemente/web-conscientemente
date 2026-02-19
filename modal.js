@@ -1,11 +1,30 @@
-const openAnsiedad = document.getElementById("open-ansiedad");
-const modalAnsiedad = document.getElementById("modal-ansiedad");
-const closeAnsiedad = document.getElementById("close-ansiedad");
+document.addEventListener("DOMContentLoaded", () => {
+  const pairs = [
+    ["ansiedad", "ansiedad"],
+    ["fobiasocial", "fobiasocial"],
+    ["autoestima", "autoestima"],
+    ["depresion", "depresion"]
+  ];
 
-openAnsiedad.addEventListener("click", () => {
-  modalAnsiedad.classList.add("active");
-});
+  pairs.forEach(([key]) => {
+    const open = document.getElementById(`open-${key}`);
+    const modal = document.getElementById(`modal-${key}`);
+    const close = document.getElementById(`close-${key}`);
 
-closeAnsiedad.addEventListener("click", () => {
-  modalAnsiedad.classList.remove("active");
+    if (open && modal && close) {
+      open.addEventListener("click", () => {
+        modal.classList.add("active");
+      });
+
+      close.addEventListener("click", () => {
+        modal.classList.remove("active");
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+        }
+      });
+    }
+  });
 });
