@@ -46,27 +46,35 @@
   text-align: center;
 }
 
-/* Body */
-.modal-body {
+/* ==========================
+   CUERPO DEL MODAL
+   (COMPATIBLE CON AMBOS)
+   ========================== */
+
+.modal-body,
+.modal-content {
   padding: 2rem 2.4rem;
-  overflow-y: auto;          /* 🔹 CLAVE */
-  flex: 1;                   /* 🔹 CLAVE */
+  overflow-y: auto;
+  flex: 1;
   font-family: 'Lora', serif;
   font-size: 1.05rem;
   line-height: 1.65;
   color: #4f4f4f;
 }
 
-.modal-body p {
+.modal-body p,
+.modal-content p {
   margin-bottom: 1.1rem;
   text-align: justify;
 }
 
-.modal-body ul {
+.modal-body ul,
+.modal-content ul {
   margin: 1rem 0 1.4rem 1.2rem;
 }
 
-.modal-body li {
+.modal-body li,
+.modal-content li {
   margin-bottom: 0.5rem;
 }
 
