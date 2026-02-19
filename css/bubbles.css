@@ -47,9 +47,14 @@
   max-width: 75px;
 }
 
-/* 🔹 Ansiedad social (ajustada) */
+/* Ansiedad social */
 #open-fobiasocial .bubble-img {
-  max-width: 95px; /* antes 82px */
+  max-width: 95px;
+}
+
+/* 🔹 Autoestima (ajuste fino) */
+#open-autoestima .bubble-img {
+  max-width: 78px; /* antes era mayor */
 }
 
 /* Depresión */
