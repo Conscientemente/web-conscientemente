@@ -54,19 +54,31 @@
 
 /* ==========================
    CUERPO DEL MODAL
+   (RESET COMPLETO DE CLAMP)
    ========================== */
 
 .modal-body {
   padding: 2rem 2.4rem;
-  overflow-y: auto;
   flex: 1;
+  overflow-y: auto;
+
   font-family: 'Lora', serif;
   font-size: 1.05rem;
   line-height: 1.65;
   color: #4f4f4f;
 }
 
+/* 🔥 AQUÍ ESTÁ LA CLAVE */
 .modal-body p {
+  display: block !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  text-overflow: unset !important;
+
+  /* reset line-clamp */
+  -webkit-line-clamp: unset !important;
+  -webkit-box-orient: unset !important;
+
   margin-bottom: 1.1rem;
   text-align: justify;
 }
