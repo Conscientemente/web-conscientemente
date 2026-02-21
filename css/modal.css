@@ -12,7 +12,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .modal.active {
@@ -21,7 +21,7 @@
 }
 
 /* ==========================
-   CAJA DEL MODAL
+   CAJA
    ========================== */
 
 .modal-box {
@@ -50,35 +50,42 @@
   font-size: 2.2rem;
   color: #6b4eff;
   text-align: center;
+  white-space: normal;
 }
 
 /* ==========================
-   CUERPO DEL MODAL
-   (RESET COMPLETO DE CLAMP)
+   CUERPO — AISLAMIENTO TOTAL
    ========================== */
 
 .modal-body {
-  padding: 2rem 2.4rem;
   flex: 1;
+  padding: 2rem 2.4rem;
   overflow-y: auto;
 
   font-family: 'Lora', serif;
   font-size: 1.05rem;
   line-height: 1.65;
   color: #4f4f4f;
+
+  /* 🔒 BLINDAJE TOTAL */
+  white-space: normal !important;
 }
 
-/* 🔥 AQUÍ ESTÁ LA CLAVE */
-.modal-body p {
+/* 🔥 RESET ABSOLUTO DE TEXTO */
+.modal-body *,
+.modal-body p,
+.modal-body span,
+.modal-body li {
   display: block !important;
-  overflow: visible !important;
   white-space: normal !important;
-  text-overflow: unset !important;
-
-  /* reset line-clamp */
+  overflow: visible !important;
+  text-overflow: clip !important;
   -webkit-line-clamp: unset !important;
   -webkit-box-orient: unset !important;
+}
 
+/* Espaciado */
+.modal-body p {
   margin-bottom: 1.1rem;
   text-align: justify;
 }
@@ -89,33 +96,6 @@
 
 .modal-body li {
   margin-bottom: 0.5rem;
-}
-
-/* ==========================
-   CTA WHATSAPP
-   ========================== */
-
-.modal-cta {
-  margin-top: 1.8rem;
-}
-
-.modal-whatsapp {
-  display: inline-block;
-  padding: 0.75rem 1.8rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #6b4eff;
-  background:
-    linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
-  border: 2px solid transparent;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.modal-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(107, 78, 255, 0.3);
 }
 
 /* ==========================
@@ -130,7 +110,7 @@
 }
 
 /* ==========================
-   BOTÓN ATRÁS
+   BOTÓN
    ========================== */
 
 .modal-close {
@@ -141,10 +121,4 @@
   border-radius: 999px;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.modal-close:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(107, 78, 255, 0.35);
 }
