@@ -2,12 +2,13 @@
    CONTENEDOR GENERAL
    ========================== */
 
-.carousel-wrapper {
-  position: relative;
-  max-width: 460px; /* 2 burbujas visibles */
-  margin: 0 auto;
+.carousel-container {
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 1100px;              /* controla lo que se ve */
+  margin: 0 auto;
+  position: relative;
 }
 
 /* ==========================
@@ -15,26 +16,22 @@
    ========================== */
 
 .carousel-arrow {
-  background: none;
+  background: transparent;
   border: none;
-  font-size: 2rem;
   color: #6b4eff;
+  font-size: 2.6rem;              /* tamaño aumentado */
   cursor: pointer;
-  padding: 0 0.6rem;
-  z-index: 10;
-  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  transition: transform 0.25s ease, color 0.25s ease;
+  z-index: 2;
 }
 
 .carousel-arrow:hover {
   transform: scale(1.15);
-}
-
-.carousel-arrow.left {
-  margin-right: 0.4rem;
-}
-
-.carousel-arrow.right {
-  margin-left: 0.4rem;
+  color: #4fc3e8;
 }
 
 /* ==========================
@@ -42,17 +39,48 @@
    ========================== */
 
 .carousel-viewport {
-  overflow: hidden;
-  width: 100%;
+  overflow: hidden;               /* oculta el resto */
+  flex: 1;
+  padding: 2rem 0;                /* aire para hover */
 }
 
 /* ==========================
-   TRACK DESLIZABLE
+   TRACK (fila horizontal)
    ========================== */
 
 .carousel-track {
   display: flex;
   gap: 2.5rem;
-  transition: transform 0.4s ease;
-  padding: 1.6rem 0; /* aire para hover */
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+/* ==========================
+   AJUSTE DE BURBUJAS
+   (NO rompe bubbles.css)
+   ========================== */
+
+.carousel-track .bubble {
+  flex: 0 0 260px;                /* 👈 clave:
+                                     2 completas + parciales */
+}
+
+/* ==========================
+   RESPONSIVE
+   ========================== */
+
+@media (max-width: 900px) {
+  .carousel-track .bubble {
+    flex: 0 0 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-track .bubble {
+    flex: 0 0 190px;
+  }
+
+  .carousel-arrow {
+    font-size: 2.2rem;
+  }
 }
