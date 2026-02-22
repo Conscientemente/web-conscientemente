@@ -1,39 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const bubbles = document.querySelectorAll(".carousel-track .bubble");
-  const btnPrev = document.querySelector(".carousel-arrow.left");
-  const btnNext = document.querySelector(".carousel-arrow.right");
+  const prevBtn = document.querySelector(".carousel-arrow.prev");
+  const nextBtn = document.querySelector(".carousel-arrow.next");
 
-  if (!track || !bubbles.length || !btnPrev || !btnNext) return;
-
-  let index = 0;
-
-  function getStep() {
-    const bubble = bubbles[0];
-    const gap = parseInt(getComputedStyle(track).gap) || 0;
-    return bubble.getBoundingClientRect().width + gap;
+  if (!track || !bubbles.length || !prevBtn || !nextBtn) {
+    console.warn("Carrusel: elementos no encontrados");
+    return;
   }
 
-  function updateCarousel() {
-    const step = getStep();
-    track.style.transform = `translateX(${-index * step}px)`;
-  }
+  const bubbleWidth = bubbles[0].offsetWidth;
+  const gap = 40; // debe coincidir con gap del CSS
+  const step = bubbleWidth + gap;
 
-  const maxIndex = bubbles.length - 2;
+  let position = 0;
 
-  btnNext.addEventListener("click", () => {
-    if (index < maxIndex) {
-      index++;
-      updateCarousel();
+  const maxPosition = -(step * (bubbles.length - 2));
+
+  nextBtn.addEventListener("click", () => {
+    position -= step;
+    if (position < maxPosition) {
+      position = maxPosition;
     }
+    track.style.transform = `translateX(${position}px)`;
   });
 
-  btnPrev.addEventListener("click", () => {
-    if (index > 0) {
-      index--;
-      updateCarousel();
+  prevBtn.addEventListener("click", () => {
+    position += step;
+    if (position > 0) {
+      position = 0;
     }
+    track.style.transform = `translateX(${position}px)`;
   });
-
-  window.addEventListener("resize", updateCarousel);
 });
