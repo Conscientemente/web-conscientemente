@@ -12,11 +12,10 @@
 }
 
 /* ==========================
-   BURBUJA BASE (BUTTON RESET)
+   BURBUJA BASE
    ========================== */
 
 .bubble {
-  /* reset botón */
   appearance: none;
   -webkit-appearance: none;
   border: none;
@@ -24,54 +23,48 @@
   font-family: inherit;
   text-align: inherit;
 
-  /* tamaño */
   width: 170px;
   height: 170px;
   border-radius: 50%;
 
-  /* layout */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding-top: 1.7rem;
 
-  /* borde degradado como CTA */
   background:
     linear-gradient(#faf9f6, #faf9f6) padding-box,
     linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
   border: 2px solid transparent;
 
-  /* sombra */
   box-shadow: 0 10px 20px rgba(107, 78, 255, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
   overflow: hidden;
 }
 
-/* Focus accesible */
-.bubble:focus {
-  outline: none;
-}
-
-/* Hover */
 .bubble:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 34px rgba(107, 78, 255, 0.35);
 }
 
+.bubble:focus {
+  outline: none;
+}
+
 /* ==========================
-   IMÁGENES (BASE)
+   IMÁGENES BASE
    ========================== */
 
 .bubble-img {
   height: auto;
   object-fit: contain;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
 }
 
 /* ==========================
-   AJUSTES POR BURBUJA
+   AJUSTES POR CATEGORÍA
    ========================== */
 
 /* Ansiedad */
@@ -100,12 +93,13 @@
   max-width: 100px;
 }
 
-/* Autolesiones */
+/* Autolesiones — AUMENTO REAL */
 #open-autolesiones .bubble-img {
-  max-width: 85px;
+  max-width: 100px;
+  transform: scale(1.08);
 }
 
-/* Trastorno Bipolar (reforzado, como indicaste) */
+/* Trastorno Bipolar */
 #open-bipolar .bubble-img {
   max-width: 105px;
 }
@@ -117,17 +111,19 @@
 
 /* Trastornos de la personalidad */
 #open-personalidad .bubble-img {
-  max-width: 90px;
+  max-width: 95px;
 }
 
-/* Trauma */
+/* Trauma — AUMENTO REAL */
 #open-trauma .bubble-img {
-  max-width: 92px;
+  max-width: 105px;
+  transform: scale(1.08);
 }
 
-/* Duelo */
+/* Duelo — AUMENTO REAL */
 #open-duelo .bubble-img {
-  max-width: 85px;
+  max-width: 100px;
+  transform: scale(1.06);
 }
 
 /* Otros motivos */
@@ -136,13 +132,14 @@
 }
 
 /* ==========================
-   TEXTO
+   TEXTO (RESPIRACIÓN CORREGIDA)
    ========================== */
 
 .bubble span {
   color: #6b4eff;
   text-align: center;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.25;
+  margin-bottom: 0.9rem; /* 👈 evita que “ostigue” la imagen */
 }
