@@ -19,6 +19,7 @@
   appearance: none;
   -webkit-appearance: none;
   border: none;
+  background: #faf9f6;
   padding: 0;
   font-family: inherit;
   text-align: inherit;
@@ -26,17 +27,11 @@
   width: 170px;
   height: 170px;
   border-radius: 50%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding-top: 1.7rem;
-
-  background:
-    linear-gradient(#faf9f6, #faf9f6) padding-box,
-    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
-  border: 2px solid transparent;
 
   box-shadow: 0 10px 20px rgba(107, 78, 255, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -44,110 +39,77 @@
   overflow: hidden;
 }
 
+.bubble:focus {
+  outline: none;
+}
+
 .bubble:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 34px rgba(107, 78, 255, 0.35);
 }
 
-.bubble:focus {
-  outline: none;
-}
-
 /* ==========================
-   IMÁGENES BASE
+   IMÁGENES
    ========================== */
 
 .bubble-img {
   height: auto;
   object-fit: contain;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
 }
 
-/* ==========================
-   AJUSTES POR CATEGORÍA
-   ========================== */
-
-/* Ansiedad */
+/* Ajustes individuales */
 #open-ansiedad .bubble-img {
   max-width: 75px;
 }
 
-/* Ansiedad social */
 #open-fobiasocial .bubble-img {
   max-width: 95px;
 }
 
-/* Autoestima */
 #open-autoestima .bubble-img {
   max-width: 105px;
   transform: scale(1.05);
 }
 
-/* Depresión */
 #open-depresion .bubble-img {
   max-width: 88px;
 }
 
-/* Adolescencia */
-#open-adolescencia .bubble-img {
-  max-width: 100px;
-}
-
-/* Autolesiones — AUMENTO REAL */
-#open-autolesiones .bubble-img {
-  max-width: 100px;
-  transform: scale(1.08);
-}
-
-/* Trastorno Bipolar */
-#open-bipolar .bubble-img {
-  max-width: 105px;
-}
-
-/* Dependencia emocional */
-#open-dependencia .bubble-img {
-  max-width: 95px;
-}
-
-/* Trastornos de la personalidad */
-#open-personalidad .bubble-img {
-  max-width: 95px;
-}
-
-/* Trauma — AUMENTO REAL */
-#open-trauma .bubble-img {
-  max-width: 105px;
-  transform: scale(1.08);
-}
-
-/* Duelo — AUMENTO REAL */
+#open-adolescencia .bubble-img,
+#open-autolesiones .bubble-img,
+#open-trauma .bubble-img,
 #open-duelo .bubble-img {
-  max-width: 100px;
-  transform: scale(1.06);
+  max-width: 95px;
 }
 
-/* Otros motivos */
+#open-bipolar .bubble-img {
+  max-width: 110px;
+}
+
+#open-dependencia .bubble-img,
+#open-personalidad .bubble-img,
 #open-otros .bubble-img {
-  max-width: 100px;
+  max-width: 90px;
 }
 
 /* ==========================
-   TEXTO (RESPIRACIÓN CORREGIDA)
+   TEXTO
    ========================== */
 
 .bubble span {
   color: #6b4eff;
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 500;
-  line-height: 1.25;
-  margin-bottom: 0.9rem; /* 👈 evita que “ostigue” la imagen */
+  line-height: 1.2;
+  padding: 0 0.6rem;
 }
+
 /* ==========================
    CARRUSEL DE BURBUJAS
    ========================== */
 
-/* Contenedor general */
 .carousel-wrapper {
   position: relative;
   max-width: 1000px;
@@ -179,6 +141,7 @@
 .carousel-viewport {
   overflow: hidden;
   flex: 1;
+  padding: 1.2rem 0; /* aire vertical para hover */
 }
 
 /* Track horizontal */
@@ -189,13 +152,12 @@
   will-change: transform;
 }
 
-/* Las burbujas no se deforman */
 .carousel-track .bubble {
   flex: 0 0 auto;
 }
 
 /* ==========================
-   RESPONSIVE (MISMA LÓGICA)
+   RESPONSIVE
    ========================== */
 
 @media (max-width: 768px) {
