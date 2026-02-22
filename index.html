@@ -78,7 +78,18 @@
   <section class="areas-block">
     <h3>Áreas de acompañamiento terapéutico</h3>
 
-    <div class="areas-bubbles">
+    <div class="carousel-wrapper">
+
+  <!-- Flecha izquierda -->
+  <button class="carousel-arrow left" aria-label="Anterior">
+    ‹
+  </button>
+
+  <!-- Ventana visible del carrusel -->
+  <div class="carousel-viewport">
+    <div class="carousel-track">
+
+      <!-- ===== BURBUJAS EXISTENTES (NO MODIFICADAS) ===== -->
 
       <div class="bubble" id="open-ansiedad">
         <img src="assets/images/ansiedad.png" class="bubble-img">
@@ -102,17 +113,17 @@
 
       <div class="bubble" id="open-adolescencia">
         <img src="assets/images/adolescencia.png" class="bubble-img">
-        <span>Adolescencia y<br>crianza</span>
+        <span>Adolescencia y crianza</span>
       </div>
 
       <div class="bubble" id="open-autolesiones">
         <img src="assets/images/autolesiones.png" class="bubble-img">
-        <span>Autolesiones y<br>conducta suicida</span>
+        <span>Autolesiones y conducta suicida</span>
       </div>
 
       <div class="bubble" id="open-bipolar">
         <img src="assets/images/bipolar.png" class="bubble-img">
-        <span>Trastorno Bipolar</span>
+        <span>Trastorno bipolar</span>
       </div>
 
       <div class="bubble" id="open-dependencia">
@@ -122,7 +133,7 @@
 
       <div class="bubble" id="open-personalidad">
         <img src="assets/images/personalidad.png" class="bubble-img">
-        <span>Trastornos de la<br>personalidad</span>
+        <span>Trastornos de la personalidad</span>
       </div>
 
       <div class="bubble" id="open-trauma">
@@ -137,11 +148,20 @@
 
       <div class="bubble" id="open-otros">
         <img src="assets/images/otros.png" class="bubble-img">
-        <span>Otros motivos<br>de consulta</span>
+        <span>Otros motivos de consulta</span>
       </div>
 
+      <!-- ===== FIN BURBUJAS ===== -->
+
     </div>
-  </section>
+  </div>
+
+  <!-- Flecha derecha -->
+  <button class="carousel-arrow right" aria-label="Siguiente">
+    ›
+  </button>
+
+</div>
 
   <!-- REDES -->
   <div class="social-icons">
