@@ -62,6 +62,10 @@
   margin-bottom: 0.7rem;
 }
 
+/* ==========================
+   AJUSTES BURBUJAS EXISTENTES
+   ========================== */
+
 /* Ansiedad */
 #open-ansiedad .bubble-img {
   max-width: 75px;
@@ -81,6 +85,50 @@
 /* Depresión */
 #open-depresion .bubble-img {
   max-width: 88px;
+}
+
+/* ==========================
+   AJUSTES BURBUJAS NUEVAS
+   ========================== */
+
+/* Adolescencia */
+#open-adolescencia .bubble-img {
+  max-width: 95px;
+}
+
+/* Autolesiones */
+#open-autolesiones .bubble-img {
+  max-width: 80px;
+}
+
+/* Trastorno Bipolar */
+#open-bipolar .bubble-img {
+  max-width: 90px;
+}
+
+/* Dependencia emocional */
+#open-dependencia .bubble-img {
+  max-width: 95px;
+}
+
+/* Trastornos de la personalidad */
+#open-personalidad .bubble-img {
+  max-width: 90px;
+}
+
+/* Trauma */
+#open-trauma .bubble-img {
+  max-width: 105px;
+}
+
+/* Duelo */
+#open-duelo .bubble-img {
+  max-width: 105px;
+}
+
+/* Otros */
+#open-otros .bubble-img {
+  max-width: 90px;
 }
 
 /* ==========================
