@@ -19,35 +19,37 @@
   /* reset botón */
   appearance: none;
   -webkit-appearance: none;
-  border: 2px solid transparent;
+  border: none;
   padding: 0;
   font-family: inherit;
   text-align: inherit;
-  cursor: pointer;
 
-  /* borde degradado tipo CTA */
-  background:
-    linear-gradient(#faf9f6, #faf9f6) padding-box,
-    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
-
-  /* diseño existente */
+  /* tamaño */
   width: 170px;
   height: 170px;
   border-radius: 50%;
+
+  /* layout */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding-top: 1.7rem;
 
+  /* borde degradado como CTA */
+  background:
+    linear-gradient(#faf9f6, #faf9f6) padding-box,
+    linear-gradient(90deg, #7b6cf6, #4fc3e8) border-box;
+  border: 2px solid transparent;
+
+  /* sombra */
   box-shadow: 0 10px 20px rgba(107, 78, 255, 0.25);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
   overflow: hidden;
 }
 
-/* Focus accesible pero no intrusivo */
+/* Focus accesible */
 .bubble:focus {
   outline: none;
 }
@@ -59,7 +61,7 @@
 }
 
 /* ==========================
-   IMAGEN
+   IMÁGENES (BASE)
    ========================== */
 
 .bubble-img {
@@ -69,7 +71,7 @@
 }
 
 /* ==========================
-   AJUSTES BURBUJAS EXISTENTES
+   AJUSTES POR BURBUJA
    ========================== */
 
 /* Ansiedad */
@@ -93,23 +95,19 @@
   max-width: 88px;
 }
 
-/* ==========================
-   AJUSTES BURBUJAS NUEVAS
-   ========================== */
-
 /* Adolescencia */
 #open-adolescencia .bubble-img {
-  max-width: 95px;
+  max-width: 100px;
 }
 
 /* Autolesiones */
 #open-autolesiones .bubble-img {
-  max-width: 80px;
+  max-width: 85px;
 }
 
-/* Trastorno Bipolar */
+/* Trastorno Bipolar (reforzado, como indicaste) */
 #open-bipolar .bubble-img {
-  max-width: 90px;
+  max-width: 105px;
 }
 
 /* Dependencia emocional */
@@ -124,17 +122,17 @@
 
 /* Trauma */
 #open-trauma .bubble-img {
-  max-width: 105px;
+  max-width: 92px;
 }
 
 /* Duelo */
 #open-duelo .bubble-img {
-  max-width: 105px;
+  max-width: 85px;
 }
 
-/* Otros */
+/* Otros motivos */
 #open-otros .bubble-img {
-  max-width: 90px;
+  max-width: 100px;
 }
 
 /* ==========================
