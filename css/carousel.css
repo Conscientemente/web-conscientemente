@@ -1,0 +1,70 @@
+/* ==========================
+   CARRUSEL DE BURBUJAS
+   ========================== */
+
+/* Contenedor general */
+.carousel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Flechas */
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #6b4eff;
+  cursor: pointer;
+  padding: 0 0.4rem;
+  line-height: 1;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  user-select: none;
+}
+
+.carousel-arrow:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+
+.carousel-arrow:focus {
+  outline: none;
+}
+
+/* Ventana visible del carrusel */
+.carousel-viewport {
+  flex: 1;
+  overflow: hidden;
+  padding: 1.2rem 0; /* aire vertical para hover de burbujas */
+}
+
+/* Pista horizontal */
+.carousel-track {
+  display: flex;
+  gap: 2.5rem;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+/* Asegura que las burbujas no se deformen */
+.carousel-track .bubble {
+  flex: 0 0 auto;
+}
+
+/* ==========================
+   RESPONSIVE
+   ========================== */
+
+@media (max-width: 768px) {
+  .carousel-arrow {
+    font-size: 2.2rem;
+  }
+
+  .carousel-wrapper {
+    gap: 0.6rem;
+  }
+}
