@@ -19,7 +19,7 @@
 
 <div class="page-content agenda-bg">
 
-  <!-- HEADER (MISMO QUE HOME) -->
+  <!-- HEADER -->
   <header class="site-header">
     <nav class="nav">
       <div class="brand-block">
@@ -42,11 +42,11 @@
   <!-- CONTENIDO -->
   <main class="agenda-page">
 
-    <!-- BLOQUE EXPLICATIVO (SIN RECUADRO) -->
+    <!-- BLOQUE EXPLICATIVO -->
     <section class="agenda-intro">
       <div class="agenda-intro-inner">
 
-        <!-- ILUSTRACIÓN IZQUIERDA -->
+        <!-- ILUSTRACIÓN -->
         <div class="agenda-illustration">
           <img src="assets/images/ilustracion.png" alt="Ilustración explicativa">
         </div>
@@ -68,14 +68,14 @@
       </div>
     </section>
 
-    <!-- SEPARADOR DE LADO A LADO -->
+    <!-- SEPARADOR -->
     <div class="agenda-separator-wide">
       <span></span>
       <span class="diamond"></span>
       <span></span>
     </div>
 
-    <!-- BLOQUE AGENDA (ANCHO RECUPERADO) -->
+    <!-- BLOQUE AGENDA -->
     <section class="agenda-calendar">
       <div class="agenda-card gradient-border">
         <!-- AQUÍ VA EL IFRAME DE GOOGLE CALENDAR -->
@@ -88,19 +88,19 @@
 
 <!-- ================= ESTILOS SOLO PARA AGENDA ================= -->
 <style>
-/* FONDO NUBE EN TODA LA PÁGINA */
+/* FONDO NUBE */
 .agenda-bg {
   background: linear-gradient(
     135deg,
     #e9f4f2 0%,
-    #f6f3fa 50%,
+    #f4f1fb 50%,
     #efe9f8 100%
   );
 }
 
 /* CONTENEDOR GENERAL */
 .agenda-page {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 80px 40px 100px;
 }
@@ -108,27 +108,25 @@
 /* BLOQUE EXPLICATIVO */
 .agenda-intro-inner {
   display: flex;
-  align-items: flex-start;
-  gap: 60px;
+  align-items: center;          /* 🔹 centra verticalmente */
+  justify-content: center;      /* 🔹 integra como bloque */
+  gap: 30px;                    /* 🔹 menos separación */
 }
 
 /* ILUSTRACIÓN */
 .agenda-illustration {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px; /* baja la ilustración */
+  flex: 0 0 auto;
 }
 
 .agenda-illustration img {
-  max-width: 420px;
+  max-width: 360px;             /* un poco más presente */
   width: 100%;
   height: auto;
 }
 
 /* TEXTO */
 .agenda-text {
-  flex: 1.2;
+  max-width: 560px;
   text-align: center;
 }
 
@@ -145,11 +143,10 @@
   line-height: 1.9;
   color: #444;
   text-align: justify;
-  max-width: 560px;
-  margin: 0 auto 18px;
+  margin-bottom: 18px;
 }
 
-/* SEPARADOR ANCHO */
+/* SEPARADOR MÁS PRESENTE */
 .agenda-separator-wide {
   display: flex;
   align-items: center;
@@ -161,18 +158,26 @@
 .agenda-separator-wide span {
   flex: 1;
   height: 2px;
-  background: linear-gradient(90deg, #bfa8ff, #8fd3f4);
-  opacity: 0.5;
+  background: linear-gradient(
+    90deg,
+    #a88bff,
+    #7fcdf0
+  );
+  opacity: 0.75;               /* 🔹 un poco más intenso */
 }
 
 .agenda-separator-wide .diamond {
   flex: none;
-  width: 14px;
-  height: 14px;
-  background: linear-gradient(135deg, #bfa8ff, #8fd3f4);
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(
+    135deg,
+    #a88bff,
+    #7fcdf0
+  );
   transform: rotate(45deg);
-  margin: 0 24px;
-  opacity: 0.6;
+  margin: 0 26px;
+  opacity: 0.85;
 }
 
 /* BLOQUE AGENDA */
@@ -186,7 +191,7 @@
   border-radius: 26px;
   padding: 50px;
   width: 100%;
-  max-width: 1100px; /* ancho recuperado */
+  max-width: 1100px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.08);
 }
 
