@@ -1,35 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const bubbles = document.querySelectorAll(".carousel-track .bubble");
-  const prevBtn = document.querySelector(".carousel-arrow.prev");
-  const nextBtn = document.querySelector(".carousel-arrow.next");
+  const btnLeft = document.querySelector(".carousel-arrow.left");
+  const btnRight = document.querySelector(".carousel-arrow.right");
 
-  if (!track || !bubbles.length || !prevBtn || !nextBtn) {
-    console.warn("Carrusel: elementos no encontrados");
-    return;
-  }
+  if (!track || bubbles.length === 0 || !btnLeft || !btnRight) return;
 
   const bubbleWidth = bubbles[0].offsetWidth;
-  const gap = 40; // debe coincidir con gap del CSS
+  const gap = 40; // espacio entre burbujas (coherente con bubbles.css)
   const step = bubbleWidth + gap;
 
-  let position = 0;
+  let currentIndex = 0;
 
-  const maxPosition = -(step * (bubbles.length - 2));
+  function updateCarousel() {
+    const translateX = -(currentIndex * step);
+    track.style.transform = `translateX(${translateX}px)`;
+  }
 
-  nextBtn.addEventListener("click", () => {
-    position -= step;
-    if (position < maxPosition) {
-      position = maxPosition;
+  btnRight.addEventListener("click", () => {
+    const maxIndex = bubbles.length - 2; // deja burbuja parcial visible
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateCarousel();
     }
-    track.style.transform = `translateX(${position}px)`;
   });
 
-  prevBtn.addEventListener("click", () => {
-    position += step;
-    if (position > 0) {
-      position = 0;
+  btnLeft.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
     }
-    track.style.transform = `translateX(${position}px)`;
   });
+
+  // Estado inicial
+  track.style.transition = "transform 0.4s ease";
+  updateCarousel();
 });
