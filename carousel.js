@@ -3,36 +3,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const bubbles = document.querySelectorAll(".carousel-track .bubble");
   const btnLeft = document.querySelector(".carousel-arrow.left");
   const btnRight = document.querySelector(".carousel-arrow.right");
+  const viewport = document.querySelector(".carousel-viewport");
 
-  if (!track || bubbles.length === 0 || !btnLeft || !btnRight) return;
+  if (!track || !bubbles.length || !btnLeft || !btnRight || !viewport) return;
 
   const bubbleWidth = bubbles[0].offsetWidth;
-  const gap = 40; // espacio entre burbujas (coherente con bubbles.css)
+  const gap = 40; // mismo gap del CSS
   const step = bubbleWidth + gap;
 
-  let currentIndex = 0;
+  const viewportWidth = viewport.offsetWidth;
+  const trackWidth = bubbles.length * step - gap;
+  const maxTranslate = trackWidth - viewportWidth;
+
+  let currentTranslate = 0;
 
   function updateCarousel() {
-    const translateX = -(currentIndex * step);
-    track.style.transform = `translateX(${translateX}px)`;
+    track.style.transform = `translateX(-${currentTranslate}px)`;
   }
 
   btnRight.addEventListener("click", () => {
-    const maxIndex = bubbles.length - 2; // deja burbuja parcial visible
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      updateCarousel();
+    const nextTranslate = currentTranslate + step;
+
+    // 👉 AJUSTE CLAVE: no permitir hueco al final
+    if (nextTranslate >= maxTranslate) {
+      currentTranslate = maxTranslate;
+    } else {
+      currentTranslate = nextTranslate;
     }
+
+    updateCarousel();
   });
 
   btnLeft.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
+    const prevTranslate = currentTranslate - step;
+
+    currentTranslate = prevTranslate <= 0 ? 0 : prevTranslate;
+    updateCarousel();
   });
 
-  // Estado inicial
+  // estado inicial
   track.style.transition = "transform 0.4s ease";
   updateCarousel();
 });
