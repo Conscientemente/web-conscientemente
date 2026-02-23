@@ -8,7 +8,7 @@
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- CSS base -->
+  <!-- CSS base existente -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/modal.css">
 </head>
@@ -41,9 +41,13 @@
 
   <main class="agenda-page">
 
-    <!-- BLOQUE INTRO -->
+    <!-- BLOQUE SUPERIOR (RESTAURADO) -->
     <section class="agenda-intro">
       <div class="agenda-intro-inner">
+
+        <div class="agenda-illustration-top">
+          <img src="assets/images/ilustracion.png" alt="Ilustración introductoria">
+        </div>
 
         <div class="agenda-text">
           <h1>Espacio de socialización virtual gratuita</h1>
@@ -61,7 +65,7 @@
       </div>
     </section>
 
-    <!-- SEPARADOR -->
+    <!-- SEPARADOR ELEGANTE (RESTAURADO) -->
     <div class="agenda-separator-wide">
       <span></span>
       <span class="diamond"></span>
@@ -83,7 +87,7 @@
         </iframe>
       </div>
 
-      <!-- DERECHA: CTA + IMAGEN -->
+      <!-- DERECHA: CTA -->
       <div class="agenda-cta-box">
 
         <a href="https://calendar.app.google/U1ZeLCakUnVHpvkZ7"
@@ -95,7 +99,7 @@
         <img
           src="assets/images/ilustracion-agenda.png"
           alt="Ilustración agenda"
-          class="agenda-illustration-img">
+          class="agenda-illustration-agenda">
 
       </div>
 
@@ -106,14 +110,9 @@
 </div>
 
 <style>
-/* FONDO NUBE */
+/* FONDO */
 .agenda-bg {
-  background: linear-gradient(
-    135deg,
-    #e9f4f2 0%,
-    #f4f1fb 50%,
-    #efe9f8 100%
-  );
+  background: linear-gradient(135deg,#e9f4f2 0%,#f4f1fb 50%,#efe9f8 100%);
 }
 
 /* CONTENEDOR */
@@ -123,10 +122,21 @@
   padding: 80px 40px 100px;
 }
 
-/* INTRO */
+/* BLOQUE SUPERIOR */
+.agenda-intro-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.agenda-illustration-top img {
+  max-width: 420px;
+  width: 100%;
+}
+
 .agenda-text {
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 560px;
   text-align: center;
 }
 
@@ -156,14 +166,14 @@
 .agenda-separator-wide span {
   flex: 1;
   height: 2px;
-  background: linear-gradient(90deg, #a88bff, #7fcdf0);
-  opacity: 0.85;
+  background: linear-gradient(90deg,#a88bff,#7fcdf0);
+  opacity: .9;
 }
 
 .agenda-separator-wide .diamond {
   width: 16px;
   height: 16px;
-  background: linear-gradient(135deg, #a88bff, #7fcdf0);
+  background: linear-gradient(135deg,#a88bff,#7fcdf0);
   transform: rotate(45deg);
   margin: 0 26px;
 }
@@ -181,63 +191,54 @@
   background: #fffdf9;
   border-radius: 26px;
   padding: 20px;
-  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 14px 40px rgba(0,0,0,.12);
 }
 
 /* CTA */
 .agenda-cta-box {
-  flex: 0.9;
+  flex: .9;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* BOTÓN 3D */
+/* BOTÓN 3D IMPONENTE */
 .agenda-cta-btn {
   display: inline-block;
-  padding: 18px 42px;
-  border-radius: 40px;
+  padding: 22px 54px;
+  border-radius: 50px;
   font-family: "Lora", serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #6f63ff;
   text-decoration: none;
   background:
-    linear-gradient(#fffdf9, #fffdf9) padding-box,
-    linear-gradient(135deg, #bfa8ff, #8fd3f4) border-box;
-  border: 2px solid transparent;
+    linear-gradient(#fffdf9,#fffdf9) padding-box,
+    linear-gradient(135deg,#bfa8ff,#8fd3f4) border-box;
+  border: 3px solid transparent;
   box-shadow:
-    0 8px 0 #cfc6ff,
-    0 14px 28px rgba(0,0,0,0.18);
-  transition: all 0.25s ease;
+    0 10px 0 #cfc6ff,
+    0 18px 34px rgba(0,0,0,.22);
+  transition: all .25s ease;
 }
 
 .agenda-cta-btn:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 4px 0 #cfc6ff,
-    0 18px 32px rgba(0,0,0,0.22);
+    0 6px 0 #cfc6ff,
+    0 22px 40px rgba(0,0,0,.28);
 }
 
-.agenda-cta-btn:active {
-  transform: translateY(0);
-}
-
-/* IMAGEN */
-.agenda-illustration-img {
-  width: 75%;
-  max-width: 360px;
-  margin-top: 36px;
+/* ILUSTRACIÓN AGENDA */
+.agenda-illustration-agenda {
+  width: 85%;
+  max-width: 420px;
+  margin-top: 34px;
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .agenda-action {
-    flex-direction: column;
-  }
-
-  .agenda-illustration-img {
-    width: 60%;
-  }
+@media (max-width:900px){
+  .agenda-action{flex-direction:column}
+  .agenda-intro-inner{flex-direction:column}
 }
 </style>
 
