@@ -39,9 +39,10 @@
     </nav>
   </header>
 
+  <!-- CONTENIDO -->
   <main class="agenda-page">
 
-    <!-- BLOQUE EXPLICATIVO -->
+    <!-- BLOQUE EXPLICATIVO (ESTABLE) -->
     <section class="agenda-intro">
       <div class="agenda-intro-inner">
 
@@ -65,7 +66,7 @@
       </div>
     </section>
 
-    <!-- SEPARADOR -->
+    <!-- SEPARADOR (INTOCABLE) -->
     <div class="agenda-separator-wide">
       <span></span>
       <span class="diamond"></span>
@@ -114,13 +115,20 @@
 
 </div>
 
+<!-- ================= ESTILOS SOLO AGENDA ================= -->
 <style>
 
-/* FONDO */
+/* FONDO NUBE */
 .agenda-bg {
-  background: linear-gradient(135deg,#e9f4f2 0%,#f4f1fb 50%,#efe9f8 100%);
+  background: linear-gradient(
+    135deg,
+    #e9f4f2 0%,
+    #f4f1fb 50%,
+    #efe9f8 100%
+  );
 }
 
+/* CONTENEDOR GENERAL */
 .agenda-page {
   max-width: 1200px;
   margin: 0 auto;
@@ -132,12 +140,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
 }
 
-/* ILUSTRACIÓN SUPERIOR (AGRANDADA) */
 .agenda-illustration-top img {
-  max-width: 520px;
+  max-width: 420px;
   width: 100%;
 }
 
@@ -149,9 +156,9 @@
 
 .agenda-text h1 {
   font-family: "Dancing Script", cursive;
-  font-size: 48px;
+  font-size: 46px;
   color: #6f63ff;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .agenda-text p {
@@ -168,31 +175,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 95px 0;
+  margin: 90px 0 90px;
   padding: 0 60px;
 }
 
 .agenda-separator-wide span {
   flex: 1;
   height: 2px;
-  background: linear-gradient(90deg,#a88bff,#7fcdf0);
+  background: linear-gradient(90deg, #a88bff, #7fcdf0);
+  opacity: 0.85;
 }
 
 .agenda-separator-wide .diamond {
+  flex: none;
   width: 16px;
   height: 16px;
-  background: linear-gradient(135deg,#a88bff,#7fcdf0);
+  background: linear-gradient(135deg, #a88bff, #7fcdf0);
   transform: rotate(45deg);
   margin: 0 26px;
 }
 
-/* LAYOUT */
+/* LAYOUT AGENDA */
 .agenda-layout {
   display: flex;
-  gap: 70px;
+  gap: 60px;
+  align-items: flex-start;
 }
 
 /* CALENDARIO */
+.agenda-calendar-left {
+  flex: 1.2;
+}
+
 .agenda-card {
   background: #fffdf9;
   border-radius: 26px;
@@ -209,49 +223,54 @@
   position: absolute;
   inset: -2px;
   border-radius: 28px;
-  background: linear-gradient(135deg,#bfa8ff,#8fd3f4);
+  background: linear-gradient(135deg, #bfa8ff, #8fd3f4);
   z-index: -1;
 }
 
 /* CTA + ILUSTRACIÓN */
 .agenda-calendar-right {
+  flex: 0.8;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 46px;
+  gap: 36px;
 }
 
-/* BOTÓN 3D GRANDE Y REDONDO */
+/* BOTÓN 3D */
 .agenda-cta-3d {
-  padding: 26px 64px;
-  font-size: 22px;
+  display: inline-block;
+  padding: 20px 46px;
   font-family: "Lora", serif;
+  font-size: 20px;
   color: #6f63ff;
-  background: #ffffff;
+  background: #fff;
   border-radius: 999px;
   text-decoration: none;
   box-shadow:
-    0 12px 0 #cfc8ff,
-    0 24px 45px rgba(0,0,0,0.25);
-  transition: transform .2s ease, box-shadow .2s ease;
+    0 10px 0 #cfc8ff,
+    0 18px 30px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .agenda-cta-3d:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 16px 0 #cfc8ff,
-    0 32px 55px rgba(0,0,0,0.28);
+    0 14px 0 #cfc8ff,
+    0 26px 40px rgba(0,0,0,0.22);
 }
 
-/* ILUSTRACIÓN AGENDA (AGRANDADA) */
+/* ILUSTRACIÓN AGENDA */
 .agenda-illustration-bottom img {
-  max-width: 560px;
+  max-width: 520px;
   width: 100%;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .agenda-intro-inner,
+  .agenda-intro-inner {
+    flex-direction: column;
+  }
+
   .agenda-layout {
     flex-direction: column;
   }
