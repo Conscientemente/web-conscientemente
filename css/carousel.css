@@ -1,7 +1,6 @@
 /* =========================
-   CAROUSEL – VERSIÓN FINAL
-   Replica borde degradado
-   del botón de socialización
+   CAROUSEL – VERSIÓN ESTABLE
+   SIN AFECTAR BURBUJAS BASE
 ========================= */
 
 .carousel-wrapper {
@@ -17,25 +16,35 @@
 .carousel-arrow {
   background: none;
   border: none;
-  font-size: 34px;
+  font-size: 32px;
   color: #7a6cff;
   cursor: pointer;
-  z-index: 10;
-  padding: 10px;
+  z-index: 5;
+  padding: 8px;
 }
 
 .carousel-arrow.left {
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 .carousel-arrow.right {
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
-/* Ventana visible */
+/* Ventana del carrusel */
 .carousel-viewport {
-  width: 620px;        /* 2 burbujas + medias */
+  width: 560px;                 /* 2 burbujas + medias */
   overflow: hidden;
+  position: relative;
+
+  /* Desvanecido lateral */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
 }
 
 /* Pista */
@@ -47,39 +56,30 @@
 }
 
 /* =========================
-   BURBUJAS EN CARRUSEL
-   (borde degradado activo)
+   BORDE DEGRADADO SUTIL
+   (EXTERNO, NO INVASIVO)
 ========================= */
 
 .carousel-track .bubble {
   flex: 0 0 auto;
   position: relative;
+}
+
+.carousel-track .bubble::after {
+  content: "";
+  position: absolute;
+  inset: -4px;                  /* borde externo */
   border-radius: 50%;
-  padding: 4px; /* grosor del borde */
   background: linear-gradient(
     135deg,
     #bfa8ff,
     #8fd3f4
   );
+  opacity: 0.6;                 /* MÁS SUTIL */
+  z-index: -1;
 }
 
-/* Contenido interno */
-.carousel-track .bubble::before {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  background: #fffdf9; /* fondo claro original */
-  border-radius: 50%;
-  z-index: 0;
-}
-
-/* Mantener contenido encima */
-.carousel-track .bubble > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Hover elegante */
+/* Hover */
 .carousel-track .bubble:hover {
   transform: translateY(-6px);
   transition: transform 0.3s ease;
