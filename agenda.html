@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda | Conscientemente, atención psicológica</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS existente (NO se modifica) -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+
+<div class="page-background"></div>
+
+<div class="page-content">
+
+  <!-- HEADER (MISMO ESTILO QUE EL HOME) -->
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand-block">
+        <div class="brand-title">Conscientemente, atención psicológica</div>
+        <div class="brand-subtitle">
+          Acompañamiento terapéutico con evidencia y calidez humana
+        </div>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Sobre Conscientemente</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="agenda.html" class="active">Agenda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="agenda-page">
+
+    <!-- BLOQUE EXPLICATIVO -->
+    <section class="agenda-intro">
+      <div class="agenda-card gradient-border">
+        <h1>Espacio de socialización virtual gratuita</h1>
+        <p>
+          Este espacio está pensado como un primer encuentro para escucharte,
+          comprender tu situación actual y resolver dudas sobre el proceso de
+          acompañamiento psicológico.
+        </p>
+        <p>
+          No implica el inicio de un proceso terapéutico formal, sino un momento
+          de orientación, claridad y contención inicial.
+        </p>
+      </div>
+    </section>
+
+    <!-- BLOQUE AGENDA -->
+    <section class="agenda-calendar">
+      <div class="agenda-card gradient-border">
+        <!-- 🔽 PEGA AQUÍ TU IFRAME DE GOOGLE CALENDAR 🔽 -->
+        <!-- Ejemplo (reemplaza por el tuyo): -->
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=TU_CALENDARIO_AQUI"
+          style="border:0"
+          width="100%"
+          height="600"
+          frameborder="0"
+          scrolling="no">
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- ================== ESTILOS SOLO PARA AGENDA ================== -->
+<style>
+.agenda-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.agenda-intro,
+.agenda-calendar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.agenda-card {
+  background: #fffdf9;
+  border-radius: 22px;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Borde degradado – MISMO LENGUAJE QUE BOTÓN DE SOCIALIZACIÓN */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #bfa8ff, #8fd3f4);
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.agenda-card h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 42px;
+  color: #6f63ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.agenda-card p {
+  font-family: "Lora", serif;
+  font-size: 17px;
+  line-height: 1.7;
+  text-align: center;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .agenda-card {
+    padding: 28px 20px;
+  }
+
+  .agenda-card h1 {
+    font-size: 34px;
+  }
+}
+</style>
+
+</body>
+</html>
