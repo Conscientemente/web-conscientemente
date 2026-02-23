@@ -1,12 +1,13 @@
 /* =========================
-   CAROUSEL – SOLO CARRUSEL
-   NO MODIFICA BURBUJAS BASE
+   CAROUSEL – VERSIÓN FINAL
+   Replica borde degradado
+   del botón de socialización
 ========================= */
 
 .carousel-wrapper {
   position: relative;
   width: 100%;
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -16,25 +17,25 @@
 .carousel-arrow {
   background: none;
   border: none;
-  font-size: 36px;
+  font-size: 34px;
   color: #7a6cff;
   cursor: pointer;
-  z-index: 5;
+  z-index: 10;
   padding: 10px;
 }
 
 .carousel-arrow.left {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .carousel-arrow.right {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 /* Ventana visible */
 .carousel-viewport {
-  overflow: visible; /* IMPORTANTE: no corta hover ni borde */
-  width: 760px;      /* 2 burbujas completas + parciales */
+  width: 620px;        /* 2 burbujas + medias */
+  overflow: hidden;
 }
 
 /* Pista */
@@ -45,13 +46,47 @@
   will-change: transform;
 }
 
-/* Burbujas dentro del carrusel */
+/* =========================
+   BURBUJAS EN CARRUSEL
+   (borde degradado activo)
+========================= */
+
 .carousel-track .bubble {
-  flex: 0 0 auto;   /* NO se estiran */
+  flex: 0 0 auto;
+  position: relative;
+  border-radius: 50%;
+  padding: 4px; /* grosor del borde */
+  background: linear-gradient(
+    135deg,
+    #bfa8ff,
+    #8fd3f4
+  );
+}
+
+/* Contenido interno */
+.carousel-track .bubble::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #fffdf9; /* fondo claro original */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Mantener contenido encima */
+.carousel-track .bubble > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover elegante */
+.carousel-track .bubble:hover {
+  transform: translateY(-6px);
+  transition: transform 0.3s ease;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .carousel-viewport {
     width: 90%;
   }
