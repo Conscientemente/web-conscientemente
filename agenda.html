@@ -8,7 +8,7 @@
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- CSS existente (NO se modifica) -->
+  <!-- CSS base existente (NO se modifica) -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/modal.css">
 </head>
@@ -19,7 +19,7 @@
 
 <div class="page-content">
 
-  <!-- HEADER (MISMO ESTILO QUE EL HOME) -->
+  <!-- HEADER (MISMO QUE HOME) -->
   <header class="site-header">
     <nav class="nav">
       <div class="brand-block">
@@ -39,38 +39,45 @@
     </nav>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- CONTENIDO -->
   <main class="agenda-page">
 
     <!-- BLOQUE EXPLICATIVO -->
     <section class="agenda-intro">
-      <div class="agenda-card gradient-border">
-        <h1>Espacio de socialización virtual gratuita</h1>
-        <p>
-          Este espacio está pensado como un primer encuentro para escucharte,
-          comprender tu situación actual y resolver dudas sobre el proceso de
-          acompañamiento psicológico.
-        </p>
-        <p>
-          No implica el inicio de un proceso terapéutico formal, sino un momento
-          de orientación, claridad y contención inicial.
-        </p>
+      <div class="agenda-intro-inner">
+
+        <div class="agenda-text">
+          <h1>Espacio de socialización virtual gratuita</h1>
+          <p>
+            Este espacio está pensado como un primer encuentro para escucharte,
+            comprender tu situación actual y resolver dudas sobre el proceso de
+            acompañamiento psicológico.
+          </p>
+          <p>
+            No implica el inicio de un proceso terapéutico formal, sino un momento
+            de orientación, claridad y contención inicial.
+          </p>
+        </div>
+
+        <div class="agenda-illustration">
+          <img src="assets/images/ilustracion.png" alt="Ilustración explicativa">
+        </div>
+
       </div>
     </section>
 
-    <!-- BLOQUE AGENDA -->
+    <!-- SEPARADOR ELEGANTE -->
+    <div class="agenda-separator">
+      <span></span>
+      <span class="diamond"></span>
+      <span></span>
+    </div>
+
+    <!-- BLOQUE AGENDA (NO SE TOCA) -->
     <section class="agenda-calendar">
       <div class="agenda-card gradient-border">
-        <!-- 🔽 PEGA AQUÍ TU IFRAME DE GOOGLE CALENDAR 🔽 -->
-        <!-- Ejemplo (reemplaza por el tuyo): -->
-        <iframe
-          src="https://calendar.google.com/calendar/embed?src=TU_CALENDARIO_AQUI"
-          style="border:0"
-          width="100%"
-          height="600"
-          frameborder="0"
-          scrolling="no">
-        </iframe>
+        <!-- AQUÍ VA EL IFRAME DE GOOGLE CALENDAR -->
+        <!-- Se incrusta en el siguiente paso -->
       </div>
     </section>
 
@@ -78,19 +85,98 @@
 
 </div>
 
-<!-- ================== ESTILOS SOLO PARA AGENDA ================== -->
+<!-- ================= ESTILOS SOLO PARA AGENDA ================= -->
 <style>
+/* CONTENEDOR GENERAL */
 .agenda-page {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
 }
 
-.agenda-intro,
+/* BLOQUE EXPLICATIVO */
+.agenda-intro {
+  background: linear-gradient(
+    135deg,
+    #e9f4f2,
+    #f6f3fa,
+    #efe9f8
+  );
+  border-radius: 28px;
+  padding: 60px 40px;
+  margin-bottom: 60px;
+}
+
+.agenda-intro-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.agenda-text {
+  flex: 1;
+  text-align: center;
+}
+
+.agenda-text h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 42px;
+  color: #6f63ff;
+  margin-bottom: 24px;
+}
+
+.agenda-text p {
+  font-family: "Lora", serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+  max-width: 520px;
+  margin: 0 auto 16px auto;
+}
+
+/* ILUSTRACIÓN */
+.agenda-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.agenda-illustration img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+/* SEPARADOR */
+.agenda-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.agenda-separator span {
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, #bfa8ff, #8fd3f4);
+  opacity: 0.6;
+}
+
+.agenda-separator .diamond {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #bfa8ff, #8fd3f4);
+  transform: rotate(45deg);
+  margin: 0 18px;
+  opacity: 0.7;
+}
+
+/* BLOQUE AGENDA */
 .agenda-calendar {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
 }
 
 .agenda-card {
@@ -102,7 +188,7 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* Borde degradado – MISMO LENGUAJE QUE BOTÓN DE SOCIALIZACIÓN */
+/* BORDE DEGRADADO (MISMO LENGUAJE QUE BOTÓN) */
 .gradient-border {
   position: relative;
 }
@@ -117,31 +203,18 @@
   opacity: 0.9;
 }
 
-.agenda-card h1 {
-  font-family: "Dancing Script", cursive;
-  font-size: 42px;
-  color: #6f63ff;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.agenda-card p {
-  font-family: "Lora", serif;
-  font-size: 17px;
-  line-height: 1.7;
-  text-align: center;
-  color: #444;
-  margin-bottom: 12px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .agenda-card {
-    padding: 28px 20px;
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .agenda-intro-inner {
+    flex-direction: column;
   }
 
-  .agenda-card h1 {
-    font-size: 34px;
+  .agenda-illustration {
+    display: none;
+  }
+
+  .agenda-text h1 {
+    font-size: 36px;
   }
 }
 </style>
