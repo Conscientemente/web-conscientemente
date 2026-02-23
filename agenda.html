@@ -105,7 +105,7 @@
             <img src="assets/images/ilustracion-agenda.png" alt="Ilustración agenda">
           </div>
 
-          <!-- BLOQUE INSTRUCCIÓN (ÚNICO AGREGADO) -->
+          <!-- BLOQUE INSTRUCCIÓN -->
           <div class="agenda-instruction">
             <img src="assets/images/calendar.png" alt="Ícono calendario">
             <div class="agenda-instruction-text">
@@ -263,6 +263,9 @@
     0 10px 0 #cfc8ff,
     0 18px 30px rgba(0,0,0,0.18);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* ⬇ NUEVO: efecto flotante sutil */
+  animation: floatCTA 4.5s ease-in-out infinite;
 }
 
 .agenda-cta-3d:hover {
@@ -270,6 +273,14 @@
   box-shadow:
     0 14px 0 #cfc8ff,
     0 26px 40px rgba(0,0,0,0.22);
+  animation-play-state: paused;
+}
+
+/* ANIMACIÓN FLOTANTE */
+@keyframes floatCTA {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
 /* ILUSTRACIÓN AGENDA */
@@ -336,5 +347,4 @@
 
 </body>
 </html>
-
 
