@@ -1,86 +1,58 @@
-/* ==========================
-   CONTENEDOR GENERAL
-   ========================== */
+/* =========================
+   CAROUSEL – SOLO CARRUSEL
+   NO MODIFICA BURBUJAS BASE
+========================= */
 
-.carousel-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 1100px;              /* controla lo que se ve */
-  margin: 0 auto;
+.carousel-wrapper {
   position: relative;
-}
-
-/* ==========================
-   FLECHAS
-   ========================== */
-
-.carousel-arrow {
-  background: transparent;
-  border: none;
-  color: #6b4eff;
-  font-size: 2.6rem;              /* tamaño aumentado */
-  cursor: pointer;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  transition: transform 0.25s ease, color 0.25s ease;
-  z-index: 2;
 }
 
-.carousel-arrow:hover {
-  transform: scale(1.15);
-  color: #4fc3e8;
+/* Flechas */
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 36px;
+  color: #7a6cff;
+  cursor: pointer;
+  z-index: 5;
+  padding: 10px;
 }
 
-/* ==========================
-   VENTANA VISIBLE
-   ========================== */
+.carousel-arrow.left {
+  margin-right: 10px;
+}
 
+.carousel-arrow.right {
+  margin-left: 10px;
+}
+
+/* Ventana visible */
 .carousel-viewport {
-  overflow: hidden;               /* oculta el resto */
-  flex: 1;
-  padding: 2rem 0;                /* aire para hover */
+  overflow: visible; /* IMPORTANTE: no corta hover ni borde */
+  width: 760px;      /* 2 burbujas completas + parciales */
 }
 
-/* ==========================
-   TRACK (fila horizontal)
-   ========================== */
-
+/* Pista */
 .carousel-track {
   display: flex;
-  gap: 2.5rem;
-  transition: transform 0.45s ease;
+  gap: 40px;
+  transition: transform 0.4s ease;
   will-change: transform;
 }
 
-/* ==========================
-   AJUSTE DE BURBUJAS
-   (NO rompe bubbles.css)
-   ========================== */
-
+/* Burbujas dentro del carrusel */
 .carousel-track .bubble {
-  flex: 0 0 260px;                /* 👈 clave:
-                                     2 completas + parciales */
+  flex: 0 0 auto;   /* NO se estiran */
 }
 
-/* ==========================
-   RESPONSIVE
-   ========================== */
-
+/* Responsive */
 @media (max-width: 900px) {
-  .carousel-track .bubble {
-    flex: 0 0 220px;
-  }
-}
-
-@media (max-width: 600px) {
-  .carousel-track .bubble {
-    flex: 0 0 190px;
-  }
-
-  .carousel-arrow {
-    font-size: 2.2rem;
+  .carousel-viewport {
+    width: 90%;
   }
 }
