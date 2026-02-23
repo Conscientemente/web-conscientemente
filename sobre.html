@@ -73,8 +73,7 @@
       <p>
         Cada proceso terapéutico se construye de manera conjunta, teniendo en cuenta la
         historia de vida, el contexto actual, los recursos personales y las necesidades
-        específicas de quien consulta. No se trabaja desde fórmulas rígidas ni intervenciones
-        estandarizadas, sino desde una comprensión clínica cuidadosa y situada.
+        específicas de quien consulta.
       </p>
       <p>
         El espacio terapéutico se concibe como un lugar seguro para explorar, comprender y
@@ -83,12 +82,28 @@
       </p>
     </section>
 
-    <!-- BLOQUE EQUIPO (ESTRUCTURA VACÍA POR AHORA) -->
+    <!-- BLOQUE EQUIPO -->
     <section class="about-section">
       <h1>El equipo profesional</h1>
 
-      <!-- AQUÍ IRÁN LAS BURBUJAS DE LAS PROFESIONALES -->
-      <!-- (NO SE AGREGA NADA AÚN) -->
+      <div class="team-bubbles">
+
+        <div class="team-bubble" data-profesional="dianag">
+          <img src="assets/images/dianag.png" alt="Diana García">
+          <span>Diana García</span>
+        </div>
+
+        <div class="team-bubble" data-profesional="dianar">
+          <img src="assets/images/dianar.png" alt="Diana Riveros">
+          <span>Diana Riveros</span>
+        </div>
+
+        <div class="team-bubble" data-profesional="juliethg">
+          <img src="assets/images/juliethg.png" alt="Julieth García">
+          <span>Julieth García</span>
+        </div>
+
+      </div>
 
     </section>
 
@@ -106,17 +121,16 @@
   padding: 90px 40px 120px;
 }
 
-/* SECCIONES */
 .about-section {
   margin-bottom: 80px;
 }
 
-/* TÍTULOS DE SECCIÓN */
+/* TÍTULOS */
 .about-section h1 {
   font-family: "Dancing Script", cursive;
   font-size: 46px;
   color: #6f63ff;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   text-align: left;
 }
 
@@ -130,6 +144,37 @@
   margin-bottom: 20px;
 }
 
+/* BURBUJAS */
+.team-bubbles {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.team-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.team-bubble img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #bfa8ff, #8fd3f4);
+}
+
+.team-bubble span {
+  margin-top: 16px;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  color: #333;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .about-page {
@@ -138,6 +183,11 @@
 
   .about-section h1 {
     font-size: 38px;
+  }
+
+  .team-bubbles {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
