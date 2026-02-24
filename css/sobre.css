@@ -1,6 +1,6 @@
 /* =========================
    SOBRE CONSCIENTEMENTE
-   Estilos básicos – PASO 2
+   Estilos básicos
    ========================= */
 
 /* Contenedor general de la página */
@@ -30,8 +30,57 @@
   font-size: 1rem;
   line-height: 1.8;
   text-align: justify;
-
-  /* “Un poquito corrido” respecto al título */
   margin-left: 18px;
   margin-bottom: 14px;
+}
+
+/* =========================
+   EQUIPO PROFESIONAL
+   ========================= */
+
+.team-container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.team-item {
+  max-width: 220px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.team-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 12px auto;
+}
+
+.team-item p {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.team-item span {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE – MÓVIL
+   ========================= */
+
+@media (max-width: 768px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
