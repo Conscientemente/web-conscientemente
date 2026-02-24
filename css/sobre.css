@@ -125,9 +125,9 @@
     gap: 32px;
   }
 }
-/* ===== BURBUJAS EQUIPO – AJUSTE FINAL ===== */
+/* ===== BURBUJAS EQUIPO – SOLO SOBRE.HTML ===== */
 
-.team-item {
+.about-page .team-item {
   width: 180px;
   height: 180px;
 
@@ -138,7 +138,6 @@
   background: #ffffff;
   border-radius: 50%;
 
-  /* Filo pastel suave (no fondo) */
   border: 3px solid transparent;
   background-image:
     linear-gradient(#ffffff, #ffffff),
@@ -149,15 +148,15 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* Ocultar imagen */
-.team-item img {
+/* Ocultar imagen SOLO en Sobre */
+.about-page .team-item img {
   display: none;
 }
 
-/* Nombre del profesional */
-.team-item p {
+/* Nombre SOLO en Sobre */
+.about-page .team-item p {
   font-family: 'Dancing Script', cursive;
-  font-size: 1.35rem;   /* 👈 un poco más grande */
+  font-size: 1.35rem;
   color: #4a6cff;
   text-align: center;
   margin: 0;
