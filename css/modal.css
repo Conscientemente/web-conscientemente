@@ -257,21 +257,41 @@
 }
 
 /* Contenedor visual de la foto */
-/* ===== FOTO DEL PROFESIONAL (UNIFICADO) ===== */
+/* ===== FOTO MODAL – BORDE LIMPIO DEFINITIVO ===== */
+
+/* Base: todas las fotos */
 .modal-body img {
-  width: 220px;               /* 👈 un poco más grande */
-  height: 220px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  background: #ffffff;              /* 👈 círculo blanco base */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
 
-  /* Círculo degradado tipo halo */
-  padding: 6px;
+/* Borde degradado SOLO para Julieth y Dianag */
+.modal-body img[src*="juliethg"],
+.modal-body img[src*="dianag"] {
+  padding: 4px;
   background: linear-gradient(
     135deg,
     #6aa9ff,
     #9dd9ff,
     #bfa8ff
   );
+}
+
+/* Diana Riveros: círculo blanco SIN borde de color */
+.modal-body img[src*="dianar"] {
+  padding: 0;
+  background: #ffffff;
+}
+
+/* Dianag un poco más grande */
+.modal-body img[src*="dianag"] {
+  width: 220px;
+  height: 220px;
+}
 
   /* Fondo blanco para recortes irregulares */
   box-shadow: 
