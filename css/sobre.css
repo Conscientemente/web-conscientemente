@@ -128,19 +128,28 @@
 /* ===== BURBUJAS EQUIPO – AJUSTE FINAL ===== */
 
 .team-item {
-  width: 180px;              /* 👈 más pequeñas */
+  width: 180px;
   height: 180px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 
   background: #ffffff;
   border-radius: 50%;
+
+  /* Filo pastel suave (no fondo) */
+  border: 3px solid transparent;
+  background-image:
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(135deg, #c7b7ff, #e2dcff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* Ocultar imagen visualmente (sin romper estructura) */
+/* Ocultar imagen */
 .team-item img {
   display: none;
 }
@@ -148,7 +157,7 @@
 /* Nombre del profesional */
 .team-item p {
   font-family: 'Dancing Script', cursive;
-  font-size: 1.2rem;
+  font-size: 1.35rem;   /* 👈 un poco más grande */
   color: #4a6cff;
   text-align: center;
   margin: 0;
