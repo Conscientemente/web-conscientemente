@@ -12,19 +12,25 @@
 
 /* Bloques de contenido */
 .about-block {
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
-/* Títulos */
+/* ===== TÍTULOS ===== */
 .about-block h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 2.2rem;
   font-weight: 600;
   text-align: left;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  color: #4a6cff; /* azul */
 }
 
-/* Texto */
+/* Separación extra del primer título (IDENTIDAD) respecto al header */
+.about-page .about-block:first-child h2 {
+  margin-top: 32px;
+}
+
+/* ===== TEXTO ===== */
 .about-block p {
   font-family: 'Lora', serif;
   font-size: 1rem;
@@ -32,10 +38,12 @@
   text-align: justify;
   margin-left: 18px;
   margin-bottom: 14px;
+  color: #444;
 }
 
 /* =========================
    EQUIPO PROFESIONAL
+   (estructura ya existente)
    ========================= */
 
 .team-container {
@@ -74,10 +82,7 @@
   font-weight: 500;
 }
 
-/* =========================
-   RESPONSIVE – MÓVIL
-   ========================= */
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .team-container {
     flex-direction: column;
