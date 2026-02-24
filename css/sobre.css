@@ -25,7 +25,7 @@
   color: #4a6cff; /* azul */
 }
 
-/* Separación extra del primer título (IDENTIDAD) respecto al header */
+/* Separación extra del primer título respecto al header */
 .about-page .about-block:first-child h2 {
   margin-top: 32px;
 }
@@ -42,50 +42,88 @@
 }
 
 /* =========================
-   EQUIPO PROFESIONAL
-   (estructura ya existente)
+   EQUIPO PROFESIONAL – BURBUJAS
    ========================= */
 
 .team-container {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 32px;
+  margin-top: 40px;
+  margin-bottom: 80px; /* más aire antes de redes */
   flex-wrap: wrap;
 }
 
 .team-item {
-  max-width: 220px;
+  width: 220px;
   text-align: center;
   cursor: pointer;
+  padding: 18px 16px 22px;
+  border-radius: 50%;
+  position: relative;
+
+  /* Efecto 3D base */
+  background: #ffffff;
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+
+  /* Borde degradado suave */
+  border: 3px solid transparent;
+  background-clip: padding-box;
 }
 
+.team-item::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #6aa9ff,
+    #9dd9ff,
+    #bfa8ff
+  );
+  z-index: -1;
+}
+
+/* Hover – elevación suave */
+.team-item:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.18),
+    0 6px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+/* Imagen */
 .team-item img {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
   margin: 0 auto 12px auto;
 }
 
+/* Nombre */
 .team-item p {
   font-family: 'Lora', serif;
   font-size: 0.95rem;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.team-item span {
-  font-size: 0.85rem;
   font-weight: 500;
+  margin: 0;
+  color: #333;
 }
 
-/* ===== RESPONSIVE ===== */
+/* =========================
+   RESPONSIVE – MÓVIL
+   ========================= */
+
 @media (max-width: 768px) {
   .team-container {
     flex-direction: column;
     align-items: center;
+    gap: 32px;
   }
 }
