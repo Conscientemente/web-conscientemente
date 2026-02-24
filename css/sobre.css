@@ -125,3 +125,31 @@
     gap: 32px;
   }
 }
+/* ===== BURBUJAS EQUIPO – AJUSTE FINAL ===== */
+
+.team-item {
+  width: 180px;              /* 👈 más pequeñas */
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Ocultar imagen visualmente (sin romper estructura) */
+.team-item img {
+  display: none;
+}
+
+/* Nombre del profesional */
+.team-item p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: #4a6cff;
+  text-align: center;
+  margin: 0;
+}
