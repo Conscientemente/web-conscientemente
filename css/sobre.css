@@ -1,47 +1,8 @@
 /* =========================
-   SOBRE CONSCIENTEMENTE
+   EQUIPO PROFESIONAL – BURBUJAS (SOLO SOBRE.HTML)
    ========================= */
 
-.about-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.about-block {
-  margin-bottom: 56px;
-}
-
-/* ===== TÍTULOS ===== */
-.about-block h2 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.2rem;
-  font-weight: 600;
-  text-align: left;
-  margin-bottom: 18px;
-  color: #4a6cff;
-}
-
-.about-page .about-block:first-child h2 {
-  margin-top: 32px;
-}
-
-/* ===== TEXTO ===== */
-.about-block p {
-  font-family: 'Lora', serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  text-align: justify;
-  margin-left: 18px;
-  margin-bottom: 14px;
-  color: #444;
-}
-
-/* =========================
-   EQUIPO PROFESIONAL – BURBUJAS
-   ========================= */
-
-.team-container {
+.about-page .team-container {
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -51,93 +12,20 @@
   flex-wrap: wrap;
 }
 
-.team-item {
-  width: 240px;
-  height: 240px;              /* 👈 clave */
+.about-page .team-item {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  position: relative;
   cursor: pointer;
 
-  display: flex;              /* 👈 centra contenido */
-  flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 
   background: #ffffff;
-  box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.12),
-    0 2px 6px rgba(0, 0, 0, 0.08);
 
-  border: 3px solid transparent;
-  background-clip: padding-box;
-
-  transition: all 0.3s ease;
-}
-
-.team-item::before {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    #6aa9ff,
-    #9dd9ff,
-    #bfa8ff
-  );
-  z-index: -1;
-}
-
-/* Hover */
-.team-item:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 14px 28px rgba(0, 0, 0, 0.18),
-    0 6px 12px rgba(0, 0, 0, 0.12);
-}
-
-/* Imagen */
-.team-item img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-/* Nombre */
-.team-item p {
-  font-family: 'Lora', serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin: 0;
-  color: #333;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-
-@media (max-width: 768px) {
-  .team-container {
-    flex-direction: column;
-    gap: 32px;
-  }
-}
-/* ===== BURBUJAS EQUIPO – SOLO SOBRE.HTML ===== */
-
-.about-page .team-item {
-  width: 180px;
-  height: 180px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #ffffff;
-  border-radius: 50%;
-
+  /* filo pastel suave */
   border: 3px solid transparent;
   background-image:
     linear-gradient(#ffffff, #ffffff),
@@ -145,19 +33,38 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
 
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Ocultar imagen SOLO en Sobre */
+.about-page .team-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Imagen NO se muestra en burbuja */
 .about-page .team-item img {
   display: none;
 }
 
-/* Nombre SOLO en Sobre */
+/* Nombre */
 .about-page .team-item p {
   font-family: 'Dancing Script', cursive;
   font-size: 1.35rem;
   color: #4a6cff;
-  text-align: center;
   margin: 0;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .about-page .team-container {
+    flex-direction: column;
+    gap: 32px;
+  }
 }
