@@ -221,61 +221,58 @@
   }
 }
 /* =========================
-   MODAL EQUIPO – DISEÑO
+   AJUSTE FINO MODAL EQUIPO
    ========================= */
 
-/* Caja del modal */
-.modal-box {
-  max-width: 760px;
+/* Header alineado a la izquierda */
+.modal-header h2 {
+  text-align: left;
 }
 
-/* Cuerpo en dos columnas */
+/* Cuerpo en dos columnas reales */
 .modal-body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 180px;
   gap: 32px;
-  align-items: flex-start;
+  align-items: start;
 }
 
-/* Columna texto */
-.modal-body {
+/* Subtítulo debajo del nombre */
+.modal-body p strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #4a6cff;
+}
+
+/* Texto clínico limpio */
+.modal-body p {
   font-family: 'Lora', serif;
   color: #444;
+  line-height: 1.7;
 }
 
-/* Título (nombre) */
-.modal-header h2 {
-  font-family: 'Dancing Script', cursive;
-  color: #4a6cff;
-  margin-bottom: 8px;
+/* Foto a la derecha */
+.modal-body::after {
+  content: "";
 }
 
-/* Subtítulo */
-.modal-body strong {
-  display: block;
-  font-family: 'Lora', serif;
-  font-weight: 500;
-  color: #4a6cff;
-  margin-bottom: 14px;
-}
-
-/* Botón Atrás */
-.modal-close {
-  background-color: #4a6cff;
-  color: #ffffff;
-  border-radius: 24px;
-  padding: 8px 24px;
-  transition: all 0.25s ease;
-}
-
-.modal-close:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+/* Imagen del profesional */
+.modal-body img {
+  grid-column: 2;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  align-self: start;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .modal-body {
-    flex-direction: column;
-    text-align: center;
+    grid-template-columns: 1fr;
+  }
+
+  .modal-body img {
+    margin: 0 auto 16px;
   }
 }
