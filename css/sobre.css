@@ -36,3 +36,66 @@
   margin-bottom: 14px;
   color: #444;
 }
+/* =========================
+   EQUIPO PROFESIONAL – SOBRE (AISLADO)
+   ========================= */
+
+.about-page .team-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+.about-page .team-item {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  /* filo pastel */
+  border: 3px solid transparent;
+  background-image:
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(135deg, #c7b7ff, #e2dcff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-page .team-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+/* solo nombre */
+.about-page .team-item img {
+  display: none;
+}
+
+.about-page .team-item p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.35rem;
+  color: #4a6cff;
+  margin: 0;
+  text-align: center;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .about-page .team-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
