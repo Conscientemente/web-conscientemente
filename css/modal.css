@@ -240,13 +240,13 @@
 }
 
 /* Cuerpo en dos columnas (más ancho para texto) */
-.modal-body {
+/*.modal-body {
   display: grid;
   grid-template-columns: 1.6fr 220px;
   gap: 36px;
   align-items: start;
 }
-
+*/
 /* Texto clínico JUSTIFICADO (forzado) */
 .modal-body p {
   font-family: 'Lora', serif;
