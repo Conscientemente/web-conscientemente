@@ -220,3 +220,62 @@
     margin-bottom: 16px;
   }
 }
+/* =========================
+   MODAL EQUIPO – DISEÑO
+   ========================= */
+
+/* Caja del modal */
+.modal-box {
+  max-width: 760px;
+}
+
+/* Cuerpo en dos columnas */
+.modal-body {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Columna texto */
+.modal-body {
+  font-family: 'Lora', serif;
+  color: #444;
+}
+
+/* Título (nombre) */
+.modal-header h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #4a6cff;
+  margin-bottom: 8px;
+}
+
+/* Subtítulo */
+.modal-body strong {
+  display: block;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: #4a6cff;
+  margin-bottom: 14px;
+}
+
+/* Botón Atrás */
+.modal-close {
+  background-color: #4a6cff;
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 8px 24px;
+  transition: all 0.25s ease;
+}
+
+.modal-close:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+    text-align: center;
+  }
+}
