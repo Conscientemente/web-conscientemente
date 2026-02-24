@@ -117,122 +117,70 @@
 
   <!-- ================= MODALES ================= -->
 
-  <div class="modal-overlay" id="modal-dianag">
-    <div class="modal-content">
-      <button class="modal-back" id="close-dianag">Atrás</button>
-      <h2>Diana García</h2>
-      <h3>Psicóloga | Docente</h3>
-      <p>
-        Psicóloga con experiencia en el ámbito educativo y clínico, actualmente se desempeña
-        también como docente. Su trabajo se caracteriza por una mirada cercana, reflexiva y
-        comprometida con los procesos de acompañamiento emocional, integrando la comprensión del
-        contexto educativo y del desarrollo humano.
-      </p>
+  <!-- DIANA GARCÍA -->
+  <div class="modal" id="modal-dianag">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>Diana García</h2>
+      </div>
+      <div class="modal-body">
+        <p><strong>Psicóloga | Docente</strong></p>
+        <p>
+          Psicóloga con experiencia en el ámbito educativo y clínico, actualmente se desempeña
+          también como docente. Su trabajo se caracteriza por una mirada cercana, reflexiva y
+          comprometida con los procesos de acompañamiento emocional, integrando la comprensión
+          del contexto educativo y del desarrollo humano.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-close" id="close-dianag">Atrás</button>
+      </div>
     </div>
   </div>
 
-  <div class="modal-overlay" id="modal-juliethg">
-    <div class="modal-content">
-      <button class="modal-back" id="close-juliethg">Atrás</button>
-      <h2>Julieth García</h2>
-      <h3>Psicóloga | Especialista en Psicología Clínica</h3>
-      <p>
-        Psicóloga especialista en Psicología Clínica, con experiencia en el campo de la
-        psicología educativa. Acompaña procesos terapéuticos desde una mirada integral,
-        combinando el rigor clínico con la comprensión del contexto relacional y educativo.
-      </p>
+  <!-- JULIETH GARCÍA -->
+  <div class="modal" id="modal-juliethg">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>Julieth García</h2>
+      </div>
+      <div class="modal-body">
+        <p><strong>Psicóloga | Especialista en Psicología Clínica</strong></p>
+        <p>
+          Psicóloga especialista en Psicología Clínica, con experiencia en el campo de la
+          psicología educativa. Acompaña procesos terapéuticos desde una mirada integral,
+          combinando el rigor clínico con la comprensión del contexto relacional y educativo.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-close" id="close-juliethg">Atrás</button>
+      </div>
     </div>
   </div>
 
-  <div class="modal-overlay" id="modal-dianar">
-    <div class="modal-content">
-      <button class="modal-back" id="close-dianar">Atrás</button>
-      <h2>Diana Riveros</h2>
-      <h3>Psicóloga | Especialista en Psicología Clínica</h3>
-      <p>
-        Psicóloga especialista en Psicología Clínica. Acompaña procesos terapéuticos desde una
-        mirada profunda, ética y basada en la evidencia, con especial cuidado en la comprensión
-        de la historia personal, el vínculo terapéutico y el respeto por los tiempos y
-        necesidades de cada proceso.
-      </p>
+  <!-- DIANA RIVEROS -->
+  <div class="modal" id="modal-dianar">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>Diana Riveros</h2>
+      </div>
+      <div class="modal-body">
+        <p><strong>Psicóloga | Especialista en Psicología Clínica</strong></p>
+        <p>
+          Psicóloga especialista en Psicología Clínica. Acompaña procesos terapéuticos desde una
+          mirada profunda, ética y basada en la evidencia, con especial cuidado en la comprensión
+          de la historia personal, el vínculo terapéutico y el respeto por los tiempos y
+          necesidades de cada proceso.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-close" id="close-dianar">Atrás</button>
+      </div>
     </div>
   </div>
 
-  <!-- ================= ESTILOS SOLO SOBRE ================= -->
-  <style>
-    .about-page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 90px 40px 120px;
-    }
+  <!-- JS SOBRE -->
+  <script src="js/modal-sobre.js"></script>
 
-    .about-section {
-      margin-bottom: 80px;
-    }
-
-    .about-section h1 {
-      font-family: "Dancing Script", cursive;
-      font-size: 46px;
-      color: #6f63ff;
-      margin-bottom: 40px;
-      text-align: left;
-    }
-
-    .about-section p {
-      font-family: "Lora", serif;
-      font-size: 17px;
-      line-height: 1.9;
-      color: #444;
-      text-align: justify;
-      margin-bottom: 20px;
-    }
-
-    .team-bubbles {
-      display: flex;
-      gap: 50px;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .team-bubble {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    .team-bubble img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      padding: 6px;
-      background: linear-gradient(135deg, #bfa8ff, #8fd3f4);
-    }
-
-    .team-bubble span {
-      margin-top: 16px;
-      font-family: "Lora", serif;
-      font-size: 16px;
-      color: #333;
-    }
-
-    @media (max-width: 900px) {
-      .about-page {
-        padding: 70px 24px 100px;
-      }
-
-      .about-section h1 {
-        font-size: 38px;
-      }
-
-      .team-bubbles {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-  
-<script src="js/modal-sobre.js"></script>
 </body>
 </html>
