@@ -315,7 +315,14 @@
   .modal-body {
     grid-template-columns: 1fr;
   }
+/* ===== FIX DEFINITIVO MODAL HOME ===== */
 
+.modal-body {
+  display: block !important;
+  columns: 1 !important;
+  column-count: 1 !important;
+  column-gap: 0 !important;
+}
   .modal-body img {
     margin: 0 auto 16px;
   }
