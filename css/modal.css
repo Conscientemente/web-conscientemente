@@ -221,56 +221,52 @@
   }
 }
 /* =========================
-   MODAL EQUIPO – AJUSTE FINAL
+   MODAL EQUIPO – DISEÑO FINAL
    ========================= */
 
-/* Título (nombre) */
+/* Header */
 .modal-header h2 {
-  text-align: left;
   font-family: 'Dancing Script', cursive;
   color: #4a6cff;
   margin-bottom: 4px;
+  text-align: left;
 }
 
-/* Subtítulo (profesión) debajo del nombre */
-.modal-body strong {
-  display: block;
+.modal-subtitle {
   font-family: 'Lora', serif;
-  font-weight: 500;
   color: #4a6cff;
-  margin-bottom: 18px;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
 }
 
-/* Cuerpo del modal en dos columnas */
+/* Cuerpo en dos columnas */
 .modal-body {
   display: grid;
-  grid-template-columns: 1fr 180px;
+  grid-template-columns: 1.4fr 180px; /* 👈 más ancho para el texto */
   gap: 32px;
   align-items: start;
 }
 
-/* Texto clínico: quitar justificado feo */
+/* Texto clínico */
 .modal-body p {
   font-family: 'Lora', serif;
   color: #444;
   line-height: 1.7;
-  text-align: left; /* 👈 clave */
+  text-align: justify;
 }
 
-/* Foto del profesional (lado derecho) */
+/* Foto */
 .modal-body img {
-  grid-column: 2;
   width: 160px;
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  align-self: start;
 }
 
 /* Botón Atrás */
 .modal-close {
   background-color: #4a6cff;
-  color: #ffffff;
+  color: #fff;
   border-radius: 24px;
   padding: 8px 24px;
   transition: all 0.25s ease;
