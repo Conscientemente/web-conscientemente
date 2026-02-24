@@ -169,16 +169,4 @@
     gap: 0.6rem;
   }
 }
-/* ===== BLINDAJE BURBUJAS HOME ===== */
 
-.carousel-track .bubble {
-  width: auto;
-  height: auto;
-  background: none;
-  border-radius: initial;
-  box-shadow: none;
-}
-
-.carousel-track .bubble img {
-  display: block;
-}
