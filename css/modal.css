@@ -257,14 +257,25 @@
 }
 
 /* Contenedor visual de la foto */
+/* ===== FOTO DEL PROFESIONAL (UNIFICADO) ===== */
 .modal-body img {
-  width: 200px;
-  height: 200px;
+  width: 220px;               /* 👈 un poco más grande */
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  background-color: #f2f4f8;   /* fondo para recortes irregulares */
-  padding: 6px;                /* marco limpio */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+  /* Círculo degradado tipo halo */
+  padding: 6px;
+  background: linear-gradient(
+    135deg,
+    #6aa9ff,
+    #9dd9ff,
+    #bfa8ff
+  );
+
+  /* Fondo blanco para recortes irregulares */
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 /* Botón Atrás */
