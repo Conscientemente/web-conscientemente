@@ -1,10 +1,6 @@
 /* ======================================================
-   SERVICIOS – ESTILOS EXCLUSIVOS (V2)
-   Archivo: css/servicios.css
-   Contexto: servicios.html
+   SERVICIOS – ESTILOS EXCLUSIVOS (V3)
    ====================================================== */
-
-/* ---------- CONTEXTO GENERAL ---------- */
 
 .services-page {
   font-family: 'Lora', serif;
@@ -16,7 +12,7 @@
 
 .services-intro {
   max-width: 900px;
-  margin: 0 auto 3.5rem;
+  margin: 3.5rem auto 3.5rem; /* separación clara del header */
   text-align: center;
 }
 
@@ -32,269 +28,159 @@
   text-align: justify;
 }
 
-/* ---------- NIVEL 1 – BLOQUES DE SERVICIOS ---------- */
+/* ---------- BLOQUES DE SERVICIOS ---------- */
 
 .services-blocks {
-  max-width: 1100px;              /* más respiración lateral */
+  max-width: 1100px;
   margin: 0 auto 5rem;
   display: flex;
-  gap: 2.2rem;
+  gap: 2.4rem;
 }
 
-/* Bloque principal */
-.services-page .service-card {
+.service-card {
   flex: 1;
-  background: #eaf4ee;            /* verde manzana suave */
-  border-radius: 20px;
-  padding: 1.8rem;                /* menos altura visual */
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  background: #dff1e6; /* VERDE MANZANA visible */
+  border-radius: 22px;
+  padding: 1.6rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
-/* Hover */
-.services-page .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.13);
 }
 
-/* ---------- CONTENEDOR DE IMAGEN INTERNA ---------- */
-
-.services-page .service-image {
-  position: relative;
+/* Imagen interna */
+.service-image {
   border-radius: 16px;
-  padding: 1.6rem;                /* respiración interna */
+  padding: 1.5rem;
+  margin-bottom: 1.3rem;
   background-size: cover;
   background-position: center;
+  position: relative;
   overflow: hidden;
-  margin-bottom: 1.4rem;
 }
 
-/* Capa de suavizado / overlay */
-.services-page .service-image::before {
+.service-image::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(234, 244, 238, 0.75); /* verde manzana translúcido */
-  backdrop-filter: blur(1.5px);
-  z-index: 0;
+  background: rgba(223, 241, 230, 0.75);
+  backdrop-filter: blur(1.2px);
 }
 
-/* Todo el texto dentro de la imagen */
-.services-page .service-image > * {
+.service-image > * {
   position: relative;
   z-index: 1;
 }
 
-/* ---------- TÍTULOS Y TEXTO ---------- */
-
-.services-page .service-card h3 {
+/* Textos */
+.service-card h3 {
   font-family: 'Dancing Script', cursive;
   font-size: 2rem;
-  color: #7fa6cf;                 /* azul pastel más suave */
-  margin-bottom: 0.8rem;
+  color: #7fa6cf;
+  margin-bottom: .7rem;
 }
 
-.services-page .service-card p {
-  font-size: 0.95rem;
+.service-card p {
+  font-size: .95rem;
   text-align: justify;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
 }
 
-/* ---------- BOTÓN ---------- */
-
-.services-page .service-button {
-  background: transparent;
+/* Botón */
+.service-button {
   border: 1.4px solid #7fa6cf;
+  background: transparent;
   color: #5f86b3;
-  padding: 0.55rem 1.5rem;
+  padding: .5rem 1.4rem;
   border-radius: 22px;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.services-page .service-button:hover {
+.service-button:hover {
   background: #7fa6cf;
-  color: #ffffff;
+  color: #fff;
 }
 
-/* ---------- NIVEL 2 – METODOLOGÍA ---------- */
+/* ---------- METODOLOGÍA ---------- */
 
 .services-method {
   max-width: 900px;
-  margin: 0 auto 4.5rem;
+  margin: 0 auto 3rem;
 }
 
 .services-method h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 2.6rem;
   color: #8fb3d9;
-  margin-bottom: 1.4rem;
   text-align: center;
+  margin-bottom: 1.4rem;
 }
 
 .services-method h3 {
   font-family: 'Dancing Script', cursive;
   font-size: 1.8rem;
   color: #7fa6cf;
-  margin-top: 2.4rem;
-  margin-bottom: 0.7rem;
+  margin-top: 2.2rem;
 }
 
 .services-method p {
-  font-size: 1rem;
   text-align: justify;
 }
 
-/* ---------- AVISO IMPORTANTE (NO URGENCIAS) ---------- */
+/* ---------- AVISO NO URGENCIAS ---------- */
 
 .services-warning {
-  max-width: 900px;
-  margin: 3.5rem auto 5rem;
-  padding: 1.6rem 2rem;
-  background: #f4f8f6;
-  border-left: 4px solid #9fc9b2;
+  max-width: 850px;
+  margin: 3rem auto 4.5rem;
+  padding: 1.4rem 1.8rem;
+  background: #f1f7f4;
+  border-left: 4px solid #8fc3aa;
   border-radius: 14px;
-  font-size: 0.95rem;
-  color: #5a6b65;
+  display: flex;
+  gap: .8rem;
+  align-items: flex-start;
+  font-size: .95rem;
 }
 
-/* ---------- NIVEL 3 – CONTACTO ---------- */
+.warning-icon {
+  font-size: 1.2rem;
+}
+
+/* ---------- CONTACTO ---------- */
 
 .services-contact {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto 4rem;
   display: flex;
-  gap: 3rem;
-  align-items: flex-start;
+  gap: 2.5rem;
 }
 
-/* CTA principal */
-.services-contact .contact-main {
-  flex: 1.2;
+.contact-main {
+  flex: 1.1;
 }
 
-.services-contact .contact-main h2 {
+.contact-main h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 2.4rem;
   color: #8fb3d9;
-  margin-bottom: 1rem;
 }
 
-.services-contact .contact-main p {
-  text-align: justify;
-  margin-bottom: 2rem;
-}
-
-/* Botones CTA */
-.contact-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-primary,
-.btn-secondary {
-  text-decoration: none;
-  padding: 0.65rem 1.7rem;
-  border-radius: 28px;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background: #7fa6cf;
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background: #6f97c1;
-}
-
-.btn-secondary {
-  border: 1.4px solid #7fa6cf;
-  color: #5f86b3;
-}
-
-.btn-secondary:hover {
-  background: #7fa6cf;
-  color: #ffffff;
-}
-
-/* Caja consulta específica */
-.services-contact .contact-box {
-  flex: 0.9;
-  background: #eaf4ee;
-  border-radius: 20px;
-  padding: 1.8rem;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-}
-
-.services-contact .contact-box h3 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.8rem;
-  color: #7fa6cf;
-  margin-bottom: 0.8rem;
-}
-
-.services-contact .contact-box p {
-  font-size: 0.95rem;
-  text-align: justify;
-  margin-bottom: 1.4rem;
-}
-
-/* Formulario */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  border: 1px solid #cfd8df;
-  border-radius: 12px;
-  padding: 0.55rem 0.75rem;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
-  margin-bottom: 0.8rem;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 90px;
-}
-
-.contact-form button {
-  background: #7fa6cf;
-  color: #ffffff;
-  border: none;
-  padding: 0.55rem 1.6rem;
-  border-radius: 24px;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background: #6f97c1;
+.contact-box {
+  flex: .9;
+  background: #dff1e6;
+  border-radius: 22px;
+  padding: 1.6rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,.09);
 }
 
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 900px) {
-
-  .services-blocks {
-    flex-direction: column;
-  }
-
+  .services-blocks,
   .services-contact {
     flex-direction: column;
-  }
-
-  .services-intro h2 {
-    font-size: 2.6rem;
-  }
-
-  .services-method h2 {
-    font-size: 2.3rem;
   }
 }
