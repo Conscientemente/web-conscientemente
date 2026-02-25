@@ -1,5 +1,5 @@
-* ======================================================
-   SERVICIOS – ESTILOS EXCLUSIVOS
+/* ======================================================
+   SERVICIOS – ESTILOS EXCLUSIVOS (V2)
    Archivo: css/servicios.css
    Contexto: servicios.html
    ====================================================== */
@@ -16,14 +16,14 @@
 
 .services-intro {
   max-width: 900px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 3.5rem;
   text-align: center;
 }
 
 .services-intro h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 3rem;
-  color: #8fb3d9; /* azul pastel */
+  color: #8fb3d9;
   margin-bottom: 1rem;
 }
 
@@ -35,57 +35,88 @@
 /* ---------- NIVEL 1 – BLOQUES DE SERVICIOS ---------- */
 
 .services-blocks {
+  max-width: 1100px;              /* más respiración lateral */
+  margin: 0 auto 5rem;
   display: flex;
-  gap: 2rem;
-  margin-bottom: 5rem;
+  gap: 2.2rem;
 }
 
-/* Tarjetas */
+/* Bloque principal */
 .services-page .service-card {
   flex: 1;
-  background: #e9f3ec; /* verde pastel / manzana suave */
-  border-radius: 18px;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  background: #eaf4ee;            /* verde manzana suave */
+  border-radius: 20px;
+  padding: 1.8rem;                /* menos altura visual */
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 /* Hover */
 .services-page .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
 
-/* Títulos de servicio */
+/* ---------- CONTENEDOR DE IMAGEN INTERNA ---------- */
+
+.services-page .service-image {
+  position: relative;
+  border-radius: 16px;
+  padding: 1.6rem;                /* respiración interna */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin-bottom: 1.4rem;
+}
+
+/* Capa de suavizado / overlay */
+.services-page .service-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(234, 244, 238, 0.75); /* verde manzana translúcido */
+  backdrop-filter: blur(1.5px);
+  z-index: 0;
+}
+
+/* Todo el texto dentro de la imagen */
+.services-page .service-image > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- TÍTULOS Y TEXTO ---------- */
+
 .services-page .service-card h3 {
   font-family: 'Dancing Script', cursive;
   font-size: 2rem;
-  color: #8fb3d9;
-  margin-bottom: 1rem;
+  color: #7fa6cf;                 /* azul pastel más suave */
+  margin-bottom: 0.8rem;
 }
 
-/* Texto */
 .services-page .service-card p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
+  font-size: 0.95rem;
   text-align: justify;
+  margin-bottom: 1.4rem;
 }
 
-/* Botón */
+/* ---------- BOTÓN ---------- */
+
 .services-page .service-button {
   background: transparent;
-  border: 1.5px solid #8fb3d9;
+  border: 1.4px solid #7fa6cf;
   color: #5f86b3;
-  padding: 0.6rem 1.6rem;
-  border-radius: 25px;
+  padding: 0.55rem 1.5rem;
+  border-radius: 22px;
   font-family: 'Lora', serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .services-page .service-button:hover {
-  background: #8fb3d9;
+  background: #7fa6cf;
   color: #ffffff;
 }
 
@@ -93,14 +124,14 @@
 
 .services-method {
   max-width: 900px;
-  margin: 0 auto 5rem;
+  margin: 0 auto 4.5rem;
 }
 
 .services-method h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 2.6rem;
   color: #8fb3d9;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
   text-align: center;
 }
 
@@ -108,8 +139,8 @@
   font-family: 'Dancing Script', cursive;
   font-size: 1.8rem;
   color: #7fa6cf;
-  margin-top: 2.5rem;
-  margin-bottom: 0.8rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.7rem;
 }
 
 .services-method p {
@@ -117,12 +148,26 @@
   text-align: justify;
 }
 
+/* ---------- AVISO IMPORTANTE (NO URGENCIAS) ---------- */
+
+.services-warning {
+  max-width: 900px;
+  margin: 3.5rem auto 5rem;
+  padding: 1.6rem 2rem;
+  background: #f4f8f6;
+  border-left: 4px solid #9fc9b2;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  color: #5a6b65;
+}
+
 /* ---------- NIVEL 3 – CONTACTO ---------- */
 
 .services-contact {
+  max-width: 1100px;
+  margin: 0 auto 4rem;
   display: flex;
   gap: 3rem;
-  margin-bottom: 4rem;
   align-items: flex-start;
 }
 
@@ -153,54 +198,52 @@
 .btn-primary,
 .btn-secondary {
   text-decoration: none;
-  padding: 0.7rem 1.8rem;
-  border-radius: 30px;
+  padding: 0.65rem 1.7rem;
+  border-radius: 28px;
   font-family: 'Lora', serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 
-/* Botón principal */
 .btn-primary {
-  background: #8fb3d9;
+  background: #7fa6cf;
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background: #7aa2cc;
+  background: #6f97c1;
 }
 
-/* Botón secundario */
 .btn-secondary {
-  border: 1.5px solid #8fb3d9;
+  border: 1.4px solid #7fa6cf;
   color: #5f86b3;
 }
 
 .btn-secondary:hover {
-  background: #8fb3d9;
+  background: #7fa6cf;
   color: #ffffff;
 }
 
 /* Caja consulta específica */
 .services-contact .contact-box {
   flex: 0.9;
-  background: #e9f3ec;
-  border-radius: 18px;
-  padding: 2rem;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  background: #eaf4ee;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
 
 .services-contact .contact-box h3 {
   font-family: 'Dancing Script', cursive;
   font-size: 1.8rem;
-  color: #8fb3d9;
+  color: #7fa6cf;
   margin-bottom: 0.8rem;
 }
 
 .services-contact .contact-box p {
   font-size: 0.95rem;
   text-align: justify;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
 }
 
 /* Formulario */
@@ -209,7 +252,7 @@
   width: 100%;
   border: 1px solid #cfd8df;
   border-radius: 12px;
-  padding: 0.6rem 0.8rem;
+  padding: 0.55rem 0.75rem;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
   margin-bottom: 0.8rem;
@@ -221,26 +264,18 @@
 }
 
 .contact-form button {
-  background: #8fb3d9;
+  background: #7fa6cf;
   color: #ffffff;
   border: none;
-  padding: 0.6rem 1.6rem;
-  border-radius: 25px;
+  padding: 0.55rem 1.6rem;
+  border-radius: 24px;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .contact-form button:hover {
-  background: #7aa2cc;
-}
-
-/* Aviso no urgencias */
-.services-contact .contact-note {
-  margin-top: 2rem;
-  font-size: 0.85rem;
-  color: #6a7680;
-  max-width: 900px;
+  background: #6f97c1;
 }
 
 /* ---------- RESPONSIVE ---------- */
