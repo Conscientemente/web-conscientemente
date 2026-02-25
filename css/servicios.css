@@ -225,7 +225,11 @@
   font-family: 'Lora', serif;
   cursor: pointer;
 }
-
+.contact-form button:hover {
+  background: #6b8fb8;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  transform: translateY(-2px);
+}
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 900px) {
