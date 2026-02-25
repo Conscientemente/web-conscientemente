@@ -1,5 +1,5 @@
-/* ======================================================
-   SERVICIOS – ESTILOS EXCLUSIVOS (V4 CORRECTIVA)
+* ======================================================
+   SERVICIOS – CSS CORRECTIVO (BASE ESTABLE – OPCIÓN B)
    ====================================================== */
 
 .services-page {
@@ -12,7 +12,7 @@
 
 .services-intro {
   max-width: 900px;
-  margin: 4.8rem auto 3.5rem; /* MÁS aire desde el header */
+  margin: 4.5rem auto 3.5rem;
   text-align: center;
 }
 
@@ -34,15 +34,15 @@
   max-width: 1100px;
   margin: 0 auto 5rem;
   display: flex;
-  gap: 2.4rem;
+  gap: 2.5rem;
 }
 
 .service-card {
   flex: 1;
-  background: #dff1e6;
+  background: #d9f0e4; /* VERDE MANZANA VISIBLE */
   border-radius: 22px;
-  padding: 1.6rem;
-  box-shadow: 0 12px 26px rgba(0,0,0,0.10);
+  padding: 1.8rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
   transition: transform .3s ease, box-shadow .3s ease;
 }
 
@@ -51,57 +51,30 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.14);
 }
 
-/* Imagen interna (preparada) */
-.service-image {
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1.3rem;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Overlay */
-.service-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(223, 241, 230, 0.78);
-  backdrop-filter: blur(1.3px);
-}
-
-.service-image > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Textos */
 .service-card h3 {
   font-family: 'Dancing Script', cursive;
   font-size: 2rem;
   color: #7fa6cf;
-  margin-bottom: .7rem;
+  margin-bottom: .8rem;
 }
 
 .service-card p {
   font-size: .95rem;
   text-align: justify;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
-/* Botón */
-.services-page .service-button {
-  font-family: 'Lora', serif; /* FORZAMOS LORA */
-  border: 1.4px solid #7fa6cf;
+.service-button {
+  font-family: 'Lora', serif;
+  border-radius: 24px;
+  border: 1.5px solid #7fa6cf;
   background: transparent;
   color: #5f86b3;
-  padding: .5rem 1.4rem;
-  border-radius: 22px;
+  padding: .6rem 1.6rem;
   cursor: pointer;
 }
 
-.services-page .service-button:hover {
+.service-button:hover {
   background: #7fa6cf;
   color: #fff;
 }
@@ -110,34 +83,51 @@
 
 .services-method {
   max-width: 900px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 3.5rem;
+}
+
+.services-method h2 {
+  font-family: 'Dancing Script', cursive; /* CONFIRMADO */
+  font-size: 2.6rem;
+  color: #8fb3d9;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.services-method h3 {
+  font-family: 'Lora', serif; /* CONFIRMADO */
+  font-size: 1.15rem;
+  color: #4b5a63;
+  margin-top: 2.2rem;
+}
+
+.services-method p {
+  text-align: justify;
 }
 
 /* ---------- AVISO NO URGENCIAS ---------- */
 
 .services-warning {
   max-width: 850px;
-  margin: 3.2rem auto 4.8rem;
+  margin: 3rem auto 4.5rem;
   padding: 1.6rem 2rem;
-  background: #f1f7f4;
+  background: #e8f5ef; /* verde manzana claro */
   border-left: 5px solid #8fc3aa;
-  border-radius: 16px;
+  border-radius: 18px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.10);
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
   transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .services-warning:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.16);
 }
 
-/* Ícono real */
 .warning-icon {
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
   background-image: url("../assets/images/importante.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -147,27 +137,89 @@
 /* ---------- CONTACTO ---------- */
 
 .services-contact {
-  max-width: 1000px;
-  margin: 0 auto 4rem;
+  max-width: 1100px;
+  margin: 0 auto 5rem;
   display: flex;
-  gap: 2.5rem;
+  gap: 3.5rem;
 }
 
-.services-page .contact-main h2 {
+.contact-main h2 {
   font-family: 'Dancing Script', cursive;
+  color: #8fb3d9; /* AZUL CORRECTO */
+  font-size: 2.4rem;
 }
 
-.services-page .contact-box {
-  background: #dff1e6;
-  border-radius: 22px;
-  padding: 1.6rem;
-  box-shadow: 0 12px 26px rgba(0,0,0,.10);
+.contact-buttons {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 1rem;
 }
 
-/* Botones CTA */
-.services-page .btn-primary,
-.services-page .btn-secondary {
+.btn-primary,
+.btn-secondary {
   font-family: 'Lora', serif;
+  padding: .7rem 1.8rem;
+  border-radius: 28px;
+  text-decoration: none;
+  font-size: .95rem;
+}
+
+.btn-primary {
+  background: #7fa6cf;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1.5px solid #7fa6cf;
+  color: #5f86b3;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #6f97c1;
+  color: #fff;
+}
+
+/* CAJA CONSULTA */
+
+.contact-box {
+  background: #d9f0e4; /* VERDE MANZANA */
+  border-radius: 26px;
+  padding: 2.4rem; /* MÁS GRANDE */
+  box-shadow: 0 14px 32px rgba(0,0,0,0.14);
+}
+
+.contact-box h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #7fa6cf;
+  font-size: 1.8rem;
+  margin-bottom: .8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border-radius: 16px;
+  border: none;
+  padding: .75rem;
+  margin-bottom: .9rem;
+  font-family: 'Lora', serif;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+}
+
+.contact-form textarea {
+  min-height: 110px;
+}
+
+.contact-form button {
+  margin-top: .6rem;
+  border-radius: 26px;
+  padding: .6rem 1.8rem;
+  border: none;
+  background: #7fa6cf;
+  color: #fff;
+  font-family: 'Lora', serif;
+  cursor: pointer;
 }
 
 /* ---------- RESPONSIVE ---------- */
