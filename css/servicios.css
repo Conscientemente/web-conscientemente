@@ -44,6 +44,40 @@
   padding: 1.8rem;
   box-shadow: 0 12px 28px rgba(0,0,0,0.10);
   transition: transform .3s ease, box-shadow .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==== IMÁGENES DE FONDO TRASLÚCIDAS ==== */
+
+.services-page #open-individual::before,
+.services-page #open-pareja::before,
+.services-page #open-talleres::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.services-page #open-individual::before {
+  background-image: url("../assets/images/individuo.png");
+}
+
+.services-page #open-pareja::before {
+  background-image: url("../assets/images/pareja.png");
+}
+
+.services-page #open-talleres::before {
+  background-image: url("../assets/images/charla.png");
+}
+
+/* aseguramos que el contenido esté encima */
+.service-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .service-card:hover {
@@ -140,7 +174,7 @@
   max-width: 1100px;
   margin: 0 auto 5rem;
   display: flex;
-  gap: 5rem; /* AUMENTAMOS SEPARACIÓN */
+  gap: 5rem;
 }
 
 .contact-main h2 {
@@ -187,7 +221,7 @@
   border-radius: 26px;
   padding: 2.4rem;
   box-shadow: 0 14px 32px rgba(0,0,0,0.14);
-  max-width: 430px; /* ANGOSTAMOS LIGERAMENTE */
+  max-width: 430px;
 }
 
 .contact-box h3 {
@@ -197,12 +231,10 @@
   margin-bottom: .8rem;
 }
 
-/* JUSTIFICAMOS TEXTO EXPLICATIVO */
 .contact-box p {
   text-align: justify;
 }
 
-/* ESTILO BOTÓN NUEVO (SIN FORM) */
 .contact-box button {
   margin-top: 1.6rem;
   border-radius: 26px;
