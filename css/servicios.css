@@ -87,7 +87,7 @@
 .service-card h3 {
   font-family: 'Dancing Script', cursive;
   font-size: 2rem;
-  color: #7fa6cf;
+  color: #a67c2d; /* OCRE ELEGANTE */
   margin-bottom: .8rem;
 }
 
@@ -95,20 +95,22 @@
   font-size: .95rem;
   text-align: justify;
   margin-bottom: 1.4rem;
+  color: #2e3a43; /* MÁS OSCURO PARA CONTRASTE */
 }
 
 .service-button {
   font-family: 'Lora', serif;
   border-radius: 24px;
-  border: 1.5px solid #7fa6cf;
-  background: transparent;
-  color: #5f86b3;
+  border: 1px solid rgba(255,255,255,0.6); /* BORDE BLANCO SUAVE */
+  background: #a67c2d; /* OCRE */
+  color: #ffffff;
   padding: .6rem 1.6rem;
   cursor: pointer;
+  transition: all .3s ease;
 }
 
 .service-button:hover {
-  background: #7fa6cf;
+  background: #8f6924; /* OCRE MÁS PROFUNDO */
   color: #fff;
 }
 
