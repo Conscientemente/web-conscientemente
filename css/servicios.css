@@ -1,4 +1,4 @@
-* ======================================================
+/* ======================================================
    SERVICIOS – CSS CORRECTIVO (BASE ESTABLE – OPCIÓN B)
    ====================================================== */
 
@@ -39,7 +39,7 @@
 
 .service-card {
   flex: 1;
-  background: #d9f0e4; /* VERDE MANZANA VISIBLE */
+  background: #d9f0e4;
   border-radius: 22px;
   padding: 1.8rem;
   box-shadow: 0 12px 28px rgba(0,0,0,0.10);
@@ -87,7 +87,7 @@
 }
 
 .services-method h2 {
-  font-family: 'Dancing Script', cursive; /* CONFIRMADO */
+  font-family: 'Dancing Script', cursive;
   font-size: 2.6rem;
   color: #8fb3d9;
   text-align: center;
@@ -95,7 +95,7 @@
 }
 
 .services-method h3 {
-  font-family: 'Lora', serif; /* CONFIRMADO */
+  font-family: 'Lora', serif;
   font-size: 1.15rem;
   color: #4b5a63;
   margin-top: 2.2rem;
@@ -111,7 +111,7 @@
   max-width: 850px;
   margin: 3rem auto 4.5rem;
   padding: 1.6rem 2rem;
-  background: #e8f5ef; /* verde manzana claro */
+  background: #e8f5ef;
   border-left: 5px solid #8fc3aa;
   border-radius: 18px;
   box-shadow: 0 12px 26px rgba(0,0,0,0.10);
@@ -140,12 +140,12 @@
   max-width: 1100px;
   margin: 0 auto 5rem;
   display: flex;
-  gap: 3.5rem;
+  gap: 5rem; /* AUMENTAMOS SEPARACIÓN */
 }
 
 .contact-main h2 {
   font-family: 'Dancing Script', cursive;
-  color: #8fb3d9; /* AZUL CORRECTO */
+  color: #8fb3d9;
   font-size: 2.4rem;
 }
 
@@ -183,10 +183,11 @@
 /* CAJA CONSULTA */
 
 .contact-box {
-  background: #d9f0e4; /* VERDE MANZANA */
+  background: #d9f0e4;
   border-radius: 26px;
-  padding: 2.4rem; /* MÁS GRANDE */
+  padding: 2.4rem;
   box-shadow: 0 14px 32px rgba(0,0,0,0.14);
+  max-width: 430px; /* ANGOSTAMOS LIGERAMENTE */
 }
 
 .contact-box h3 {
@@ -196,40 +197,30 @@
   margin-bottom: .8rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  border-radius: 16px;
-  border: none;
-  padding: .75rem;
-  margin-bottom: .9rem;
-  font-family: 'Lora', serif;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+/* JUSTIFICAMOS TEXTO EXPLICATIVO */
+.contact-box p {
+  text-align: justify;
 }
-/* Separación entre el texto explicativo y los campos del formulario */
-.contact-form {
+
+/* ESTILO BOTÓN NUEVO (SIN FORM) */
+.contact-box button {
   margin-top: 1.6rem;
-}
-
-.contact-form textarea {
-  min-height: 110px;
-}
-
-.contact-form button {
-  margin-top: .6rem;
   border-radius: 26px;
-  padding: .6rem 1.8rem;
+  padding: .7rem 1.8rem;
   border: none;
   background: #7fa6cf;
   color: #fff;
   font-family: 'Lora', serif;
   cursor: pointer;
+  transition: all .3s ease;
 }
-.contact-form button:hover {
+
+.contact-box button:hover {
   background: #6b8fb8;
   box-shadow: 0 10px 22px rgba(0,0,0,0.18);
   transform: translateY(-2px);
 }
+
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 900px) {
