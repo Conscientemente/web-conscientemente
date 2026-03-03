@@ -48,8 +48,6 @@
   overflow: hidden;
 }
 
-/* ==== IMÁGENES SOBRE FONDO AMARILLO ==== */
-
 .services-page #open-individual::before,
 .services-page #open-pareja::before,
 .services-page #open-talleres::before {
@@ -115,32 +113,192 @@
   transform: translateY(-2px);
 }
 
-/* ---------- MODALES SERVICIOS ---------- */
+/* ---------- METODOLOGÍA ---------- */
+
+.services-method {
+  max-width: 900px;
+  margin: 0 auto 3.5rem;
+}
+
+.services-method h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.6rem;
+  color: #4e2f0e;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.services-method h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.15rem;
+  color: #4e2f0e;
+  margin-top: 2.2rem;
+}
+
+.services-method p {
+  text-align: justify;
+}
+
+/* ---------- AVISO NO URGENCIAS ---------- */
+
+.services-warning {
+  max-width: 850px;
+  margin: 3rem auto 4.5rem;
+  padding: 1.6rem 2rem;
+  background: rgba(244, 177, 14, 0.75);
+  border-left: 5px solid #4e2f0e;
+  border-radius: 18px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.10);
+  display: flex;
+  gap: 1rem;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.services-warning:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.16);
+}
+
+.warning-icon {
+  width: 34px;
+  height: 34px;
+  background-image: url("../assets/images/importante.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+/* ---------- CONTACTO ---------- */
+
+.services-contact {
+  max-width: 1100px;
+  margin: 0 auto 5rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.contact-main h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #4e2f0e;
+  font-size: 2.4rem;
+}
+
+.contact-buttons {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 1rem;
+}
+
+@keyframes subtleFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.btn-primary,
+.btn-secondary {
+  font-family: 'Lora', serif;
+  padding: .7rem 1.8rem;
+  border-radius: 28px;
+  text-decoration: none;
+  font-size: .95rem;
+  animation: subtleFloat 3.5s ease-in-out infinite;
+}
+
+.btn-primary {
+  background: #4e2f0e;
+  color: #F4B10E;
+}
+
+.btn-secondary {
+  border: 1.5px solid #4e2f0e;
+  color: #4e2f0e;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #3c240b;
+  color: #F4B10E;
+}
+
+/* CAJA CONSULTA */
+
+.contact-box {
+  background: rgba(244, 177, 14, 0.78);
+  border-radius: 26px;
+  padding: 2.4rem;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.20);
+  max-width: 430px;
+}
+
+.contact-box h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #4e2f0e;
+  font-size: 1.8rem;
+  margin-bottom: .8rem;
+}
+
+.contact-box p {
+  text-align: justify;
+}
+
+.contact-box button {
+  margin-top: 1.6rem;
+  border-radius: 26px;
+  padding: .7rem 1.8rem;
+  border: none;
+  background: #4e2f0e;
+  color: #F4B10E;
+  font-family: 'Lora', serif;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.contact-box button:hover {
+  background: #3c240b;
+  transform: translateY(-2px);
+}
+
+/* ---------- MODALES SERVICIOS (INTEGRADOS SIN ROMPER NADA) ---------- */
 
 .services-modal {
-  display: none;
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
   backdrop-filter: blur(3px);
-  align-items: center;
-  justify-content: center;
   z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
 .services-modal.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .services-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
   background: #ffffff;
   width: 90%;
   max-width: 700px;
   border-radius: 20px;
   padding: 2.5rem;
   box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-  position: relative;
-  animation: modalFade 0.25s ease;
+  transition: transform 0.25s ease;
+}
+
+.services-modal.active .services-modal-content {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .services-modal-content h2 {
@@ -156,11 +314,6 @@
   font-size: 1.5rem;
   cursor: pointer;
   color: #4e2f0e;
-}
-
-@keyframes modalFade {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
 }
 
 /* ---------- RESPONSIVE ---------- */
