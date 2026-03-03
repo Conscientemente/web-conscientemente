@@ -95,7 +95,7 @@
   font-size: .95rem;
   text-align: justify;
   margin-bottom: 1.4rem;
-  color: #1f1f1f; /* TEXTO UN POCO MÁS FIRME */
+  color: #1a140c; /* MÁS PROFUNDO Y CÁLIDO */
 }
 
 .service-button {
@@ -112,6 +112,7 @@
 .service-button:hover {
   background: #3c240b;
   color: #F4B10E;
+  transform: translateY(-2px);
 }
 
 /* ---------- METODOLOGÍA ---------- */
@@ -190,6 +191,14 @@
   gap: 1rem;
 }
 
+/* ANIMACIÓN SUTIL BOTONES PRINCIPALES */
+
+@keyframes subtleFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
 .btn-primary,
 .btn-secondary {
   font-family: 'Lora', serif;
@@ -197,6 +206,7 @@
   border-radius: 28px;
   text-decoration: none;
   font-size: .95rem;
+  animation: subtleFloat 3.5s ease-in-out infinite;
 }
 
 .btn-primary {
@@ -221,7 +231,7 @@
   background: rgba(244, 177, 14, 0.78);
   border-radius: 26px;
   padding: 2.4rem;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.14);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.20); /* MÁS PROFUNDIDAD */
   max-width: 430px;
 }
 
