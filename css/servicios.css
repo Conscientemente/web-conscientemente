@@ -58,12 +58,12 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.35;
   z-index: 0;
 }
 
 .services-page #open-individual::before {
-  background-image: url("../assets/images/individuo.png");
+  background-image: url("../assets/images/individual.png");
 }
 
 .services-page #open-pareja::before {
