@@ -342,3 +342,10 @@
   font-family: 'Lora', serif;
   cursor: pointer;
 }
+.services-modal-content span.services-modal-close {
+  display: none;
+}
+.services-modal-content button.services-modal-close {
+  font-size: .9rem;
+  padding: .45rem 1.2rem;
+}
