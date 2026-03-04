@@ -4,8 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!track) return;
 
+  // duplicar contenido para carrusel infinito
+  track.innerHTML += track.innerHTML;
+
   let scrollAmount = 0;
-  const speed = 0.4;
+  const speed = 0.35;
 
   function autoScroll() {
 
