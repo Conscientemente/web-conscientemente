@@ -48,8 +48,6 @@
   overflow: hidden;
 }
 
-/* ==== IMÁGENES SOBRE FONDO AMARILLO ==== */
-
 .services-page #open-individual::before,
 .services-page #open-pareja::before,
 .services-page #open-talleres::before {
@@ -95,7 +93,7 @@
   font-size: .95rem;
   text-align: justify;
   margin-bottom: 1.4rem;
-  color: #1f1f1f;
+  color: #1a140c;
 }
 
 .service-button {
@@ -112,6 +110,7 @@
 .service-button:hover {
   background: #3c240b;
   color: #F4B10E;
+  transform: translateY(-2px);
 }
 
 /* ---------- METODOLOGÍA ---------- */
@@ -190,6 +189,12 @@
   gap: 1rem;
 }
 
+@keyframes subtleFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
 .btn-primary,
 .btn-secondary {
   font-family: 'Lora', serif;
@@ -197,6 +202,7 @@
   border-radius: 28px;
   text-decoration: none;
   font-size: .95rem;
+  animation: subtleFloat 3.5s ease-in-out infinite;
 }
 
 .btn-primary {
@@ -215,26 +221,99 @@
   color: #F4B10E;
 }
 
-/* ---------- MODALES (COMPATIBLE CON TU modal.css) ---------- */
+/* CAJA CONSULTA */
 
-.services-modal-content p {
+.contact-box {
+  background: rgba(244, 177, 14, 0.78);
+  border-radius: 26px;
+  padding: 2.4rem;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.20);
+  max-width: 430px;
+}
+
+.contact-box h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #4e2f0e;
+  font-size: 1.8rem;
+  margin-bottom: .8rem;
+}
+
+.contact-box p {
   text-align: justify;
 }
 
-.modal-back {
-  margin-top: 1.5rem;
-  border-radius: 24px;
+.contact-box button {
+  margin-top: 1.6rem;
+  border-radius: 26px;
+  padding: .7rem 1.8rem;
   border: none;
   background: #4e2f0e;
   color: #F4B10E;
-  padding: .6rem 1.6rem;
-  cursor: pointer;
   font-family: 'Lora', serif;
+  cursor: pointer;
   transition: all .3s ease;
 }
 
-.modal-back:hover {
+.contact-box button:hover {
   background: #3c240b;
+  transform: translateY(-2px);
+}
+
+/* ---------- MODALES SERVICIOS (INTEGRADOS SIN ROMPER NADA) ---------- */
+
+.services-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.services-modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.services-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  background: #ffffff;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease;
+}
+
+.services-modal.active .services-modal-content {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.services-modal-content h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #4e2f0e;
+  margin-bottom: 1rem;
+}
+
+.services-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #4e2f0e;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -245,3 +324,4 @@
     flex-direction: column;
   }
 }
+
