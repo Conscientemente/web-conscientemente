@@ -342,10 +342,51 @@
   font-family: 'Lora', serif;
   cursor: pointer;
 }
+
 .services-modal-content span.services-modal-close {
   display: none;
 }
+
 .services-modal-content button.services-modal-close {
   font-size: .9rem;
   padding: .45rem 1.2rem;
+}
+
+/* ======================================================
+   CARRUSEL CONSULTORIO
+   ====================================================== */
+
+.consultorio-carousel {
+  max-width: 1100px;
+  margin: 5rem auto 5rem;
+  text-align: center;
+}
+
+.consultorio-carousel h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  color: #4e2f0e;
+  margin-bottom: 2.5rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.carousel-item {
+  min-width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid rgba(244,177,14,0.75);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
