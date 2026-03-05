@@ -373,7 +373,8 @@
   display: flex;
   gap: 2rem;
   overflow: hidden;
-  padding-bottom: 25px; 
+  padding-bottom: 25px;
+  scroll-behavior: smooth; 
 }
 
 .carousel-item {
