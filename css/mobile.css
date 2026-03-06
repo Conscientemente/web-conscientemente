@@ -268,3 +268,40 @@ height:700px;
 }
 
 }
+/* AJUSTE CALENDARIO MOVIL */
+
+.calendar-container{
+overflow-x:auto;
+}
+
+.calendar-container iframe{
+min-width:700px;
+height:650px;
+}
+/* AJUSTE TITULO SOCIALIZACION */
+
+.banner-circle-text h2{
+max-width:80%;
+margin:auto;
+line-height:1.25;
+}
+/* AJUSTE POSICION TEXTO CIRCULO */
+
+.banner-circle-text{
+padding-top:3.6rem;
+padding-bottom:3rem;
+}
+/* FOTOS EQUIPO CIRCULARES */
+
+.modal img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+}
+/* ESPACIO LATERAL SOLO SERVICIOS */
+
+.services-section{
+padding-left:18px;
+padding-right:18px;
+}
