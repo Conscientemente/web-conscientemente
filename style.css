@@ -250,6 +250,8 @@ body {
    RESPONSIVE
    ========================== */
 @media (max-width:768px) {
+
+  /* Banner existente */
   .banner-circle {
     width: 270px;
     height: 270px;
@@ -259,7 +261,28 @@ body {
     max-width: 300px;
   }
 
+  /* Iconos redes */
   .social-icons img {
     width: 90px;
   }
+
+  /* Redes más ordenadas */
+  .social-icons {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  /* Evitar texto pegado a bordes */
+  body {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Menú más flexible */
+  .nav-menu {
+    gap: .6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 }
