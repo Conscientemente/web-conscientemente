@@ -133,3 +133,70 @@ height:auto;
 }
 
 }
+/* =================================
+   AJUSTES EXTRA SOLO MÓVIL
+   (no modifica estilos existentes)
+================================= */
+
+@media (max-width:768px){
+
+/* ---------------------------------
+   FOTO EQUIPO (EVITAR ÓVALO)
+--------------------------------- */
+
+.modal-content img{
+width:160px;
+height:160px;
+object-fit:cover;
+border-radius:50%;
+display:block;
+margin:30px auto;
+}
+
+
+/* ---------------------------------
+   SERVICIOS — ESPACIO LATERAL
+--------------------------------- */
+
+.services-section,
+.servicios-section,
+.services-container,
+.servicios-container{
+padding-left:18px;
+padding-right:18px;
+}
+
+
+/* ---------------------------------
+   TARJETAS DE SERVICIO
+--------------------------------- */
+
+.service-card,
+.servicio-card,
+.service-box{
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+
+
+/* ---------------------------------
+   TEXTO SERVICIOS
+--------------------------------- */
+
+.services-section p,
+.servicios-section p{
+padding-left:6px;
+padding-right:6px;
+}
+
+
+/* ---------------------------------
+   EVITAR DESBORDE GENERAL
+--------------------------------- */
+
+*{
+max-width:100%;
+}
+
+}
