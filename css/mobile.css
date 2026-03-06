@@ -1,0 +1,135 @@
+/* =================================
+   CONSCIENTEMENTE — AJUSTES MÓVIL
+   NO MODIFICA CSS EXISTENTE
+================================= */
+
+@media (max-width:768px){
+
+/* CONTENIDO GENERAL */
+
+body{
+padding-left:16px;
+padding-right:16px;
+}
+
+
+/* HEADER */
+
+.site-header{
+padding:1rem 1rem;
+}
+
+.nav{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+.brand-title{
+font-size:1.6rem;
+line-height:1.2;
+}
+
+.brand-subtitle{
+font-size:.9rem;
+}
+
+
+/* MENÚ */
+
+.nav-menu{
+flex-wrap:wrap;
+gap:.6rem;
+}
+
+
+/* BANNER */
+
+.banner-wrapper{
+min-height:420px;
+}
+
+.banner-circle{
+width:260px;
+height:260px;
+}
+
+.banner-circle-text{
+padding:1.6rem;
+}
+
+.banner-circle-text h2{
+font-size:1.4rem;
+line-height:1.2;
+}
+
+.banner-circle-text p{
+font-size:.9rem;
+line-height:1.4;
+}
+
+.banner-logo{
+max-width:260px;
+}
+
+
+/* BOTÓN DEL BANNER */
+
+.banner-button{
+font-size:.95rem;
+padding:.7rem 1.5rem;
+}
+
+
+/* TEXTO GENERAL */
+
+p{
+text-align:left;
+}
+
+
+/* CARDS */
+
+.service-card,
+.card,
+.servicio-card{
+width:100%;
+}
+
+
+/* MODALES */
+
+.modal-content{
+width:92%;
+max-height:85vh;
+overflow-y:auto;
+}
+
+
+/* ICONOS REDES */
+
+.social-icons{
+gap:2rem;
+flex-wrap:wrap;
+}
+
+.social-icons img{
+width:80px;
+}
+
+
+/* IFRAME (agenda calendario) */
+
+iframe{
+width:100%;
+}
+
+
+/* IMÁGENES RESPONSIVE */
+
+img{
+max-width:100%;
+height:auto;
+}
+
+}
