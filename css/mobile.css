@@ -336,3 +336,34 @@ transition:all .3s ease;
 }
 
 }
+/* ARREGLAR LINEA ACTIVA EN MOVIL */
+
+@media (max-width:768px){
+
+.nav-menu a{
+display:inline-block;
+}
+
+.nav-menu a.active{
+border-bottom:2px solid #6b4eff;
+width:auto;
+}
+
+}
+/* ESPACIADO MENU MOVIL */
+
+@media (max-width:768px){
+
+.nav-menu{
+padding-top:10px;
+}
+
+.nav-menu li{
+margin:8px 0;
+}
+
+.nav-menu a{
+font-size:1.1rem;
+}
+
+}
