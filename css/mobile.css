@@ -233,3 +233,44 @@ border-bottom:2px solid #6b4eff;
 }
 
 }
+/* ESPACIADO MENU MOVIL */
+
+@media (max-width:768px){
+
+.nav-menu{
+margin-top:15px;
+gap:14px;
+}
+
+.nav-menu li{
+padding:4px 0;
+}
+
+}
+/* ANIMACION MENU */
+
+@media (max-width:768px){
+
+.nav-menu{
+transition:all .3s ease;
+}
+
+}
+/* BOTON HAMBURGUESA */
+
+@media (max-width:768px){
+
+.menu-toggle{
+font-size:30px;
+color:#2f2f2f;
+background:none;
+border:none;
+cursor:pointer;
+padding:6px;
+}
+
+.menu-toggle:hover{
+opacity:.7;
+}
+
+}
