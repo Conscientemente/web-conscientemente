@@ -324,3 +324,15 @@ max-height:400px;
 }
 
 }
+/* HEADER BLUR CUANDO MENÚ ESTÁ ABIERTO */
+
+@media (max-width:768px){
+
+.site-header.menu-open{
+background:rgba(250,249,246,0.85);
+backdrop-filter:blur(8px);
+-webkit-backdrop-filter:blur(8px);
+transition:all .3s ease;
+}
+
+}
