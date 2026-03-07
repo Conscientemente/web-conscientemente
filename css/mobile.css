@@ -274,3 +274,40 @@ opacity:.7;
 }
 
 }
+/* ==========================
+   HAMBURGUESA ANIMADO
+========================== */
+
+.menu-toggle{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+width:28px;
+height:20px;
+background:none;
+border:none;
+cursor:pointer;
+}
+
+.menu-toggle span{
+display:block;
+height:3px;
+width:100%;
+background:#333;
+border-radius:3px;
+transition:all .3s ease;
+}
+
+/* ANIMACIÓN A X */
+
+.menu-toggle.open span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.menu-toggle.open span:nth-child(2){
+opacity:0;
+}
+
+.menu-toggle.open span:nth-child(3){
+transform:rotate(-45deg) translate(5px,-5px);
+}
