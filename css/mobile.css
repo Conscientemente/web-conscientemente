@@ -195,3 +195,18 @@ display:flex;
 }
 
 }
+/* POSICIÓN BOTÓN HAMBURGUESA */
+
+@media (max-width:768px){
+
+.nav{
+position:relative;
+}
+
+.menu-toggle{
+position:absolute;
+right:10px;
+top:10px;
+}
+
+}
