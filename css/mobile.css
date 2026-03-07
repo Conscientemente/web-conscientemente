@@ -210,3 +210,12 @@ top:10px;
 }
 
 }
+/* ESPACIO ENTRE HEADER Y BANNER */
+
+@media (max-width:768px){
+
+.banner-wrapper{
+margin-top:25px;
+}
+
+}
