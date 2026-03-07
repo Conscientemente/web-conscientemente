@@ -219,3 +219,17 @@ margin-top:25px;
 }
 
 }
+/* AJUSTE SUBRAYADO MENÚ EN MÓVIL */
+
+@media (max-width:768px){
+
+.nav-menu a{
+display:inline-block;
+border-bottom:2px solid transparent;
+}
+
+.nav-menu a.active{
+border-bottom:2px solid #6b4eff;
+}
+
+}
