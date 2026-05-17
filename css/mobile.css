@@ -121,7 +121,6 @@ height:420px;
 .banner-circle img{
 width:100%;
 height:100%;
-
 object-fit:cover;
 display:block;
 }
@@ -250,10 +249,4 @@ height:120px;
 
 position:absolute;
 pointer-events:none;
-}
-.banner-circle img{
-height:420px;
-width:420px;
-object-fit:cover;
-display:block;
 }
