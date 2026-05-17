@@ -84,13 +84,13 @@
 }
 
 #open-bipolar .bubble-img {
-  max-width: 110px;
+  max-width: 85px;
 }
 
 #open-dependencia .bubble-img,
 #open-personalidad .bubble-img,
 #open-otros .bubble-img {
-  max-width: 90px;
+  max-width: 85px;
 }
 
 /* ==========================
