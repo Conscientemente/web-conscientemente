@@ -114,14 +114,8 @@ margin-top:25px;
 }
 
 .banner-circle{
-width:320px;
-height:320px;
-
-border-radius:50%;
-overflow:hidden;
-
-margin:auto;
-flex-shrink:0;
+width:420px;
+height:420px;
 }
 
 .banner-circle img{
