@@ -259,3 +259,20 @@ height:120px;
 position:absolute;
 pointer-events:none;
 }
+.banner-circle{
+width:90vw !important;
+max-width:420px !important;
+aspect-ratio:1/1 !important;
+
+border-radius:50% !important;
+overflow:hidden !important;
+}
+
+.banner-circle img{
+width:100% !important;
+height:100% !important;
+object-fit:cover !important;
+
+border-radius:50% !important;
+display:block;
+}
