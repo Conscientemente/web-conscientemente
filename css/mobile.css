@@ -114,8 +114,10 @@ margin-top:25px;
 }
 
 .banner-circle{
-width:420px;
-height:420px;
+width:90vw;
+max-width:420px;
+aspect-ratio:1/1;
+height:auto;
 }
 
 .banner-circle-text{
