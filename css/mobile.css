@@ -251,4 +251,9 @@ height:120px;
 position:absolute;
 pointer-events:none;
 }
-
+.banner-circle img{
+height:420px;
+width:420px;
+object-fit:cover;
+display:block;
+}
