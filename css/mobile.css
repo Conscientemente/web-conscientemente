@@ -121,11 +121,10 @@ flex-shrink:0;
 }
 
 .banner-circle img{
-width:420px;
-height:420px;
+width:100%;
+height:100%;
 object-fit:cover;
 display:block;
-max-width:none;
 }
    
 .banner-circle-text{
@@ -248,7 +247,7 @@ transition:all .3s ease;
 }
 .banner-circle-text{
 visibility:hidden;
-height:120px;
+height:110px;
 
 position:absolute;
 pointer-events:none;
