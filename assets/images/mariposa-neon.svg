@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180">
+  <defs>
+    <linearGradient id="wingLeft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#B9A0FF"/>
+      <stop offset="55%" stop-color="#D9C7FF"/>
+      <stop offset="100%" stop-color="#91DDF4"/>
+    </linearGradient>
+    <linearGradient id="wingRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5BCEB"/>
+      <stop offset="55%" stop-color="#C8C6FF"/>
+      <stop offset="100%" stop-color="#9BE5E7"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <!-- Alas izquierdas -->
+    <path d="M98 84
+      C77 62 55 22 34 29
+      C9 37 20 78 43 96
+      C59 108 79 104 98 91 Z"
+      fill="url(#wingLeft)" fill-opacity=".78"
+      stroke="#D6C4FF" stroke-width="2.5"
+      filter="url(#glow)"/>
+
+    <path d="M96 94
+      C75 99 57 112 61 133
+      C65 151 84 144 99 112 Z"
+      fill="url(#wingLeft)" fill-opacity=".8"
+      stroke="#D6C4FF" stroke-width="2.5"
+      filter="url(#glow)"/>
+
+    <!-- Alas derechas -->
+    <path d="M102 84
+      C123 62 145 22 166 29
+      C191 37 180 78 157 96
+      C141 108 121 104 102 91 Z"
+      fill="url(#wingRight)" fill-opacity=".78"
+      stroke="#F1C5F0" stroke-width="2.5"
+      filter="url(#glow)"/>
+
+    <path d="M104 94
+      C125 99 143 112 139 133
+      C135 151 116 144 101 112 Z"
+      fill="url(#wingRight)" fill-opacity=".8"
+      stroke="#B7DFFF" stroke-width="2.5"
+      filter="url(#glow)"/>
+
+    <!-- Líneas delicadas de las alas -->
+    <g fill="none" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="1.4">
+      <path d="M98 86 L42 43"/>
+      <path d="M95 92 L32 70"/>
+      <path d="M96 96 L69 132"/>
+      <path d="M102 86 L158 43"/>
+      <path d="M105 92 L168 70"/>
+      <path d="M104 96 L131 132"/>
+    </g>
+
+    <!-- Cuerpo -->
+    <path d="M100 77 C95 91 96 111 100 122
+      C104 111 105 91 100 77 Z"
+      fill="#8064D9" stroke="#FFFFFF" stroke-width="1.5"/>
+
+    <!-- Antenas -->
+    <g fill="none" stroke="#9677E8" stroke-width="2.2">
+      <path d="M99 80 C90 65 82 60 76 55"/>
+      <path d="M101 80 C110 65 118 60 124 55"/>
+    </g>
+
+    <g fill="#F8D6F2" stroke="#FFFFFF" stroke-width="1.3">
+      <circle cx="76" cy="55" r="3"/>
+      <circle cx="124" cy="55" r="3"/>
+    </g>
+  </g>
+</svg>
