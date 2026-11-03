@@ -350,7 +350,7 @@ body {
   animation: butterflyFloat 9s ease-in-out infinite;
 }
 
-/* Posiciones y tamaños */
+/* Distribución en escritorio */
 
 .butterfly-1 {
   top: 12%;
@@ -391,7 +391,7 @@ body {
   animation-delay: -5s;
 }
 
-/* Movimiento delicado */
+/* Flotación sutil del conjunto */
 
 @keyframes butterflyFloat {
   0% {
@@ -415,10 +415,47 @@ body {
   }
 }
 
-/* Adaptación a celulares */
+/* Aleteo de las alas izquierdas */
+
+.butterfly .wing-left {
+  transform-box: view-box;
+  transform-origin: 100px 90px;
+  animation: flapLeft 1.4s ease-in-out infinite;
+}
+
+/* Aleteo de las alas derechas */
+
+.butterfly .wing-right {
+  transform-box: view-box;
+  transform-origin: 100px 90px;
+  animation: flapRight 1.4s ease-in-out infinite;
+}
+
+/* Las alas se abren y cierran de forma alternada */
+
+@keyframes flapLeft {
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(48deg);
+  }
+}
+
+@keyframes flapRight {
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(-48deg);
+  }
+}
+
+/* Ajustes para celular */
 
 @media (max-width: 768px) {
-
   .butterfly-1 {
     width: 65px;
     top: 8%;
@@ -450,10 +487,12 @@ body {
   }
 }
 
-/* Preferencia de movimiento reducido */
+/* Accesibilidad: respetar la preferencia de movimiento reducido */
 
 @media (prefers-reduced-motion: reduce) {
-  .butterfly {
+  .butterfly,
+  .butterfly .wing-left,
+  .butterfly .wing-right {
     animation: none;
   }
 }
